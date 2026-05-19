@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<!-- Consent Mode — ANTES do GTM -->
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{analytics_storage:'granted',ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',wait_for_update:500});
+try{if(localStorage.getItem('nml_cookie_consent')==='accept'){gtag('consent','update',{analytics_storage:'granted',ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted'});}}catch(e){}
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NSQ62LBV');</script>
+<!-- End Google Tag Manager -->
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Faça o diagnóstico gratuito em 2 minutos e descubra os pontos que estão travando o crescimento do seu negócio.">
+<title>Score Financeiro Gratuito — Nemalá Finanças</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ── Reset & Tokens ── */
+:root {
+  --or: #FFAB1A;
+  --or-dk: #E8950A;
+  --or-lt: #FFF6E0;
+  --or-md: #FFD580;
+  --ink: #1A1A1A;
+  --ink2: #2D2D2D;
+  --sub: #5C5C72;
+  --muted: #9494A8;
+  --bg: #F7F7F9;
+  --wh: #FFFFFF;
+  --bd: #E6E6EE;
+  --bd2: #D0D0DC;
+  --grn: #0EA671;
+  --grn-lt: #E8F9F2;
+  --red: #E53E3E;
+  --red-lt: #FFF0F0;
+  --display: 'Sora', sans-serif;
+  --body: 'Plus Jakarta Sans', sans-serif;
+  --r: 12px;
+  --rl: 20px;
+  --rxl: 28px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body { font-family: var(--body); background: #fff; color: var(--ink); line-height: 1.6; overflow-x: hidden; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 28px; }
+img { display: block; max-width: 100%; }
+a { text-decoration: none; }
+
+/* ── Animations ── */
+@keyframes fu { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:none; } }
+@keyframes fl { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-7px); } }
+@keyframes pulse-ring { 0% { transform:scale(1); opacity:.7; } 100% { transform:scale(1.6); opacity:0; } }
+@keyframes count-up { from { opacity:0; transform:scale(.8); } to { opacity:1; transform:scale(1); } }
+@keyframes draw-circle { from { stroke-dashoffset: 314; } to { stroke-dashoffset: 78; } }
+@keyframes slide-in { from { opacity:0; transform:translateX(-16px); } to { opacity:1; transform:none; } }
+@keyframes fade-in { from { opacity:0; } to { opacity:1; } }
+
+/* ── NAV MINI ── */
+.nav-mini {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  background: rgba(255,255,255,.94); backdrop-filter: blur(18px) saturate(180%);
+  border-bottom: 1px solid var(--bd);
+  box-shadow: 0 1px 12px rgba(0,0,0,.06);
+}
+.nav-mini-in {
+  max-width: 1100px; margin: 0 auto; padding: 0 28px;
+  height: 64px; display: flex; align-items: center; justify-content: space-between;
+}
+.logo { display: flex; align-items: center; gap: 10px; }
+.logo-svg { height: 32px; width: auto; }
+.nav-mini-wa {
+  display: flex; align-items: center; gap: 7px;
+  font-size: 13px; font-weight: 600; color: var(--sub);
+  padding: 7px 14px; border: 1.5px solid var(--bd); border-radius: 100px;
+  transition: all .18s;
+}
+.nav-mini-wa:hover { border-color: #25D366; color: #25D366; }
+.nav-mini-wa svg { width: 15px; height: 15px; flex-shrink: 0; }
+
+/* ── HERO ── */
+.hero {
+  padding: 112px 0 64px;
+  background: #fff;
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; top: -80px; right: -120px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(255,171,26,.12) 0%, transparent 65%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute; bottom: -60px; left: -80px;
+  width: 360px; height: 360px;
+  background: radial-gradient(circle, rgba(255,171,26,.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 64px; align-items: center; position: relative;
+}
+.hero-left { animation: fu .55s ease both; }
+.hero-right { animation: fu .55s .1s ease both; }
+
+.eyebrow-pill {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: var(--or-lt); border: 1px solid #FFD97D; border-radius: 100px;
+  padding: 5px 14px; font-size: 11px; font-weight: 700;
+  color: #A05A00; margin-bottom: 22px; letter-spacing: .04em;
+}
+.eyebrow-pill span { width: 6px; height: 6px; border-radius: 50%; background: var(--or); }
+
+.hero-h1 {
+  font-family: var(--display);
+  font-size: clamp(32px, 4.8vw, 56px);
+  font-weight: 800; line-height: 1.08; letter-spacing: -.03em;
+  margin-bottom: 18px; color: var(--ink);
+}
+.hero-h1 em { font-style: normal; color: var(--or); }
+.hero-sub {
+  font-size: 17px; color: var(--sub); line-height: 1.72;
+  margin-bottom: 32px; max-width: 480px;
+}
+.hero-sub strong { color: var(--or-dk); font-weight: 700; }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--body); font-weight: 700; font-size: 15px;
+  padding: 13px 26px; border-radius: 100px; border: none;
+  cursor: pointer; text-decoration: none; transition: all .18s ease;
+  white-space: nowrap;
+}
+.btn-or { background: var(--or); color: var(--ink); box-shadow: 0 4px 16px rgba(255,171,26,.35); }
+.btn-or:hover { background: var(--or-dk); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(255,171,26,.45); }
+.btn-lg { font-size: 17px; padding: 16px 36px; }
+.btn-icon { width: 22px; height: 22px; background: rgba(0,0,0,.12); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+
+.hero-trust {
+  display: flex; align-items: center; gap: 12px;
+  margin-top: 20px; font-size: 13px; color: var(--sub);
+}
+.hero-avs { display: flex; }
+.hero-av {
+  width: 30px; height: 30px; border-radius: 50%; border: 2.5px solid #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 9px; font-weight: 800; color: #fff; margin-left: -8px;
+}
+.hero-av:first-child { margin-left: 0; }
+
+/* ── SCORE CARD (hero right) ── */
+.score-card {
+  background: #fff;
+  border: 1px solid var(--bd);
+  border-radius: 24px;
+  box-shadow: 0 24px 72px rgba(0,0,0,.13), 0 6px 18px rgba(0,0,0,.07);
+  overflow: hidden;
+}
+.score-card-top {
+  background: var(--ink); padding: 18px 24px;
+  display: flex; align-items: center; gap: 10px;
+}
+.score-card-top-av {
+  width: 36px; height: 36px; border-radius: 50%; background: var(--or);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: 800; color: var(--ink);
+}
+.score-card-top-info strong { display: block; font-size: 13px; font-weight: 700; color: #fff; }
+.score-card-top-info small { font-size: 11px; color: rgba(255,255,255,.45); }
+.score-card-body { padding: 24px; }
+
+.score-dial-wrap { display: flex; align-items: center; gap: 24px; margin-bottom: 20px; }
+.score-dial { position: relative; width: 110px; height: 110px; flex-shrink: 0; }
+.score-dial svg { transform: rotate(-90deg); }
+.score-dial-bg { fill: none; stroke: var(--bg); stroke-width: 10; }
+.score-dial-fill {
+  fill: none; stroke: var(--or); stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dasharray: 314;
+  animation: draw-circle 1.4s .4s ease both;
+}
+.score-dial-label {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.score-dial-num {
+  font-family: var(--display); font-size: 32px; font-weight: 800; color: var(--or);
+  line-height: 1; animation: count-up .6s .6s both;
+}
+.score-dial-tag { font-size: 9px; font-weight: 700; color: var(--sub); letter-spacing: .06em; text-transform: uppercase; }
+
+.score-title { font-size: 13px; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+.score-sub-txt { font-size: 11px; color: var(--sub); line-height: 1.5; }
+.score-evolving { display: flex; align-items: center; gap: 5px; font-size: 11px; color: var(--sub); margin-top: 8px; }
+.score-dot-anim { width: 7px; height: 7px; border-radius: 50%; background: var(--or); position: relative; }
+.score-dot-anim::after {
+  content: ''; position: absolute; inset: 0; border-radius: 50%;
+  background: var(--or); animation: pulse-ring 1.6s infinite;
+}
+
+.score-bars { display: flex; flex-direction: column; gap: 8px; }
+.score-bar-row { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 8px; }
+.score-bar-label { font-size: 11px; color: var(--sub); }
+.score-bar-track { height: 6px; background: var(--bg); border-radius: 3px; overflow: hidden; margin-top: 2px; }
+.score-bar-fill { height: 100%; border-radius: 3px; transition: width .8s ease; }
+.score-bar-pct { font-size: 10px; font-weight: 700; }
+
+/* ── FEATURES STRIP ── */
+.features-strip { background: var(--ink); padding: 0; }
+.features-strip-inner {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+.feat-item {
+  padding: 28px 24px; border-right: 1px solid rgba(255,255,255,.08);
+  display: flex; gap: 14px; align-items: flex-start;
+}
+.feat-item:last-child { border-right: none; }
+.feat-ic {
+  width: 40px; height: 40px; border-radius: 10px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.feat-ic svg { width: 18px; height: 18px; }
+.feat-t { font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+.feat-t em { font-style: normal; color: var(--or); }
+.feat-d { font-size: 12px; color: rgba(255,255,255,.45); line-height: 1.55; }
+
+/* ── SEÇÃO GENÉRICA ── */
+section { padding: 80px 0; }
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 11px; font-weight: 700; letter-spacing: .09em;
+  text-transform: uppercase; color: var(--or-dk); margin-bottom: 14px;
+}
+.dot { width: 5px; height: 5px; border-radius: 50%; background: var(--or); flex-shrink: 0; }
+.section-title {
+  font-family: var(--display);
+  font-size: clamp(26px, 3.2vw, 40px);
+  font-weight: 800; line-height: 1.12; letter-spacing: -.025em;
+  margin-bottom: 14px;
+}
+.section-sub { font-size: 16px; color: var(--sub); line-height: 1.7; max-width: 540px; }
+.section-head { margin-bottom: 52px; }
+.section-head.center { text-align: center; }
+.section-head.center .section-sub { margin: 0 auto; }
+
+/* ── DORES ── */
+.dores-section { background: var(--bg); }
+.dores-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.dor-card {
+  background: #fff; border: 1px solid var(--bd); border-radius: 16px;
+  padding: 22px; display: flex; gap: 14px; align-items: flex-start;
+  transition: box-shadow .2s, transform .2s;
+}
+.dor-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,.08); transform: translateY(-2px); }
+.dor-ic {
+  width: 40px; height: 40px; border-radius: 11px;
+  background: var(--red-lt); color: var(--red);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.dor-ic svg { width: 18px; height: 18px; }
+.dor-t { font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 5px; }
+.dor-d { font-size: 13px; color: var(--sub); line-height: 1.6; }
+
+/* ── COMO FUNCIONA ── */
+.como-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; position: relative; }
+.como-grid::before {
+  content: '';
+  position: absolute; top: 52px; left: calc(16.66% + 14px); right: calc(16.66% + 14px); height: 2px;
+  background: repeating-linear-gradient(90deg, var(--or) 0, var(--or) 6px, transparent 6px, transparent 14px);
+  pointer-events: none;
+}
+.como-step {
+  background: #fff; border: 1px solid var(--bd); border-radius: 20px;
+  padding: 28px 22px; text-align: center;
+  transition: box-shadow .2s, transform .2s;
+}
+.como-step:hover { box-shadow: 0 12px 40px rgba(0,0,0,.09); transform: translateY(-4px); }
+.como-num {
+  width: 52px; height: 52px; border-radius: 50%; background: var(--or);
+  font-family: var(--display); font-size: 22px; font-weight: 800; color: var(--ink);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 18px; position: relative; z-index: 1;
+}
+.como-t { font-size: 16px; font-weight: 700; color: var(--ink); margin-bottom: 8px; font-family: var(--display); }
+.como-d { font-size: 13px; color: var(--sub); line-height: 1.65; }
+
+/* ── SCORE PREVIEW ── */
+.score-prev-section { background: var(--bg); }
+.score-prev-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: center; }
+.score-prev-benefits { display: flex; flex-direction: column; gap: 14px; margin-top: 28px; }
+.benefit-row { display: flex; align-items: flex-start; gap: 12px; }
+.benefit-ic { width: 24px; height: 24px; border-radius: 50%; background: var(--grn-lt); flex-shrink: 0; display: flex; align-items: center; justify-content: center; margin-top: 1px; }
+.benefit-ic svg { width: 12px; height: 12px; stroke: var(--grn); stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.benefit-t { font-size: 15px; font-weight: 700; color: var(--ink); }
+.benefit-d { font-size: 13px; color: var(--sub); line-height: 1.55; }
+
+.score-mockup {
+  background: #fff; border: 1px solid var(--bd); border-radius: 24px;
+  box-shadow: 0 24px 72px rgba(0,0,0,.12); overflow: hidden;
+  animation: fu .6s .15s ease both;
+}
+.mockup-bar { background: var(--ink); padding: 12px 16px; display: flex; align-items: center; gap: 6px; }
+.mockup-dot { width: 10px; height: 10px; border-radius: 50%; }
+.mockup-title { flex: 1; text-align: center; font-size: 11px; color: rgba(255,255,255,.3); }
+.mockup-body { padding: 24px; }
+.mockup-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+.mockup-header-t { font-size: 15px; font-weight: 700; color: var(--ink); }
+.mockup-badge { font-size: 11px; font-weight: 700; background: var(--or-lt); color: var(--or-dk); border: 1px solid var(--or-md); padding: 3px 10px; border-radius: 100px; }
+
+.score-donut-wrap { display: flex; align-items: center; justify-content: center; margin-bottom: 20px; gap: 24px; }
+.score-donut { position: relative; width: 100px; height: 100px; }
+.score-donut svg { transform: rotate(-90deg); }
+.score-donut-center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.score-donut-num { font-family: var(--display); font-size: 28px; font-weight: 800; color: var(--or); line-height: 1; }
+.score-donut-lbl { font-size: 9px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--sub); }
+.score-donut-info { font-size: 12px; color: var(--sub); }
+.score-donut-info strong { display: block; font-size: 14px; font-weight: 700; color: var(--ink); }
+
+.area-bars { display: flex; flex-direction: column; gap: 10px; }
+.area-bar-row { display: flex; align-items: center; gap: 10px; }
+.area-label { font-size: 11px; color: var(--sub); min-width: 100px; flex-shrink: 0; }
+.area-track { flex: 1; height: 7px; background: var(--bg); border-radius: 4px; overflow: hidden; }
+.area-fill { height: 100%; border-radius: 4px; }
+.area-pct { font-size: 11px; font-weight: 700; min-width: 34px; text-align: right; }
+
+.ia-tag {
+  display: flex; align-items: flex-start; gap: 12px;
+  background: var(--or-lt); border: 1px solid var(--or-md);
+  border-radius: 12px; padding: 14px 16px; margin-top: 16px;
+}
+.ia-tag svg { width: 20px; height: 20px; color: var(--or-dk); flex-shrink: 0; margin-top: 1px; }
+.ia-tag-t { font-size: 13px; font-weight: 700; color: var(--or-dk); }
+.ia-tag-d { font-size: 12px; color: var(--ink); margin-top: 2px; line-height: 1.55; }
+
+/* ── PROVA SOCIAL ── */
+.proof-section { background: #fff; }
+.proof-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.proof-card {
+  background: var(--bg); border: 1px solid var(--bd); border-radius: 18px;
+  padding: 24px; transition: box-shadow .2s, transform .2s;
+}
+.proof-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,.08); transform: translateY(-3px); }
+.proof-stars { color: var(--or); font-size: 15px; margin-bottom: 12px; }
+.proof-txt { font-size: 13px; color: var(--ink); line-height: 1.7; margin-bottom: 16px; font-style: italic; }
+.proof-author { display: flex; align-items: center; gap: 10px; }
+.proof-av { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 800; color: #fff; flex-shrink: 0; }
+.proof-nome { font-size: 13px; font-weight: 700; color: var(--ink); }
+.proof-cargo { font-size: 11px; color: var(--sub); }
+
+/* ── STATS ── */
+.stats-section { background: var(--or); padding: 52px 0; }
+.stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.stat-item { text-align: center; }
+.stat-val { font-family: var(--display); font-size: clamp(32px, 4vw, 48px); font-weight: 800; color: var(--ink); line-height: 1; }
+.stat-lbl { font-size: 14px; color: rgba(26,26,26,.6); margin-top: 6px; font-weight: 600; }
+
+/* ── CTA FINAL ── */
+.cta-section { background: var(--ink); padding: 88px 0; text-align: center; position: relative; overflow: hidden; }
+.cta-section::before {
+  content: '';
+  position: absolute; top: -120px; left: 50%; transform: translateX(-50%);
+  width: 600px; height: 600px; border-radius: 50%;
+  background: rgba(255,171,26,.06); pointer-events: none;
+}
+.cta-h2 { font-family: var(--display); font-size: clamp(26px,4vw,44px); font-weight: 800; color: #fff; margin-bottom: 12px; letter-spacing: -.025em; }
+.cta-h2 em { font-style: normal; color: var(--or); }
+.cta-p { font-size: 16px; color: rgba(255,255,255,.55); margin-bottom: 36px; }
+
+.cta-box {
+  background: #fff; border-radius: 24px; padding: 36px 32px;
+  max-width: 500px; margin: 0 auto; position: relative;
+}
+.cta-box-title { font-family: var(--display); font-size: 20px; font-weight: 800; color: var(--ink); margin-bottom: 6px; }
+.cta-box-sub { font-size: 13px; color: var(--sub); margin-bottom: 24px; }
+
+.form-field { margin-bottom: 14px; text-align: left; }
+.form-field label { display: block; font-size: 12px; font-weight: 700; color: var(--ink); margin-bottom: 5px; }
+.form-field input, .form-field select {
+  width: 100%; border: 1.5px solid var(--bd); border-radius: 10px;
+  padding: 12px 14px; font-size: 14px; font-family: var(--body);
+  color: var(--ink); background: #fff; transition: border-color .15s; outline: none;
+}
+.form-field input:focus, .form-field select:focus { border-color: var(--or); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.form-submit {
+  width: 100%; padding: 16px; background: var(--or); color: var(--ink);
+  font-family: var(--display); font-size: 16px; font-weight: 800;
+  border: none; border-radius: 100px; cursor: pointer;
+  box-shadow: 0 4px 18px rgba(255,171,26,.4);
+  transition: all .18s; display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+.form-submit:hover { background: var(--or-dk); transform: translateY(-2px); box-shadow: 0 6px 28px rgba(255,171,26,.5); }
+.form-trust { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; margin-top: 16px; font-size: 12px; color: var(--muted); }
+.form-trust-item { display: flex; align-items: center; gap: 5px; }
+.form-trust-item svg { width: 12px; height: 12px; }
+.form-terms { font-size: 11px; color: var(--muted); text-align: center; margin-top: 12px; line-height: 1.5; }
+.form-terms a { color: var(--or-dk); }
+
+/* ── STICKY BAR ── */
+.sticky-bar {
+  display: none; position: fixed; bottom: 0; left: 0; right: 0;
+  background: #fff; border-top: 1px solid var(--bd);
+  padding: 12px 20px; z-index: 100; box-shadow: 0 -4px 20px rgba(0,0,0,.1);
+}
+.sticky-bar-in { max-width: 500px; margin: 0 auto; display: flex; gap: 12px; align-items: center; }
+.sticky-bar-in p { font-size: 13px; font-weight: 700; color: var(--ink); flex: 1; line-height: 1.3; }
+.sticky-bar-in .btn { padding: 10px 22px; font-size: 14px; }
+
+/* ── FOOTER ── */
+.foot-mini { background: var(--ink); border-top: 1px solid rgba(255,255,255,.08); padding: 20px 0; }
+.foot-mini-in {
+  max-width: 1100px; margin: 0 auto; padding: 0 28px;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px;
+}
+.foot-mini-in span { font-size: 12px; color: rgba(255,255,255,.3); }
+.foot-mini-l { display: flex; gap: 20px; }
+.foot-mini-l a { font-size: 12px; color: rgba(255,255,255,.3); transition: color .15s; }
+.foot-mini-l a:hover { color: rgba(255,255,255,.7); }
+
+/* ── WA FAB ── */
+#wa-fab { position: fixed; bottom: 24px; right: 22px; z-index: 999; }
+#wa-fab-btn {
+  display: flex; align-items: center; gap: 8px;
+  background: #25D366; color: #fff; border: none; border-radius: 100px;
+  padding: 12px 18px 12px 14px; font-size: 14px; font-weight: 700;
+  font-family: var(--body); cursor: pointer;
+  box-shadow: 0 4px 18px rgba(37,211,102,.35);
+  transition: transform .18s, box-shadow .18s; line-height: 1;
+}
+#wa-fab-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(37,211,102,.45); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+  .hero-right { order: -1; }
+  .score-card { max-width: 440px; margin: 0 auto; }
+  .features-strip-inner { grid-template-columns: repeat(2,1fr); }
+  .feat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .feat-item:nth-child(odd) { border-right: 1px solid rgba(255,255,255,.08); }
+  .feat-item:nth-last-child(-n+2) { border-bottom: none; }
+  .dores-grid { grid-template-columns: 1fr; }
+  .como-grid { grid-template-columns: 1fr; }
+  .como-grid::before { display: none; }
+  .score-prev-grid { grid-template-columns: 1fr; gap: 40px; }
+  .proof-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: 1fr; gap: 28px; }
+  #wa-fab-btn span { display: none; }
+  #wa-fab-btn { border-radius: 50%; padding: 14px; }
+  .sticky-bar { display: block; }
+}
+@media (max-width: 640px) {
+  .hero { padding: 88px 0 48px; }
+  .form-row { grid-template-columns: 1fr; }
+  .cta-box { padding: 24px 18px; }
+  .features-strip-inner { grid-template-columns: 1fr; }
+  .feat-item:nth-child(odd) { border-right: none; }
+}
+
+/* ── Scroll reveal ── */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .55s ease, transform .55s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSQ62LBV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- NAV -->
+<nav class="nav-mini">
+  <div class="nav-mini-in">
+    <a class="logo" href="#">
+      <svg class="logo-svg" viewBox="0 0 950.72 203.86" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <clipPath id="lcp1"><path fill-rule="evenodd" clip-rule="evenodd" d="M257.63,79.45l-15.53-15.53-6.82,6.82,22.35,8.71ZM128.24,106.35l7.02-7.02,6.82,6.82-7.02,7.02-6.82-6.82ZM163.68,70.92l35.44,35.44-35.44,35.44-14.49-14.49,21.14-21.14-20.94-20.94,14.3-14.3ZM85.47,120.92l-21.25,21.21-35.97-35.97,56.92-56.91,35.97,35.97-21.14,21.14,20.94,20.94-7.44,7.44-21.04-20.79-6.99,6.97ZM78.3,156.21l14.22-14.2,6.89,6.8-14.25,14.25-6.86-6.86ZM242.1,49.71l35.44,35.44-35.44,35.44-35.44-35.44,35.44-35.44ZM256.14,35.51l7.16-7.17,37.32,37.32,14.12-14.12L263.3.1l-60.13,60.13.08.08-10.97,10.97-28.61-28.61-28.42,28.42-50.09-50.09L0,106.16l50.08,50.08-34.92,34.85,28.05.12,20.96-20.88,21,21,28.46-28.46,28.69,28.36,28.29-.05-42.9-42.4,7.36-7.36,28.62,28.62,14.54-14.54,28.6,28.73,13.63-14.21,22.2,21.67h28.52s-51.19-49.95-51.19-49.95l-13.42,13.99-14.26-14.33,21.19-21.19,28.61,28.61,63.68-63.68-49.64-49.64Z"/></clipPath>
+          <linearGradient id="lg1" x1="153.72" y1=".03" x2="161.02" y2="191.74" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fbb11e"/><stop offset="1" stop-color="#f68f1f"/></linearGradient>
+          <clipPath id="lcp2"><path fill-rule="evenodd" clip-rule="evenodd" d="M780.97,153.26c3.08-2.03,6.63-3.04,10.65-3.04,5.54,0,10.45,1.7,14.74,5.09v4.68c-4.45-3.9-9.36-5.85-14.74-5.85-2.89,0-5.46.65-7.72,1.96-2.26,1.31-3.39,3.13-3.39,5.47,0,.78.14,1.47.41,2.08.27.6.74,1.15,1.4,1.64.66.49,1.31.91,1.93,1.26.62.35,1.53.7,2.72,1.05,1.19.35,2.19.63,3.01.85.82.21,1.99.5,3.51.85,5.07,1.13,8.65,2.65,10.74,4.56,2.09,1.91,3.15,4.27,3.19,7.08,0,2.46-.73,4.56-2.19,6.32-1.46,1.76-3.28,3.01-5.44,3.77-2.16.76-4.49,1.14-6.99,1.14h-.35c-5.97-.04-11.29-2.22-15.97-6.55v-4.62c5.11,4.8,10.51,7.2,16.21,7.2,2.93,0,5.42-.61,7.49-1.84,2.07-1.23,3.1-2.99,3.1-5.29,0-2.03-.93-3.7-2.78-5-1.85-1.31-4.98-2.47-9.39-3.48-5.15-1.13-8.89-2.51-11.23-4.12-2.34-1.62-3.51-3.89-3.51-6.81,0-3.55,1.54-6.34,4.62-8.37M735.09,177.65l-9.48-25.45-9.59,25.45h19.07ZM721.93,150.74h7.37l15.44,40.95h-4.44l-3.86-10.18h-21.76l-4.04,10.18h-4.39l15.68-40.95ZM638.66,170.98c0-5.81,1.99-10.75,5.97-14.83,3.98-4.08,8.83-6.11,14.57-6.11,4.21,0,7.98,1.17,11.29,3.51,3.31,2.34,5.77,5.44,7.37,9.3l-4.1,1.17c-1.29-3-3.21-5.41-5.76-7.22-2.56-1.81-5.49-2.72-8.8-2.72h-.18c-4.56,0-8.39,1.63-11.5,4.88-3.1,3.26-4.65,7.26-4.65,12.02s1.55,8.66,4.65,11.93c3.1,3.28,6.99,4.91,11.67,4.91,3.35,0,6.31-.89,8.86-2.66,2.56-1.77,4.46-4.16,5.7-7.17l4.1,1.11c-1.52,3.78-3.92,6.84-7.2,9.18-3.28,2.34-7,3.53-11.17,3.57l-.82,1.99c1.68.31,3.2.95,4.56,1.9,1.36.96,2.05,2.14,2.05,3.54,0,1.13-.5,2.06-1.49,2.78-.99.72-2.17,1.18-3.51,1.38-1.35.2-2.43.31-3.25.35-.82.04-1.36.06-1.64.06-.9,0-1.62-.08-2.16-.23v-2.98c.86.19,1.75.29,2.69.29s2.17-.13,3.71-.38c1.54-.25,2.31-.87,2.31-1.84,0-.86-.71-1.58-2.13-2.17-1.42-.58-2.78-.92-4.07-.99l1.46-3.8c-5.3-.51-9.72-2.74-13.25-6.7-3.53-3.96-5.29-8.65-5.29-14.07ZM580.14,150.74l21.41,39.08v-39.08h4.15v40.95h-7.96l-21.59-39.43v39.43h-4.1v-40.95h8.07ZM530.46,177.65l-9.48-25.45-9.59,25.45h19.07ZM517.29,150.74h7.37l15.45,40.95h-4.45l-3.86-10.18h-21.76l-4.04,10.18h-4.39l15.68-40.95ZM443.8,150.74l21.41,39.08v-39.08h4.15v40.95h-7.96l-21.59-39.43v39.43h-4.09v-40.95h8.07ZM397.39,191.69v-40.95h4.21v40.95h-4.21ZM364.96,150.74v3.92h-24.28v14.63h21.94v3.86h-21.94v18.54h-4.21v-40.95h28.49Z"/></clipPath>
+          <linearGradient id="lg2" x1="572.13" y1="149.96" x2="571.76" y2="203.92" xlink:href="#lg1"/>
+        </defs>
+        <g clip-path="url(#lcp1)"><rect fill="url(#lg1)" y=".1" width="314.75" height="191.59"/></g>
+        <g clip-path="url(#lcp2)"><rect fill="url(#lg2)" x="336.47" y="150.04" width="470.94" height="53.82"/></g>
+        <path fill="#1A1A1A" fill-rule="evenodd" d="M546.67,24.06h23.9v12.45l23.88-12.48h3.8c12.39-.03,21.55,4.58,26.86,12.48l23.88-12.48h9.12c20.52-.02,32.19,12.63,32.2,31.97l.04,64.85h-23.95V56.1c0-3.95-3-8.36-8.3-8.3l-3.8.04c-12.39.02-22.98,6.03-23.85,21.69l.03,51.32h-23.95V56.1c0-3.95-3-8.36-8.3-8.3l-3.8.04c-12.95.02-23.92,6.58-23.91,23.86l.04,49.16h-23.9V24.06ZM950.72,24.02v96.83h-23.9v-56.98l-44.94,23.43c-1.56.82-2.73,2.44-2.73,4.69,0,2.77,2.37,5.01,5.15,5.01h30.49s0,23.86,0,23.86h-30.57c-15,0-29.06-12.4-29.05-28.81,0-11.2,5.84-21.1,15.57-26.2l45.59-23.87-20.82,5.83h-40.34v-23.79h95.56ZM845.11,121.01h-7.95c-20.52.02-32.19-12.62-32.2-31.97l-.04-88.94h23.95v97.14s16.25-.04,16.25-.04v23.81ZM473.8,96.94l51.3.02v23.81s-51.31-.06-51.31-.06c-20.52-.02-32.19-12.61-32.2-31.98V24.02h23.9v12.49l23.88-12.48h15.59c20.14-.02,31.75,12.15,32.2,30.9,0,.36,0,.72-.01,1.07-.44,18.75-12.05,30.91-32.19,30.91h-39.46s0,1.73,0,1.73c0,3.95,3,8.3,8.3,8.3ZM466.54,63.1h39.1c4.73,0,7.59-3.73,7.59-7.49,0-3.86-2.55-7.77-7.38-7.77h-16.49c-10.87,0-19.78,4.44-22.82,15.26ZM904.95.39l26.74-.39-18.63,17.83-19.19.13,11.08-17.57ZM795.42,24.02v96.83h-23.9v-56.98l-44.94,23.43c-1.56.82-2.73,2.44-2.73,4.69,0,2.77,2.37,5.01,5.15,5.01h30.49s0,23.86,0,23.86h-30.58c-15,0-29.06-12.4-29.05-28.81,0-11.2,5.84-21.1,15.57-26.2l45.59-23.87-20.82,5.83h-40.34v-23.79h95.56ZM336.47,21.75h23.9v14.76l23.88-12.48h15.58c20.52-.02,32.19,12.61,32.2,31.97l.04,64.85h-23.95V56.1c0-3.95-2.99-8.31-8.3-8.3l-15.58.04c-12.95.02-23.92,6.58-23.91,23.86l.04,49.16h-23.9V21.75Z"/>
+      </svg>
+    </a>
+    <a href="https://wa.me/554991032411" target="_blank" rel="noopener noreferrer" class="nav-mini-wa" data-track="Contact" data-track-canal="site_wa">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+      Precisa de ajuda?
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-left">
+        <div class="eyebrow-pill"><span></span>Diagnóstico 100% gratuito · 2 minutos</div>
+        <h1 class="hero-h1">Saiba exatamente onde sua empresa está <em>financeiramente.</em></h1>
+        <p class="hero-sub">Faça o diagnóstico gratuito em <strong>2 minutos</strong> e descubra os pontos que estão travando o crescimento do seu negócio.</p>
+        <a href="#fazer-teste" class="btn btn-or btn-lg">
+          Fazer Teste Grátis
+          <span class="btn-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
+        </a>
+        <div class="hero-trust">
+          <div class="hero-avs">
+            <div class="hero-av" style="background:linear-gradient(135deg,#F97316,#EA580C)">MA</div>
+            <div class="hero-av" style="background:linear-gradient(135deg,#3B82F6,#1D4ED8)">JR</div>
+            <div class="hero-av" style="background:linear-gradient(135deg,#8B5CF6,#6D28D9)">PC</div>
+            <div class="hero-av" style="background:linear-gradient(135deg,#10B981,#047857)">RM</div>
+            <div class="hero-av" style="background:var(--ink);font-size:8px">+</div>
+          </div>
+          <span>★★★★★ <strong>+2.000 empresas</strong> já avaliadas</span>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="score-card">
+          <div class="score-card-top">
+            <div class="score-card-top-av">JS</div>
+            <div class="score-card-top-info">
+              <strong>Seu Score Financeiro</strong>
+              <small>Resultado gerado por IA · Nemalá</small>
+            </div>
+          </div>
+          <div class="score-card-body">
+            <div class="score-dial-wrap">
+              <div class="score-dial">
+                <svg viewBox="0 0 110 110" width="110" height="110">
+                  <circle class="score-dial-bg" cx="55" cy="55" r="50"/>
+                  <circle class="score-dial-fill" cx="55" cy="55" r="50" stroke-dashoffset="157"/>
+                </svg>
+                <div class="score-dial-label">
+                  <div class="score-dial-num">47</div>
+                  <div class="score-dial-tag">Atenção</div>
+                </div>
+              </div>
+              <div>
+                <div class="score-title">Score de Atenção</div>
+                <div class="score-sub-txt">Sua empresa tem pontos críticos que precisam de atenção imediata para crescer com segurança.</div>
+                <div class="score-evolving">
+                  <div class="score-dot-anim"></div>
+                  Em evolução
+                </div>
+              </div>
+            </div>
+
+            <div style="font-size:12px;font-weight:700;color:var(--ink);margin-bottom:10px;">Pontuação por área</div>
+            <div class="score-bars">
+              <div class="score-bar-row">
+                <div>
+                  <div class="score-bar-label">Controle de Caixa</div>
+                  <div class="score-bar-track"><div class="score-bar-fill" style="width:100%;background:var(--grn)"></div></div>
+                </div>
+                <div class="score-bar-pct" style="color:var(--grn)">100%</div>
+              </div>
+              <div class="score-bar-row">
+                <div>
+                  <div class="score-bar-label">Rentabilidade</div>
+                  <div class="score-bar-track"><div class="score-bar-fill" style="width:40%;background:var(--or)"></div></div>
+                </div>
+                <div class="score-bar-pct" style="color:var(--or)">40%</div>
+              </div>
+              <div class="score-bar-row">
+                <div>
+                  <div class="score-bar-label">Precificação</div>
+                  <div class="score-bar-track"><div class="score-bar-fill" style="width:5%;background:var(--red)"></div></div>
+                </div>
+                <div class="score-bar-pct" style="color:var(--red)">0%</div>
+              </div>
+              <div class="score-bar-row">
+                <div>
+                  <div class="score-bar-label">Relatórios</div>
+                  <div class="score-bar-track"><div class="score-bar-fill" style="width:5%;background:var(--red)"></div></div>
+                </div>
+                <div class="score-bar-pct" style="color:var(--red)">0%</div>
+              </div>
+              <div class="score-bar-row">
+                <div>
+                  <div class="score-bar-label">Organização</div>
+                  <div class="score-bar-track"><div class="score-bar-fill" style="width:40%;background:var(--or)"></div></div>
+                </div>
+                <div class="score-bar-pct" style="color:var(--or)">40%</div>
+              </div>
+              <div class="score-bar-row">
+                <div>
+                  <div class="score-bar-label">Planejamento</div>
+                  <div class="score-bar-track"><div class="score-bar-fill" style="width:100%;background:var(--grn)"></div></div>
+                </div>
+                <div class="score-bar-pct" style="color:var(--grn)">100%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES STRIP -->
+<div class="features-strip">
+  <div class="container">
+    <div class="features-strip-inner">
+      <div class="feat-item">
+        <div class="feat-ic" style="background:rgba(255,171,26,.12)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--or)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <div>
+          <div class="feat-t">10 Perguntas <em>Rápidas</em></div>
+          <div class="feat-d">Responda em menos de 2 minutos.</div>
+        </div>
+      </div>
+      <div class="feat-item">
+        <div class="feat-ic" style="background:rgba(255,171,26,.12)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--or)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <div>
+          <div class="feat-t">Resultado <em>Instantâneo</em></div>
+          <div class="feat-d">Veja seu score na hora.</div>
+        </div>
+      </div>
+      <div class="feat-ic-wrap feat-item">
+        <div class="feat-ic" style="background:rgba(255,171,26,.12)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--or)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="12" width="4" height="9" rx="1"/><rect x="10" y="7" width="4" height="14" rx="1"/><rect x="17" y="3" width="4" height="18" rx="1"/></svg>
+        </div>
+        <div>
+          <div class="feat-t">Diagnóstico <em>Completo</em></div>
+          <div class="feat-d">Identifique pontos fortes e críticos.</div>
+        </div>
+      </div>
+      <div class="feat-item">
+        <div class="feat-ic" style="background:rgba(255,171,26,.12)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--or)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <div>
+          <div class="feat-t">Análise <em>Personalizada</em></div>
+          <div class="feat-d">Receba insights e recomendações no WhatsApp.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DORES -->
+<section class="dores-section">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow"><span class="dot"></span>Se isso te parece familiar…</div>
+      <h2 class="section-title">Os problemas que impedem<br>sua empresa de crescer</h2>
+      <p class="section-sub">Empresários de todo o Brasil relatam os mesmos desafios. Você se identifica?</p>
+    </div>
+    <div class="dores-grid">
+      <div class="dor-card reveal">
+        <div class="dor-ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="12" width="4" height="9" rx="1"/><rect x="10" y="7" width="4" height="14" rx="1"/><rect x="17" y="3" width="4" height="18" rx="1"/></svg>
+        </div>
+        <div>
+          <div class="dor-t">Não sabe o lucro real da empresa</div>
+          <div class="dor-d">Fatura bem mas não sabe se está lucrando. O saldo no banco não conta a história completa.</div>
+        </div>
+      </div>
+      <div class="dor-card reveal">
+        <div class="dor-ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div>
+          <div class="dor-t">Caixa sempre apertado</div>
+          <div class="dor-d">Dinheiro some sem explicação. Contas chegam de surpresa e o mês termina no vermelho.</div>
+        </div>
+      </div>
+      <div class="dor-card reveal">
+        <div class="dor-ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <div>
+          <div class="dor-t">Precificação no escuro</div>
+          <div class="dor-d">Não sabe se os preços cobertos cobrem todos os custos. Vende, mas pode estar perdendo dinheiro.</div>
+        </div>
+      </div>
+      <div class="dor-card reveal">
+        <div class="dor-ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <div class="dor-t">Tempo demais no financeiro</div>
+          <div class="dor-d">Horas toda semana lançando números em planilhas que nunca ficam atualizadas.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section style="background:#fff;">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow"><span class="dot"></span>Como funciona</div>
+      <h2 class="section-title">Em 3 passos, você descobre<br>onde está sua empresa</h2>
+    </div>
+    <div class="como-grid">
+      <div class="como-step reveal">
+        <div class="como-num">1</div>
+        <div class="como-t">Responda 10 perguntas</div>
+        <div class="como-d">Perguntas diretas sobre como você gerencia seu financeiro hoje. Leva menos de 2 minutos.</div>
+      </div>
+      <div class="como-step reveal">
+        <div class="como-num">2</div>
+        <div class="como-t">Nossa IA analisa tudo</div>
+        <div class="como-d">A inteligência artificial da Nemalá processa suas respostas e calcula o score em cada área financeira.</div>
+      </div>
+      <div class="como-step reveal">
+        <div class="como-num">3</div>
+        <div class="como-t">Receba seu diagnóstico</div>
+        <div class="como-d">Você recebe o score completo, os pontos críticos e recomendações personalizadas direto no WhatsApp.</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:44px;" class="reveal">
+      <a href="#fazer-teste" class="btn btn-or btn-lg">Fazer meu diagnóstico grátis →</a>
+      <div style="font-size:13px;color:var(--sub);margin-top:12px;">Grátis · Rápido · Sem compromisso · 100% Seguro</div>
+    </div>
+  </div>
+</section>
+
+<!-- SCORE PREVIEW -->
+<section class="score-prev-section">
+  <div class="container">
+    <div class="score-prev-grid">
+      <div class="reveal">
+        <div class="eyebrow"><span class="dot"></span>Um score. Muitos insights.</div>
+        <h2 class="section-title">Melhores decisões<br>para o seu negócio.</h2>
+        <div class="score-prev-benefits">
+          <div class="benefit-row">
+            <div class="benefit-ic"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div>
+              <div class="benefit-t">Mais controle</div>
+              <div class="benefit-d">Entenda onde cada real da sua empresa está indo.</div>
+            </div>
+          </div>
+          <div class="benefit-row">
+            <div class="benefit-ic"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div>
+              <div class="benefit-t">Mais lucro</div>
+              <div class="benefit-d">Identifique os pontos que estão corroendo sua margem.</div>
+            </div>
+          </div>
+          <div class="benefit-row">
+            <div class="benefit-ic"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div>
+              <div class="benefit-t">Mais crescimento</div>
+              <div class="benefit-d">Tome decisões com dados, não com intuição.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="score-mockup">
+          <div class="mockup-bar">
+            <div class="mockup-dot" style="background:#FF5F57"></div>
+            <div class="mockup-dot" style="background:#FEBC2E"></div>
+            <div class="mockup-dot" style="background:#28C840"></div>
+            <div class="mockup-title">Score Financeiro — Nemalá</div>
+          </div>
+          <div class="mockup-body">
+            <div class="mockup-header">
+              <div class="mockup-header-t">Seu Score Financeiro</div>
+              <div class="mockup-badge">Resultado em 2 min</div>
+            </div>
+
+            <div class="score-donut-wrap">
+              <div class="score-donut">
+                <svg viewBox="0 0 100 100" width="100" height="100">
+                  <defs>
+                    <linearGradient id="donut-grad" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stop-color="#FFAB1A"/>
+                      <stop offset="100%" stop-color="#F68F1F"/>
+                    </linearGradient>
+                  </defs>
+                  <circle fill="none" stroke="#F7F7F9" stroke-width="10" cx="50" cy="50" r="40"/>
+                  <circle fill="none" stroke="url(#donut-grad)" stroke-width="10" stroke-linecap="round" cx="50" cy="50" r="40" stroke-dasharray="251.2" stroke-dashoffset="163" style="animation: draw-circle 1.4s .4s ease both;"/>
+                </svg>
+                <div class="score-donut-center">
+                  <div class="score-donut-num">47</div>
+                  <div class="score-donut-lbl">Atenção</div>
+                </div>
+              </div>
+              <div class="score-donut-info">
+                <strong>Score de Atenção</strong>
+                Pontos críticos identificados em 3 áreas que precisam de ajuste imediato.
+              </div>
+            </div>
+
+            <div class="area-bars">
+              <div class="area-bar-row">
+                <div class="area-label">Controle de Caixa</div>
+                <div class="area-track"><div class="area-fill" style="width:100%;background:var(--grn)"></div></div>
+                <div class="area-pct" style="color:var(--grn)">100%</div>
+              </div>
+              <div class="area-bar-row">
+                <div class="area-label">Rentabilidade</div>
+                <div class="area-track"><div class="area-fill" style="width:40%;background:var(--or)"></div></div>
+                <div class="area-pct" style="color:var(--or)">40%</div>
+              </div>
+              <div class="area-bar-row">
+                <div class="area-label">Precificação</div>
+                <div class="area-track"><div class="area-fill" style="width:5%;background:var(--red)"></div></div>
+                <div class="area-pct" style="color:var(--red)">0%</div>
+              </div>
+              <div class="area-bar-row">
+                <div class="area-label">Organização</div>
+                <div class="area-track"><div class="area-fill" style="width:40%;background:var(--or)"></div></div>
+                <div class="area-pct" style="color:var(--or)">40%</div>
+              </div>
+              <div class="area-bar-row">
+                <div class="area-label">Planejamento</div>
+                <div class="area-track"><div class="area-fill" style="width:100%;background:var(--grn)"></div></div>
+                <div class="area-pct" style="color:var(--grn)">100%</div>
+              </div>
+            </div>
+
+            <div class="ia-tag">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2z"/></svg>
+              <div>
+                <div class="ia-tag-t">IA + Inteligência Financeira</div>
+                <div class="ia-tag-d">Nossa tecnologia analisa seus dados e mostra os pontos que realmente importam.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROVA SOCIAL -->
+<section class="proof-section">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow"><span class="dot"></span>Quem já descobriu seu score</div>
+      <h2 class="section-title">O que os empresários dizem</h2>
+    </div>
+    <div class="proof-grid">
+      <div class="proof-card reveal">
+        <div class="proof-stars">★★★★★</div>
+        <p class="proof-txt">"Pela primeira vez em 8 anos de empresa sei exatamente onde estão os pontos fracos do meu financeiro. O diagnóstico foi preciso demais."</p>
+        <div class="proof-author">
+          <div class="proof-av" style="background:linear-gradient(135deg,#F97316,#EA580C)">MA</div>
+          <div>
+            <div class="proof-nome">M. Almeida</div>
+            <div class="proof-cargo">Dono de distribuidora · SC</div>
+          </div>
+        </div>
+      </div>
+      <div class="proof-card reveal">
+        <div class="proof-stars">★★★★★</div>
+        <p class="proof-txt">"Fiz o teste esperando algo genérico e me surpreendi. Identificou exatamente o problema de precificação que eu sabia que existia mas não conseguia enxergar."</p>
+        <div class="proof-author">
+          <div class="proof-av" style="background:linear-gradient(135deg,#8B5CF6,#6D28D9)">PC</div>
+          <div>
+            <div class="proof-nome">P. Costa</div>
+            <div class="proof-cargo">Clínica de saúde · SP</div>
+          </div>
+        </div>
+      </div>
+      <div class="proof-card reveal">
+        <div class="proof-stars">★★★★★</div>
+        <p class="proof-txt">"O score financeiro me deu clareza sobre o que focar primeiro. Em 2 semanas já vi diferença no resultado do mês. Recomendo para todo empresário."</p>
+        <div class="proof-author">
+          <div class="proof-av" style="background:linear-gradient(135deg,#10B981,#047857)">RM</div>
+          <div>
+            <div class="proof-nome">R. Mendes</div>
+            <div class="proof-cargo">E-commerce · PR</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <div class="stat-val">+2.000</div>
+        <div class="stat-lbl">Empresas avaliadas</div>
+      </div>
+      <div class="stat-item reveal">
+        <div class="stat-val">2 min</div>
+        <div class="stat-lbl">Para completar o diagnóstico</div>
+      </div>
+      <div class="stat-item reveal">
+        <div class="stat-val">4.9★</div>
+        <div class="stat-lbl">Avaliação média dos usuários</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA FINAL -->
+<section class="cta-section" id="fazer-teste">
+  <div class="container">
+    <h2 class="cta-h2">Descubra seu <em>Score Financeiro</em> agora</h2>
+    <p class="cta-p">Diagnóstico gratuito. Resultado imediato. Sem compromisso.</p>
+
+    <div class="cta-box">
+      <div class="cta-box-title">Fazer Teste Grátis</div>
+      <div class="cta-box-sub">Cadastro em menos de 1 minuto. 100% gratuito.</div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label>Nome</label>
+          <input type="text" placeholder="Seu nome">
+        </div>
+        <div class="form-field">
+          <label>WhatsApp</label>
+          <input type="tel" placeholder="(48) 99999-9999">
+        </div>
+      </div>
+      <div class="form-field">
+        <label>E-mail</label>
+        <input type="email" placeholder="seu@email.com.br">
+      </div>
+      <div class="form-field">
+        <label>Segmento da empresa</label>
+        <select>
+          <option value="">Selecione seu segmento</option>
+          <option>Comércio / Varejo</option>
+          <option>Serviços</option>
+          <option>Indústria</option>
+          <option>Saúde / Clínica</option>
+          <option>Alimentação / Restaurante</option>
+          <option>E-commerce</option>
+          <option>Construção Civil</option>
+          <option>Outro</option>
+        </select>
+      </div>
+
+      <button class="form-submit" onclick="handleSubmit(this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        Fazer Teste Grátis →
+      </button>
+
+      <div class="form-trust">
+        <div class="form-trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          100% Seguro
+        </div>
+        <div class="form-trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Grátis
+        </div>
+        <div class="form-trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Rápido
+        </div>
+        <div class="form-trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Sem spam
+        </div>
+      </div>
+
+      <div class="form-terms">
+        Ao se cadastrar você concorda com os <a href="#">Termos de Uso</a> e a <a href="#">Política de Privacidade</a>.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STICKY BAR -->
+<div class="sticky-bar" id="sticky-bar">
+  <div class="sticky-bar-in">
+    <p>Diagnóstico gratuito. Resultado em 2 minutos.</p>
+    <a href="#fazer-teste" class="btn btn-or">Fazer grátis →</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="foot-mini">
+  <div class="foot-mini-in">
+    <span>© 2026 Nemalá Finanças Inteligentes LTDA · CNPJ 57.769.629/0001-18</span>
+    <div class="foot-mini-l">
+      <a href="#">Termos</a>
+      <a href="#">Privacidade</a>
+      <a href="#">Contato</a>
+    </div>
+  </div>
+</footer>
+
+<!-- WA FAB -->
+<div id="wa-fab">
+  <a id="wa-fab-btn" href="https://wa.me/554991032411?text=Olá!%20Tenho%20dúvidas%20sobre%20o%20Score%20Financeiro." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" data-track="Contact" data-track-canal="site_wa">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+    <span>Falar no WhatsApp</span>
+  </a>
+</div>
+
+<script>
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Sticky bar
+window.addEventListener('scroll', () => {
+  const bar = document.getElementById('sticky-bar');
+  if (bar) bar.style.display = window.scrollY > 500 ? 'block' : 'none';
+}, { passive: true });
+
+// Smooth scroll to form
+document.querySelectorAll('a[href="#fazer-teste"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    document.getElementById('fazer-teste').scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+// Form submit placeholder
+function handleSubmit(btn) {
+  btn.textContent = '✓ Enviado! Aguarde o resultado no WhatsApp';
+  btn.style.background = 'var(--grn)';
+  btn.disabled = true;
+}
+</script>
+</body>
+</html>

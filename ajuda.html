@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<!-- Consent Mode — ANTES do GTM -->
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{analytics_storage:'granted',ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',wait_for_update:500});
+try{if(localStorage.getItem('nml_cookie_consent')==='accept'){gtag('consent','update',{analytics_storage:'granted',ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted'});}}catch(e){}
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NSQ62LBV');</script>
+<!-- End Google Tag Manager -->
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="Central de Ajuda da Nemalá Finanças. Encontre respostas sobre planos, configuração, integração bancária, IA, LGPD e muito mais.">
+<title>Central de Ajuda — Nemalá Finanças</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Central de Ajuda — Nemalá Finanças">
+<meta property="og:description" content="Tudo que você precisa saber para usar a Nemalá. Respostas rápidas, passo a passo e suporte humanizado.">
+<meta property="og:url" content="https://nemala.com.br/ajuda">
+<meta property="og:site_name" content="Nemalá Finanças">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Central de Ajuda — Nemalá Finanças">
+<meta name="twitter:description" content="Central de Ajuda da Nemalá Finanças. Encontre respostas rápidas.">
+<link rel="canonical" href="https://nemala.com.br/ajuda">
+<meta name="keywords" content="ajuda nemalá, suporte, faq, dúvidas, central de ajuda, tutorial">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iQ2FtYWRhXzEiIGRhdGEtbmFtZT0iQ2FtYWRhIDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZpZXdCb3g9IjAgMCAyNS41MyAxNS41NCI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5jbHMtMSB7CiAgICAgICAgZmlsbDogdXJsKCNHcmFkaWVudGVfc2VtX25vbWVfMTMpOwogICAgICB9CgogICAgICAuY2xzLTIgewogICAgICAgIGNsaXAtcnVsZTogZXZlbm9kZDsKICAgICAgICBmaWxsOiBub25lOwogICAgICB9CgogICAgICAuY2xzLTMgewogICAgICAgIGNsaXAtcGF0aDogdXJsKCNjbGlwcGF0aCk7CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgICA8Y2xpcFBhdGggaWQ9ImNsaXBwYXRoIj4KICAgICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMjAuOSw2LjQ0bC0xLjI2LTEuMjYtLjU1LjU1LDEuODEuNzFaTTEwLjQsOC42MmwuNTctLjU3LjU1LjU1LS41Ny41Ny0uNTUtLjU1Wk0xMy4yOCw1Ljc1bDIuODcsMi44Ny0yLjg3LDIuODctMS4xOC0xLjE4LDEuNzEtMS43Mi0xLjctMS43LDEuMTYtMS4xNlpNNi45Myw5LjhsLTEuNzIsMS43Mi0yLjkyLTIuOTJMNi45MSwzLjk5bDIuOTIsMi45Mi0xLjcxLDEuNzEsMS43LDEuNy0uNi42LTEuNzEtMS42OS0uNTcuNTdaTTYuMzUsMTIuNjdsMS4xNS0xLjE1LjU2LjU1LTEuMTYsMS4xNi0uNTYtLjU2Wk0xOS42NCw0LjAzbDIuODcsMi44Ny0yLjg3LDIuODctMi44Ny0yLjg3LDIuODctMi44N1pNMjAuNzgsMi44N2wuNTgtLjU4LDMuMDMsMy4wMywxLjE1LTEuMTVMMjEuMzYsMGwtNC44OCw0Ljg4aDBzLS44OS45LS44OS45bC0yLjMyLTIuMzItMi4zMSwyLjMxTDYuOTEsMS43LDAsOC42bDQuMDYsNC4wNi0yLjgzLDIuODNoMi4yOHMxLjctMS42OCwxLjctMS42OGwxLjcsMS43LDIuMzEtMi4zMSwyLjMzLDIuM2gyLjNzLTMuNDgtMy40NC0zLjQ4LTMuNDRsLjYtLjYsMi4zMiwyLjMyLDEuMTgtMS4xOCwyLjMyLDIuMzMsMS4xMS0xLjE1LDEuOCwxLjc2aDIuMzFzLTQuMTUtNC4wNS00LjE1LTQuMDVsLTEuMDksMS4xNC0xLjE2LTEuMTYsMS43Mi0xLjcyLDIuMzIsMi4zMiw1LjE3LTUuMTctNC4wMy00LjAzWiIvPgogICAgPC9jbGlwUGF0aD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iR3JhZGllbnRlX3NlbV9ub21lXzEzIiBkYXRhLW5hbWU9IkdyYWRpZW50ZSBzZW0gbm9tZSAxMyIgeDE9IjEyLjQ3IiB5MT0iMCIgeDI9IjEzLjA2IiB5Mj0iMTUuNTUiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZWJhZjMzIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2U1OGUyOSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPGcgY2xhc3M9ImNscy0zIj4KICAgIDxyZWN0IGNsYXNzPSJjbHMtMSIgd2lkdGg9IjI1LjUzIiBoZWlnaHQ9IjE1LjU0Ii8+CiAgPC9nPgo8L3N2Zz4=">
+<link rel="stylesheet" href="style.css">
+<style>
+/* ── NAV MOBILE ── */
+.ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;border-radius:8px;transition:background .15s;-webkit-tap-highlight-color:transparent}
+.ham span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:all .25s}
+.ham.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.ham.open span:nth-child(2){opacity:0}
+.ham.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mob-nav{display:none;position:fixed;top:66px;left:0;right:0;background:#fff;border-bottom:1px solid var(--bd);box-shadow:0 8px 32px rgba(0,0,0,.1);z-index:199;padding:16px 20px 24px;flex-direction:column;gap:4px}
+.mob-nav.open{display:flex}
+.mob-nav a{font-size:15px;font-weight:600;color:var(--ink);text-decoration:none;padding:11px 14px;border-radius:10px;transition:background .15s}
+.mob-nav a:hover{background:var(--bg)}
+.mob-nav .mob-ctas{display:flex;gap:8px;margin-top:12px;padding-top:12px;border-top:1px solid var(--bd)}
+
+/* ── AJUDA ── */
+.help-hero{padding:80px 0 56px;background:linear-gradient(160deg,#fff 60%,#FFF6E0 100%);border-bottom:1px solid var(--bd)}
+.help-search-wrap{max-width:540px;margin:32px auto 0;position:relative}
+.help-search-wrap input{width:100%;box-sizing:border-box;border:1.5px solid var(--bd);border-radius:100px;padding:14px 20px 14px 48px;font-size:15px;font-family:var(--body);color:var(--ink);background:#fff;transition:border-color .15s;outline:none}
+.help-search-wrap input:focus{border-color:var(--or)}
+.help-search-wrap svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none}
+#search-results-bar{display:none;font-size:13px;color:var(--or-dk);font-weight:600;margin-top:10px;text-align:center}
+mark.hl-match{background:#FFF3C0;color:var(--ink);border-radius:3px;padding:0 2px;font-style:normal}
+.help-cats{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin:48px 0 64px}
+.help-cat{background:#fff;border:1.5px solid var(--bd);border-radius:16px;padding:22px 20px;cursor:pointer;transition:all .18s;text-align:center;text-decoration:none;color:inherit;display:block}
+.help-cat:hover,.help-cat.active{border-color:var(--or);background:var(--or-lt);transform:translateY(-2px)}
+.help-cat-ic{width:48px;height:48px;border-radius:13px;background:#FFF6E0;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;color:var(--or-dk)}
+.help-cat-ic svg{width:22px;height:22px}
+.help-cat-t{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:3px}
+.help-cat-c{font-size:12px;color:var(--sub)}
+.help-section{margin-bottom:64px}
+.help-section-hd{display:flex;align-items:center;gap:12px;margin-bottom:24px;padding-bottom:16px;border-bottom:2px solid var(--bd)}
+.help-section-hd-ic{width:40px;height:40px;border-radius:11px;background:#FFF6E0;display:flex;align-items:center;justify-content:center;color:var(--or-dk);flex-shrink:0}
+.help-section-hd h2{font-size:20px;font-weight:800;font-family:var(--display);margin:0}
+.help-section-hd span{font-size:13px;color:var(--sub)}
+.help-faq-item{border:1px solid var(--bd);border-radius:12px;margin-bottom:8px;overflow:hidden;transition:border-color .18s}
+.help-faq-item.open{border-color:var(--or-md)}
+.help-faq-q{width:100%;background:none;border:none;cursor:pointer;padding:16px 20px;text-align:left;display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:var(--body);font-size:14px;font-weight:600;color:var(--ink)}
+.help-faq-qt{flex:1}
+.help-faq-icon{width:24px;height:24px;border-radius:50%;background:var(--bg);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .25s,background .2s;color:var(--sub)}
+.help-faq-item.open .help-faq-icon{transform:rotate(45deg);background:var(--or);color:var(--ink)}
+.help-faq-a{max-height:0;overflow:hidden;transition:max-height .35s cubic-bezier(.4,0,.2,1)}
+.help-faq-item.open .help-faq-a{max-height:800px}
+.help-faq-body{padding:4px 20px 18px;font-size:14px;color:var(--sub);line-height:1.75}
+.help-faq-body a{color:var(--or-dk);font-weight:600;text-decoration:none}
+.help-faq-body a:hover{text-decoration:underline}
+.help-faq-body strong{color:var(--ink)}
+.help-faq-body ul{padding-left:20px;margin:8px 0}
+.help-faq-body li{margin-bottom:4px}
+.help-tip{display:flex;gap:10px;align-items:flex-start;background:#F0F9F4;border:1px solid #C3E8D3;border-radius:10px;padding:12px 14px;margin:12px 0 0;font-size:13px;color:#0D6E47;line-height:1.5}
+.help-tip svg{flex-shrink:0;margin-top:2px;color:#0A8F5C}
+.help-cta-box{background:var(--ink);border-radius:20px;padding:40px 36px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;margin-top:64px}
+.help-cta-box h3{font-size:22px;font-weight:800;color:#fff;margin-bottom:8px;font-family:var(--display)}
+.help-cta-box p{font-size:14px;color:rgba(255,255,255,.6);line-height:1.6;margin:0}
+.help-cta-acts{display:flex;gap:12px;flex-wrap:wrap;flex-shrink:0}
+
+/* ── FAB ── */
+#nml-fab{position:fixed;bottom:24px;right:20px;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+#nml-fab-btn{display:flex;align-items:center;gap:8px;background:#25D366;color:#fff;border:none;border-radius:100px;padding:10px 18px 10px 14px;font-size:14px;font-weight:700;font-family:var(--body);cursor:pointer;box-shadow:0 4px 18px rgba(37,211,102,.35);transition:transform .18s;line-height:1;white-space:nowrap}
+#nml-fab-btn:hover{transform:translateY(-2px)}
+#nml-fab-menu{background:#fff;border:1px solid var(--bd);border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,.14);overflow:hidden;min-width:240px;opacity:0;transform:translateY(8px) scale(.97);pointer-events:none;transition:opacity .2s,transform .2s}
+#nml-fab-menu.open{opacity:1;transform:none;pointer-events:auto}
+.nml-fab-item{display:flex;align-items:center;gap:12px;padding:14px 16px;text-decoration:none;color:var(--ink);transition:background .15s;border-bottom:1px solid var(--bg)}
+.nml-fab-item:last-child{border-bottom:none}
+.nml-fab-item:hover{background:var(--bg)}
+.nml-fab-ic{width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.nml-fab-tx strong{display:block;font-size:13px;font-weight:700;color:var(--ink)}
+.nml-fab-tx small{display:block;font-size:11px;color:var(--sub);margin-top:1px}
+
+/* ── COOKIE ── */
+#nml-cookie{position:fixed;bottom:0;left:0;right:0;z-index:9998;background:#1A1A1A;padding:14px 20px;display:none}
+#nml-cookie-in{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+#nml-cookie-txt{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:rgba(255,255,255,.75);line-height:1.5;flex:1;min-width:240px}
+#nml-cookie-txt a{color:var(--or);text-decoration:none}
+#nml-cookie-acts{display:flex;gap:8px;flex-shrink:0}
+#nml-cookie-reject{background:transparent;border:1px solid rgba(255,255,255,.3);color:rgba(255,255,255,.7);font-size:13px;font-weight:600;padding:8px 16px;border-radius:8px;cursor:pointer;font-family:var(--body)}
+#nml-cookie-accept{background:var(--or);border:none;color:var(--ink);font-size:13px;font-weight:700;padding:8px 18px;border-radius:8px;cursor:pointer;font-family:var(--body)}
+
+@media(max-width:900px){
+  .ham{display:flex}.na{display:none}
+  #nml-fab{bottom:20px;right:16px}
+  #nml-fab-btn{border-radius:50%;padding:14px;width:52px;height:52px;justify-content:center}
+  #nml-fab-label{display:none}
+}
+@media(max-width:768px){
+  .help-cats{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:480px){
+  .help-cats{grid-template-columns:repeat(2,1fr)}
+  .help-cta-box{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSQ62LBV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- NAV -->
+<nav id="nb"><div class="container"><div class="nw">
+  <a class="logo" href="/"><svg style="height:32px;width:auto" viewBox="0 0 950.72 203.86" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><clipPath id="A1"><path fill-rule="evenodd" clip-rule="evenodd" d="M257.63,79.45l-15.53-15.53-6.82,6.82,22.35,8.71ZM128.24,106.35l7.02-7.02,6.82,6.82-7.02,7.02-6.82-6.82ZM163.68,70.92l35.44,35.44-35.44,35.44-14.49-14.49,21.14-21.14-20.94-20.94,14.3-14.3ZM85.47,120.92l-21.25,21.21-35.97-35.97,56.92-56.91,35.97,35.97-21.14,21.14,20.94,20.94-7.44,7.44-21.04-20.79-6.99,6.97ZM78.3,156.21l14.22-14.2,6.89,6.8-14.25,14.25-6.86-6.86ZM242.1,49.71l35.44,35.44-35.44,35.44-35.44-35.44,35.44-35.44ZM256.14,35.51l7.16-7.17,37.32,37.32,14.12-14.12L263.3.1l-60.13,60.13.08.08-10.97,10.97-28.61-28.61-28.42,28.42-50.09-50.09L0,106.16l50.08,50.08-34.92,34.85,28.05.12,20.96-20.88,21,21,28.46-28.46,28.69,28.36,28.29-.05-42.9-42.4,7.36-7.36,28.62,28.62,14.54-14.54,28.6,28.73,13.63-14.21,22.2,21.67h28.52s-51.19-49.95-51.19-49.95l-13.42,13.99-14.26-14.33,21.19-21.19,28.61,28.61,63.68-63.68-49.64-49.64Z"/></clipPath><linearGradient id="A2" x1="153.72" y1=".03" x2="161.02" y2="191.74" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fbb11e"/><stop offset="1" stop-color="#f68f1f"/></linearGradient><clipPath id="A3"><path fill-rule="evenodd" clip-rule="evenodd" d="M780.97,153.26c3.08-2.03,6.63-3.04,10.65-3.04,5.54,0,10.45,1.7,14.74,5.09v4.68c-4.45-3.9-9.36-5.85-14.74-5.85-2.89,0-5.46.65-7.72,1.96-2.26,1.31-3.39,3.13-3.39,5.47,0,.78.14,1.47.41,2.08.27.6.74,1.15,1.4,1.64.66.49,1.31.91,1.93,1.26.62.35,1.53.7,2.72,1.05,1.19.35,2.19.63,3.01.85.82.21,1.99.5,3.51.85,5.07,1.13,8.65,2.65,10.74,4.56,2.09,1.91,3.15,4.27,3.19,7.08,0,2.46-.73,4.56-2.19,6.32-1.46,1.76-3.28,3.01-5.44,3.77-2.16.76-4.49,1.14-6.99,1.14h-.35c-5.97-.04-11.29-2.22-15.97-6.55v-4.62c5.11,4.8,10.51,7.2,16.21,7.2,2.93,0,5.42-.61,7.49-1.84,2.07-1.23,3.1-2.99,3.1-5.29,0-2.03-.93-3.7-2.78-5-1.85-1.31-4.98-2.47-9.39-3.48-5.15-1.13-8.89-2.51-11.23-4.12-2.34-1.62-3.51-3.89-3.51-6.81,0-3.55,1.54-6.34,4.62-8.37M735.09,177.65l-9.48-25.45-9.59,25.45h19.07ZM721.93,150.74h7.37l15.44,40.95h-4.44l-3.86-10.18h-21.76l-4.04,10.18h-4.39l15.68-40.95ZM638.66,170.98c0-5.81,1.99-10.75,5.97-14.83,3.98-4.08,8.83-6.11,14.57-6.11,4.21,0,7.98,1.17,11.29,3.51,3.31,2.34,5.77,5.44,7.37,9.3l-4.1,1.17c-1.29-3-3.21-5.41-5.76-7.22-2.56-1.81-5.49-2.72-8.8-2.72h-.18c-4.56,0-8.39,1.63-11.5,4.88-3.1,3.26-4.65,7.26-4.65,12.02s1.55,8.66,4.65,11.93c3.1,3.28,6.99,4.91,11.67,4.91,3.35,0,6.31-.89,8.86-2.66,2.56-1.77,4.46-4.16,5.7-7.17l4.1,1.11c-1.52,3.78-3.92,6.84-7.2,9.18-3.28,2.34-7,3.53-11.17,3.57l-.82,1.99c1.68.31,3.2.95,4.56,1.9,1.36.96,2.05,2.14,2.05,3.54,0,1.13-.5,2.06-1.49,2.78-.99.72-2.17,1.18-3.51,1.38-1.35.2-2.43.31-3.25.35-.82.04-1.36.06-1.64.06-.9,0-1.62-.08-2.16-.23v-2.98c.86.19,1.75.29,2.69.29s2.17-.13,3.71-.38c1.54-.25,2.31-.87,2.31-1.84,0-.86-.71-1.58-2.13-2.17-1.42-.58-2.78-.92-4.07-.99l1.46-3.8c-5.3-.51-9.72-2.74-13.25-6.7-3.53-3.96-5.29-8.65-5.29-14.07ZM580.14,150.74l21.41,39.08v-39.08h4.15v40.95h-7.96l-21.59-39.43v39.43h-4.1v-40.95h8.07ZM530.46,177.65l-9.48-25.45-9.59,25.45h19.07ZM517.29,150.74h7.37l15.45,40.95h-4.45l-3.86-10.18h-21.76l-4.04,10.18h-4.39l15.68-40.95ZM443.8,150.74l21.41,39.08v-39.08h4.15v40.95h-7.96l-21.59-39.43v39.43h-4.09v-40.95h8.07ZM397.39,191.69v-40.95h4.21v40.95h-4.21ZM364.96,150.74v3.92h-24.28v14.63h21.94v3.86h-21.94v18.54h-4.21v-40.95h28.49Z"/></clipPath><linearGradient id="A4" x1="572.13" y1="149.96" x2="571.76" y2="203.92" xlink:href="#A2"/></defs><g clip-path="url(#A1)"><rect fill="url(#A2)" y=".1" width="314.75" height="191.59"/></g><g clip-path="url(#A3)"><rect fill="url(#A4)" x="336.47" y="150.04" width="470.94" height="53.82"/></g><path fill="#1A1A1A" fill-rule="evenodd" d="M546.67,24.06h23.9v12.45l23.88-12.48h3.8c12.39-.03,21.55,4.58,26.86,12.48l23.88-12.48h9.12c20.52-.02,32.19,12.63,32.2,31.97l.04,64.85h-23.95V56.1c0-3.95-3-8.36-8.3-8.3l-3.8.04c-12.39.02-22.98,6.03-23.85,21.69l.03,51.32h-23.95V56.1c0-3.95-3-8.36-8.3-8.3l-3.8.04c-12.95.02-23.92,6.58-23.91,23.86l.04,49.16h-23.9V24.06ZM950.72,24.02v96.83h-23.9v-56.98l-44.94,23.43c-1.56.82-2.73,2.44-2.73,4.69,0,2.77,2.37,5.01,5.15,5.01h30.49s0,23.86,0,23.86h-30.57c-15,0-29.06-12.4-29.05-28.81,0-11.2,5.84-21.1,15.57-26.2l45.59-23.87-20.82,5.83h-40.34v-23.79h95.56ZM845.11,121.01h-7.95c-20.52.02-32.19-12.62-32.2-31.97l-.04-88.94h23.95v97.14s16.25-.04,16.25-.04v23.81ZM473.8,96.94l51.3.02v23.81s-51.31-.06-51.31-.06c-20.52-.02-32.19-12.61-32.2-31.98V24.02h23.9v12.49l23.88-12.48h15.59c20.14-.02,31.75,12.15,32.2,30.9,0,.36,0,.72-.01,1.07-.44,18.75-12.05,30.91-32.19,30.91h-39.46s0,1.73,0,1.73c0,3.95,3,8.3,8.3,8.3ZM466.54,63.1h39.1c4.73,0,7.59-3.73,7.59-7.49,0-3.86-2.55-7.77-7.38-7.77h-16.49c-10.87,0-19.78,4.44-22.82,15.26ZM904.95.39l26.74-.39-18.63,17.83-19.19.13,11.08-17.57ZM795.42,24.02v96.83h-23.9v-56.98l-44.94,23.43c-1.56.82-2.73,2.44-2.73,4.69,0,2.77,2.37,5.01,5.15,5.01h30.49s0,23.86,0,23.86h-30.58c-15,0-29.06-12.4-29.05-28.81,0-11.2,5.84-21.1,15.57-26.2l45.59-23.87-20.82,5.83h-40.34v-23.79h95.56ZM336.47,21.75h23.9v14.76l23.88-12.48h15.58c20.52-.02,32.19,12.61,32.2,31.97l.04,64.85h-23.95V56.1c0-3.95-2.99-8.31-8.3-8.3l-15.58.04c-12.95.02-23.92,6.58-23.91,23.86l.04,49.16h-23.9V21.75Z"/></svg></a>
+  <ul class="nl">
+    <li><a href="funcionalidades">Funcionalidades</a></li>
+    <li><a href="planos">Planos</a></li>
+    <li><a href="sobre-mentoria">Mentoria</a></li>
+    <li><a href="parceiros-bpo">Parceiros</a></li>
+    <li><a href="sobre">Sobre</a></li>
+    <li><a href="contato">Contato</a></li>
+    <li><a href="ajuda">Ajuda</a></li>
+    <li><a href="blog">Blog</a></li>
+  </ul>
+  <div class="na">
+    <a href="https://app.nemala.com.br" target="_blank" rel="noopener noreferrer" class="btn btn-gh btn-sm">Entrar</a>
+    <a href="https://app.nemala.com.br/register" class="btn btn-or btn-sm" target="_blank" rel="noopener noreferrer" data-track="InitiateCheckout">Teste grátis</a>
+  </div>
+  <button class="ham" id="ham-btn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</div></div></nav>
+
+<!-- MOB NAV -->
+<div class="mob-nav" id="mob-nav">
+  <a href="funcionalidades">Funcionalidades</a>
+  <a href="planos">Planos</a>
+  <a href="sobre-mentoria">Mentoria</a>
+  <a href="parceiros-bpo">Parceiros</a>
+  <a href="sobre">Sobre</a>
+  <a href="contato">Contato</a>
+  <a href="ajuda">Ajuda</a>
+  <a href="blog">Blog</a>
+  <div class="mob-ctas">
+    <a href="https://app.nemala.com.br" target="_blank" rel="noopener noreferrer" class="btn btn-gh" style="flex:1;justify-content:center">Entrar</a>
+    <a href="https://app.nemala.com.br/register" class="btn btn-or" style="flex:1;justify-content:center" target="_blank" rel="noopener noreferrer" data-track="InitiateCheckout">Teste grátis</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="help-hero">
+  <div class="container" style="text-align:center">
+    <div class="eyebrow"><span class="dot"></span>Central de Ajuda</div>
+    <h1 style="font-size:clamp(28px,4vw,46px);font-weight:800;font-family:var(--display);margin:16px 0 12px;line-height:1.15">Como podemos te ajudar?</h1>
+    <p style="font-size:16px;color:var(--sub);max-width:440px;margin:0 auto;line-height:1.6">Encontre respostas rápidas, tutoriais e tudo que precisa para usar a Nemalá com confiança.</p>
+    <div class="help-search-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="17" height="17"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="search" id="help-search" placeholder="Buscar dúvidas... ex: como importar extrato" autocomplete="off">
+    </div>
+  </div>
+</div>
+
+<!-- CONTEÚDO -->
+<div class="container" style="padding-top:56px;padding-bottom:80px">
+
+  <!-- CATEGORIAS -->
+  <div class="help-cats" id="cats-grid">
+    <a class="help-cat active" href="#sec-primeiros-passos" data-target="sec-primeiros-passos">
+      <div class="help-cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><circle cx="6" cy="6" r="2"/></svg></div>
+      <div class="help-cat-t">Primeiros passos</div>
+      <div class="help-cat-c">6 respostas</div>
+    </a>
+    <a class="help-cat" href="#sec-planos" data-target="sec-planos">
+      <div class="help-cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 0 0 0 4h4a2 2 0 0 1 0 4H8"/><line x1="12" y1="6" x2="12" y2="8"/><line x1="12" y1="16" x2="12" y2="18"/></svg></div>
+      <div class="help-cat-t">Planos e cobrança</div>
+      <div class="help-cat-c">5 respostas</div>
+    </a>
+    <a class="help-cat" href="#sec-dados" data-target="sec-dados">
+      <div class="help-cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+      <div class="help-cat-t">Dados e importação</div>
+      <div class="help-cat-c">5 respostas</div>
+    </a>
+    <a class="help-cat" href="#sec-ia" data-target="sec-ia">
+      <div class="help-cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/></svg></div>
+      <div class="help-cat-t">Inteligência artificial</div>
+      <div class="help-cat-c">4 respostas</div>
+    </a>
+    <a class="help-cat" href="#sec-seguranca" data-target="sec-seguranca">
+      <div class="help-cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <div class="help-cat-t">Segurança e LGPD</div>
+      <div class="help-cat-c">4 respostas</div>
+    </a>
+    <a class="help-cat" href="#sec-parceiros" data-target="sec-parceiros">
+      <div class="help-cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+      <div class="help-cat-t">Parceiros e BPO</div>
+      <div class="help-cat-c">3 respostas</div>
+    </a>
+  </div>
+
+  <!-- BUSCA VAZIA -->
+  <div id="search-empty" style="display:none;text-align:center;padding:48px 0">
+    <div style="font-size:40px;margin-bottom:16px">🔍</div>
+    <div style="font-size:16px;font-weight:700;margin-bottom:8px">Nenhum resultado encontrado</div>
+    <div style="font-size:14px;color:var(--sub);margin-bottom:24px">Tente outras palavras ou fale direto com a gente.</div>
+    <a href="https://wa.me/554991032411?text=Tenho%20uma%20dúvida%20sobre%20a%20Nemalá." target="_blank" rel="noopener noreferrer" class="btn btn-or" data-track="Contact" data-track-canal="ajuda_wa">Falar no WhatsApp</a>
+  </div>
+
+  <!-- PRIMEIROS PASSOS -->
+  <div class="help-section" id="sec-primeiros-passos">
+    <div class="help-section-hd">
+      <div class="help-section-hd-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><circle cx="6" cy="6" r="2"/></svg></div>
+      <div><h2>Primeiros passos</h2><span>Configure sua conta e comece a usar em menos de 10 minutos</span></div>
+    </div>
+    <div class="help-faq-item"><button class="help-faq-q"><span class="help-faq-qt">Como criar minha conta na Nemalá?</span><span class="help-faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="help-faq-a"><div class="help-faq-body">Acesse <a href="https://app.nemala.com.br/register" target="_blank" rel="noopener noreferrer" data-track="InitiateCheckout">app.nemala.com.br/register</a> e preencha o formulário com nome, e-mail, WhatsApp, nome da empresa e segmento. Informe seus dados e o cartão de crédito para iniciar o período de teste. Em instantes você receberá o link de acesso por e-mail.<div class="help-tip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>O trial de 15 dias começa no cadastro. Após esse período, a cobrança é feita automaticamente no cartão informado.</div></div></div></div>
+    <div class="help-faq-item"><button class="help-faq-q"><span class="help-faq-qt">Por onde começo depois de criar minha conta?</span><span class="help-faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="help-faq-a"><div class="help-faq-body">Siga 3 passos na ordem: <ul><li><strong>1. Configure o plano de contas</strong> — defina categorias de receitas e despesas. A Nemalá já vem com modelo padrão por segmento.</li><li><strong>2. Importe seus lançamentos</strong> — faça upload do extrato bancário (OFX ou CSV). A IA classifica automaticamente.</li><li><strong>3. Revise e confirme</strong> — valide as categorias sugeridas. Após isso, o dashboard fica atualizado.</li></ul></div></div></div>
+    <div class="help-faq-item"><button class="help-faq-q"><span class="help-faq-qt">Preciso ser um especialista em finanças para usar a Nemalá?</span><span class="help-faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="help-faq-a"><div class="help-faq-body">Não. A Nemalá foi desenvolvida para que qualquer empresário — mesmo sem formação contábil — entenda seus números. <strong>A interface é visual, os relatórios usam linguagem de dono</strong> e a IA explica o significado prático de cada indicador.</div></div></div>
+    <div class="help-faq-item"><button class="help-faq-q"><span class="help-faq-qt">Posso adicionar mais usuários à minha conta?</span><span class="help-faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="help-faq-a"><div class="help-faq-body">Sim. O número de usuários depende do plano: <ul><li><strong>Formiguinha:</strong> 1 usuário</li><li><strong>Formiga Carregadeira:</strong> 1 usuário</li><li><strong>Formigão:</strong> até 5 usuários</li><li><strong>Formiga Biônica:</strong> 4 usuários + suporte dedicado</li></ul>Você pode convidar seu contador para acesso de leitura em qualquer plano, sem contar como usuário ativo.</div></div></div>
+    <div class="help-faq-item"><button class="help-faq-q"><span class="help-faq-qt">A Nemalá tem aplicativo para celular?</span><span class="help-faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="help-faq-a"><div class="help-faq-body">A plataforma é 100% web e funciona perfeitamente pelo navegador do celular (Chrome ou Safari). Basta acessar <strong>app.nemala.com.br</strong> no smartphone. Um aplicativo nativo está no roadmap de 2026.</div></div></div>
+    <div class="help-faq-item"><button class="help-faq-q"><span class="help-faq-qt">Meu contador pode usar a Nemalá comigo?</span><span class="help-faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="help-faq-a"><div class="help-faq-body">Sim. Você pode convidar seu contador para acesso de leitura ou edição. Para escritórios que queiram operar múltiplos clientes, temos o <a href="parceiros-bpo">Programa de Parceiros BPO</a>.</div></div></div>
+  </div>
+
+  <!-- PLANOS E COBRANÇA -->
+  <div class="help-section" id="sec-planos">
+    <div class="help-section-hd">
+      <div class="help-section-hd-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 0 0 0 4h4a2 2 0 0 1 0 4H8"/><line x1="12" y1="6" x2="12" y2="8"/><line x1="12" y1="16" x2="12" y2="18"/></svg></div>
+      <div><h2>Planos e cobrança</h2><span>Tudo sobre preços, trial, faturas e upgrade</span></div>
+    </div>
+    <div class="help-faq-item"><button class="help-faq-q"><span class="help-faq-qt">Como funciona o trial de 15 dias?</span><span class="help-faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="help-faq-a"><div class="help-faq-body">Ao criar sua conta você informa o cartão de crédito e tem acesso completo ao plano escolhido por 15 dias. <strong>Após o período de teste, a cobrança é feita automaticamente.</strong> Cancele antes do vencimento para não ser cobrado.</div></div></div>
+    <div class="help-faq-item"><button class="help-faq-q"><span class="help-faq-qt">Posso cancelar a qualquer momento?</span><span class="help-faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="help-faq-a"><div class="help-faq-body">Sim, sem fidelidade e sem multa. Para cancelar, entre em contato com nosso suporte pelo WhatsApp ou e-mail <strong>(suporte@nemala.com.br)</strong>. <strong>O acesso segue ativo até o fim do período pago.</strong> Seus dados ficam disponíveis por 30 dias para exportação.</div></div></div>
+    <div class="help-faq-item"><button class="help-faq-q"><span class="help-faq-qt">Posso mudar de plano depois de contratar?</span><span class="help-faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="help-faq-a"><div class="help-faq-body">Sim. Upgrades são ativados imediatamente com cobrança proporcional. Downgrades são efetivados no próximo ciclo. Não há perda de dados.</div></div></div>
+    <div class="help-faq-item"><button class="help-faq-q"><span class="help-faq-qt">Quais formas de pagamento são aceitas?</span><span class="help-faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="help-faq-a"><div class="help-faq-body">Aceitamos <strong>cartão de crédito</strong> (Visa, Mastercard, Elo) e <strong>boleto bancário</strong>. Para planos anuais, consulte condições especiais com nosso time.</div></div></div>
+    <div class="help-faq-item"><button class="help-faq-q"><span class="help-faq-qt">Recebo nota fiscal da assinatura?</span><span class="help-faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="help-faq-a"><div class="help-faq-body">Sim. A NFS-e é emitida automaticamente a cada cobrança e enviada para o e-mail cadastrado. CNPJ da Nemalá: <strong>57.769.629/0001-18</strong>.</div></div></div>
+  </div>
+
+  <!-- DADOS E IMPORTAÇÃO -->
+  <div class="help-section" id="sec-dados">
+    <div class="help-section-hd">
+      <div class="help-section-hd-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+      <div><h2>Dados e importação</h2><span>Como importar extratos, planilhas e migrar de outras ferramentas</span></div>
+    </div>
+    <div class="help-faq-item"><button class="help-faq-q"><span class="help-faq-qt">Como importo meu extrato bancário?</span><span class="help-faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="help-faq-a"><div class="help-faq-body">A Nemalá aceita <strong>OFX</strong> e <strong>CSV</strong>. Acesse <strong>Financeiro → Importar Extrato</strong>, faça upload do arquivo e a IA classifica automaticamente. Recomendamos importar pelo menos 3 meses de histórico.</div></div></div>
+    <div class="help-faq-item"><button class="help-faq-q"><span class="help-faq-qt">Consigo migrar dados de outra ferramenta ou planilha?</span><span class="help-faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="help-faq-a"><div class="help-faq-body">Sim. Você pode importar planilhas Excel/Google Sheets via CSV e extratos OFX de qualquer banco. Nossa equipe <strong>auxilia a migração gratuitamente</strong> durante o onboarding.</div></div></div>
+    <div class="help-faq-item"><button class="help-faq-q"><span class="help-faq-qt">Posso importar de múltiplas contas bancárias?</span><span class="help-faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="help-faq-a"><div class="help-faq-body">Sim. Você pode cadastrar quantas contas bancárias quiser — corrente, poupança, PJ, cartão corporativo. A Nemalá consolida automaticamente saldo e fluxo de caixa de todas elas.</div></div></div>
+    <div class="help-faq-item"><button class="help-faq-q"><span class="help-faq-qt">Consigo exportar meus dados e relatórios?</span><span class="help-faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="help-faq-a"><div class="help-faq-body">Sim. Todos os relatórios podem ser exportados em <strong>PDF</strong> e <strong>CSV/Excel</strong>. Seus dados são seus e podem ser exportados a qualquer momento, inclusive ao cancelar.</div></div></div>
+    <div class="help-faq-item"><button class="help-faq-q"><span class="help-faq-qt">A Nemalá integra com outros sistemas que já uso?</span><span class="help-faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="help-faq-a"><div class="help-faq-body">O plano <strong>Formiga Biônica</strong> inclui acesso a integrações externas via API REST e webhooks. Para integrações customizadas, entre em <a href="contato">contato</a> com nossa equipe.</div></div></div>
+  </div>
+
+  <!-- IA -->
+  <div class="help-section" id="sec-ia">
+    <div class="help-section-hd">
+      <div class="help-section-hd-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/></svg></div>
+      <div><h2>Inteligência artificial</h2><span>Como a IA analista funciona e o que ela faz por você</span></div>
+    </div>
+    <div class="help-faq-item"><button class="help-faq-q"><span class="help-faq-qt">O que exatamente a IA da Nemalá faz?</span><span class="help-faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="help-faq-a"><div class="help-faq-body">Nossa IA atua como um <strong>Experiente Gerente Financeiro</strong> para sua empresa, realizando 7 funções: <ul><li>Ajuda a melhorar os resultados da sua empresa</li><li>Cria lançamentos automaticamente</li><li>Categoriza lançamentos</li><li>Trabalha como consultor financeiro, dando dicas de como melhorar seus resultados com apenas 1 clique</li><li>Cria seu planejamento orçamentário</li><li>Faz a gestão de metas</li><li>Faz a precificação dos seus produtos e/ou serviços</li></ul></div></div></div>
+    <div class="help-faq-item"><button class="help-faq-q"><span class="help-faq-qt">A IA pode classificar um lançamento errado?</span><span class="help-faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="help-faq-a"><div class="help-faq-body">Pode, especialmente nos primeiros meses. Por isso <strong>toda classificação passa por você antes de ser confirmada</strong>. Quando você corrige, a IA aprende e não repete o mesmo erro.<div class="help-tip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Após 2–3 meses de uso, a taxa de acerto supera 90%.</div></div></div></div>
+    <div class="help-faq-item"><button class="help-faq-q"><span class="help-faq-qt">A IA está disponível em todos os planos?</span><span class="help-faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="help-faq-a"><div class="help-faq-body">A <strong>categorização automática</strong> está em todos os planos. O <strong>agente IA analista completo</strong> está incluso a partir do plano <strong>Formiga Carregadeira</strong>.</div></div></div>
+    <div class="help-faq-item"><button class="help-faq-q"><span class="help-faq-qt">Meus dados financeiros são usados para treinar a IA?</span><span class="help-faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="help-faq-a"><div class="help-faq-body"><strong>Não. Seus dados financeiros são estritamente confidenciais e nunca são usados para treinar modelos de terceiros.</strong> A personalização acontece exclusivamente dentro da sua conta. Veja nossa <a href="privacidade">Política de Privacidade</a>.</div></div></div>
+  </div>
+
+  <!-- SEGURANÇA -->
+  <div class="help-section" id="sec-seguranca">
+    <div class="help-section-hd">
+      <div class="help-section-hd-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <div><h2>Segurança e LGPD</h2><span>Como seus dados são protegidos e seus direitos como titular</span></div>
+    </div>
+    <div class="help-faq-item"><button class="help-faq-q"><span class="help-faq-qt">Como meus dados financeiros são protegidos?</span><span class="help-faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="help-faq-a"><div class="help-faq-body">Múltiplas camadas de segurança: <ul><li><strong>Criptografia SSL/TLS</strong> em toda comunicação</li><li><strong>Criptografia em repouso</strong> com AES-256</li><li><strong>Backup automático diário</strong> com retenção de 30 dias</li><li><strong>Autenticação em dois fatores (2FA)</strong></li><li><strong>Servidores no Brasil</strong> com certificação de segurança</li></ul></div></div></div>
+    <div class="help-faq-item"><button class="help-faq-q"><span class="help-faq-qt">A Nemalá está em conformidade com a LGPD?</span><span class="help-faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="help-faq-a"><div class="help-faq-body">Sim. Como titular, você tem direito a acessar, corrigir, excluir e portar seus dados. Para exercer esses direitos, envie um e-mail para <strong>privacidade@nemala.com.br</strong>. Veja nossa <a href="privacidade">Política de Privacidade completa</a>.</div></div></div>
+    <div class="help-faq-item"><button class="help-faq-q"><span class="help-faq-qt">A Nemalá compartilha meus dados com terceiros?</span><span class="help-faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="help-faq-a"><div class="help-faq-body"><strong>Nunca vendemos seus dados.</strong> Compartilhamos informações apenas com fornecedores de infraestrutura essencial, contratualmente obrigados a manter o mesmo nível de proteção.</div></div></div>
+    <div class="help-faq-item"><button class="help-faq-q"><span class="help-faq-qt">Como solicito a exclusão da minha conta e dados?</span><span class="help-faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="help-faq-a"><div class="help-faq-body">Envie um e-mail para <strong>privacidade@nemala.com.br</strong> com o assunto "Exclusão de conta". Processamos em até 15 dias úteis.<div class="help-tip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>Antes de excluir, exporte seus relatórios — essa ação é irreversível.</div></div></div></div>
+  </div>
+
+  <!-- PARCEIROS -->
+  <div class="help-section" id="sec-parceiros">
+    <div class="help-section-hd">
+      <div class="help-section-hd-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+      <div><h2>Parceiros e BPO</h2><span>Para contadores e escritórios que operam clientes na plataforma</span></div>
+    </div>
+    <div class="help-faq-item"><button class="help-faq-q"><span class="help-faq-qt">Como funciona o programa de parceiros BPO?</span><span class="help-faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="help-faq-a"><div class="help-faq-body">Contadores e escritórios BPO podem gerenciar múltiplos clientes numa única conta Nemalá. O modelo inclui: <ul><li><strong>Desconto progressivo</strong> por volume</li><li><strong>Comissão recorrente</strong> por cliente indicado</li><li><strong>Painel multicliente</strong> com acesso segregado</li></ul>Saiba mais em <a href="parceiros-bpo">Parceiros BPO</a>.</div></div></div>
+    <div class="help-faq-item"><button class="help-faq-q"><span class="help-faq-qt">Posso revender a Nemalá para meus clientes?</span><span class="help-faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="help-faq-a"><div class="help-faq-body">Sim, dentro do modelo de parceria. Você pode incluir o custo da Nemalá no seu pacote de serviços. Para discutir condições, entre em contato pelo <a href="https://wa.me/554991032411?text=Tenho%20interesse%20no%20programa%20de%20parceiros%20BPO." target="_blank" rel="noopener noreferrer" data-track="Contact" data-track-canal="ajuda_wa">WhatsApp</a>.</div></div></div>
+    <div class="help-faq-item"><button class="help-faq-q"><span class="help-faq-qt">O que é o programa de mentoria da Nemalá?</span><span class="help-faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="help-faq-a"><div class="help-faq-body">O programa de mentoria é para empresários que querem transformar a gestão financeira com acompanhamento humano. Inclui diagnóstico financeiro, 3 sessões de implementação ao vivo e acompanhamento por 3 meses. Saiba mais em <a href="sobre-mentoria">Mentoria</a>.</div></div></div>
+  </div>
+
+  <!-- CTA FINAL -->
+  <div class="help-cta-box">
+    <div>
+      <h3>Não encontrou o que precisava?</h3>
+      <p>Nossa equipe responde em até 2 horas úteis pelo WhatsApp. Sem robô, sem script.</p>
+    </div>
+    <div class="help-cta-acts">
+      <a href="https://wa.me/554991032411?text=Olá!%20Preciso%20de%20ajuda%20com%20a%20Nemalá." target="_blank" rel="noopener noreferrer" class="btn btn-or btn-lg" data-track="Contact" data-track-canal="ajuda_wa">Falar no WhatsApp</a>
+      <a href="contato" class="btn btn-lg" style="background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.3);color:#fff">Enviar mensagem</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer><div class="container">
+  <div class="fg">
+    <div class="fb">
+      <a class="logo" href="/"><svg style="height:30px;width:auto" viewBox="0 0 950.72 203.86" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><clipPath id="F1"><path fill-rule="evenodd" clip-rule="evenodd" d="M257.63,79.45l-15.53-15.53-6.82,6.82,22.35,8.71ZM128.24,106.35l7.02-7.02,6.82,6.82-7.02,7.02-6.82-6.82ZM163.68,70.92l35.44,35.44-35.44,35.44-14.49-14.49,21.14-21.14-20.94-20.94,14.3-14.3ZM85.47,120.92l-21.25,21.21-35.97-35.97,56.92-56.91,35.97,35.97-21.14,21.14,20.94,20.94-7.44,7.44-21.04-20.79-6.99,6.97ZM78.3,156.21l14.22-14.2,6.89,6.8-14.25,14.25-6.86-6.86ZM242.1,49.71l35.44,35.44-35.44,35.44-35.44-35.44,35.44-35.44ZM256.14,35.51l7.16-7.17,37.32,37.32,14.12-14.12L263.3.1l-60.13,60.13.08.08-10.97,10.97-28.61-28.61-28.42,28.42-50.09-50.09L0,106.16l50.08,50.08-34.92,34.85,28.05.12,20.96-20.88,21,21,28.46-28.46,28.69,28.36,28.29-.05-42.9-42.4,7.36-7.36,28.62,28.62,14.54-14.54,28.6,28.73,13.63-14.21,22.2,21.67h28.52s-51.19-49.95-51.19-49.95l-13.42,13.99-14.26-14.33,21.19-21.19,28.61,28.61,63.68-63.68-49.64-49.64Z"/></clipPath><linearGradient id="F2" x1="153.72" y1=".03" x2="161.02" y2="191.74" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fbb11e"/><stop offset="1" stop-color="#f68f1f"/></linearGradient><clipPath id="F3"><path fill-rule="evenodd" clip-rule="evenodd" d="M780.97,153.26c3.08-2.03,6.63-3.04,10.65-3.04,5.54,0,10.45,1.7,14.74,5.09v4.68c-4.45-3.9-9.36-5.85-14.74-5.85-2.89,0-5.46.65-7.72,1.96-2.26,1.31-3.39,3.13-3.39,5.47,0,.78.14,1.47.41,2.08.27.6.74,1.15,1.4,1.64.66.49,1.31.91,1.93,1.26.62.35,1.53.7,2.72,1.05,1.19.35,2.19.63,3.01.85.82.21,1.99.5,3.51.85,5.07,1.13,8.65,2.65,10.74,4.56,2.09,1.91,3.15,4.27,3.19,7.08,0,2.46-.73,4.56-2.19,6.32-1.46,1.76-3.28,3.01-5.44,3.77-2.16.76-4.49,1.14-6.99,1.14h-.35c-5.97-.04-11.29-2.22-15.97-6.55v-4.62c5.11,4.8,10.51,7.2,16.21,7.2,2.93,0,5.42-.61,7.49-1.84,2.07-1.23,3.1-2.99,3.1-5.29,0-2.03-.93-3.7-2.78-5-1.85-1.31-4.98-2.47-9.39-3.48-5.15-1.13-8.89-2.51-11.23-4.12-2.34-1.62-3.51-3.89-3.51-6.81,0-3.55,1.54-6.34,4.62-8.37M735.09,177.65l-9.48-25.45-9.59,25.45h19.07ZM721.93,150.74h7.37l15.44,40.95h-4.44l-3.86-10.18h-21.76l-4.04,10.18h-4.39l15.68-40.95ZM638.66,170.98c0-5.81,1.99-10.75,5.97-14.83,3.98-4.08,8.83-6.11,14.57-6.11,4.21,0,7.98,1.17,11.29,3.51,3.31,2.34,5.77,5.44,7.37,9.3l-4.1,1.17c-1.29-3-3.21-5.41-5.76-7.22-2.56-1.81-5.49-2.72-8.8-2.72h-.18c-4.56,0-8.39,1.63-11.5,4.88-3.1,3.26-4.65,7.26-4.65,12.02s1.55,8.66,4.65,11.93c3.1,3.28,6.99,4.91,11.67,4.91,3.35,0,6.31-.89,8.86-2.66,2.56-1.77,4.46-4.16,5.7-7.17l4.1,1.11c-1.52,3.78-3.92,6.84-7.2,9.18-3.28,2.34-7,3.53-11.17,3.57l-.82,1.99c1.68.31,3.2.95,4.56,1.9,1.36.96,2.05,2.14,2.05,3.54,0,1.13-.5,2.06-1.49,2.78-.99.72-2.17,1.18-3.51,1.38-1.35.2-2.43.31-3.25.35-.82.04-1.36.06-1.64.06-.9,0-1.62-.08-2.16-.23v-2.98c.86.19,1.75.29,2.69.29s2.17-.13,3.71-.38c1.54-.25,2.31-.87,2.31-1.84,0-.86-.71-1.58-2.13-2.17-1.42-.58-2.78-.92-4.07-.99l1.46-3.8c-5.3-.51-9.72-2.74-13.25-6.7-3.53-3.96-5.29-8.65-5.29-14.07ZM580.14,150.74l21.41,39.08v-39.08h4.15v40.95h-7.96l-21.59-39.43v39.43h-4.1v-40.95h8.07ZM530.46,177.65l-9.48-25.45-9.59,25.45h19.07ZM517.29,150.74h7.37l15.45,40.95h-4.45l-3.86-10.18h-21.76l-4.04,10.18h-4.39l15.68-40.95ZM443.8,150.74l21.41,39.08v-39.08h4.15v40.95h-7.96l-21.59-39.43v39.43h-4.09v-40.95h8.07ZM397.39,191.69v-40.95h4.21v40.95h-4.21ZM364.96,150.74v3.92h-24.28v14.63h21.94v3.86h-21.94v18.54h-4.21v-40.95h28.49Z"/></clipPath><linearGradient id="F4" x1="572.13" y1="149.96" x2="571.76" y2="203.92" xlink:href="#F2"/></defs><g clip-path="url(#F1)"><rect fill="url(#F2)" y=".1" width="314.75" height="191.59"/></g><g clip-path="url(#F3)"><rect fill="url(#F4)" x="336.47" y="150.04" width="470.94" height="53.82"/></g><path fill="#fff" fill-rule="evenodd" d="M546.67,24.06h23.9v12.45l23.88-12.48h3.8c12.39-.03,21.55,4.58,26.86,12.48l23.88-12.48h9.12c20.52-.02,32.19,12.63,32.2,31.97l.04,64.85h-23.95V56.1c0-3.95-3-8.36-8.3-8.3l-3.8.04c-12.39.02-22.98,6.03-23.85,21.69l.03,51.32h-23.95V56.1c0-3.95-3-8.36-8.3-8.3l-3.8.04c-12.95.02-23.92,6.58-23.91,23.86l.04,49.16h-23.9V24.06ZM950.72,24.02v96.83h-23.9v-56.98l-44.94,23.43c-1.56.82-2.73,2.44-2.73,4.69,0,2.77,2.37,5.01,5.15,5.01h30.49s0,23.86,0,23.86h-30.57c-15,0-29.06-12.4-29.05-28.81,0-11.2,5.84-21.1,15.57-26.2l45.59-23.87-20.82,5.83h-40.34v-23.79h95.56ZM845.11,121.01h-7.95c-20.52.02-32.19-12.62-32.2-31.97l-.04-88.94h23.95v97.14s16.25-.04,16.25-.04v23.81ZM473.8,96.94l51.3.02v23.81s-51.31-.06-51.31-.06c-20.52-.02-32.19-12.61-32.2-31.98V24.02h23.9v12.49l23.88-12.48h15.59c20.14-.02,31.75,12.15,32.2,30.9,0,.36,0,.72-.01,1.07-.44,18.75-12.05,30.91-32.19,30.91h-39.46s0,1.73,0,1.73c0,3.95,3,8.3,8.3,8.3ZM466.54,63.1h39.1c4.73,0,7.59-3.73,7.59-7.49,0-3.86-2.55-7.77-7.38-7.77h-16.49c-10.87,0-19.78,4.44-22.82,15.26ZM904.95.39l26.74-.39-18.63,17.83-19.19.13,11.08-17.57ZM795.42,24.02v96.83h-23.9v-56.98l-44.94,23.43c-1.56.82-2.73,2.44-2.73,4.69,0,2.77,2.37,5.01,5.15,5.01h30.49s0,23.86,0,23.86h-30.58c-15,0-29.06-12.4-29.05-28.81,0-11.2,5.84-21.1,15.57-26.2l45.59-23.87-20.82,5.83h-40.34v-23.79h95.56ZM336.47,21.75h23.9v14.76l23.88-12.48h15.58c20.52-.02,32.19,12.61,32.2,31.97l.04,64.85h-23.95V56.1c0-3.95-2.99-8.31-8.3-8.3l-15.58.04c-12.95.02-23.92,6.58-23.91,23.86l.04,49.16h-23.9V21.75Z"/></svg></a>
+      <p class="fdesc">Gestão financeira com IA para empresários que querem clareza, controle e previsibilidade.</p>
+      <div class="fsoc">
+        <a class="fsl" href="https://instagram.com/nemala_oficial" target="_blank" rel="noopener noreferrer" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a class="fsl" href="https://linkedin.com/company/nemala" target="_blank" rel="noopener noreferrer" title="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a class="fsl" href="https://wa.me/554991032411?text=Olá!%20Tenho%20interesse%20em%20conhecer%20a%20Nemalá." target="_blank" rel="noopener noreferrer" title="WhatsApp" data-track="Contact" data-track-canal="ajuda_wa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></a>
+      </div>
+    </div>
+    <div class="fc"><h5>Produto</h5><ul>
+      <li><a href="funcionalidades">Funcionalidades</a></li>
+      <li><a href="planos">Planos e preços</a></li>
+      <li><a href="sobre-mentoria">Mentoria</a></li>
+      <li><a href="https://app.nemala.com.br/register" target="_blank" rel="noopener noreferrer" data-track="InitiateCheckout">Teste grátis</a></li>
+    </ul></div>
+    <div class="fc"><h5>Empresa</h5><ul>
+      <li><a href="sobre">Sobre a Nemalá</a></li>
+      <li><a href="parceiros-bpo">Parceiros BPO</a></li>
+      <li><a href="contato">Contato</a></li>
+    </ul></div>
+    <div class="fc"><h5>Conteúdo</h5><ul>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/ajuda">Central de Ajuda</a></li>
+      <li><a href="/termos">Termos de uso</a></li>
+      <li><a href="/privacidade">Privacidade</a></li>
+    </ul></div>
+  </div>
+  <div class="fb2">
+    <div class="fc2">© 2026 Nemalá Finanças. Todos os direitos reservados.</div>
+    <div class="fl"><a href="termos">Termos de uso</a><a href="privacidade">Privacidade</a></div>
+  </div>
+</div></footer>
+
+<!-- FAB -->
+<div id="nml-fab">
+  <div id="nml-fab-menu">
+    <a class="nml-fab-item" href="ajuda">
+      <div class="nml-fab-ic" style="background:#FFF6E0;color:#E8950A"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+      <div class="nml-fab-tx"><strong>Central de Ajuda</strong><small>Respostas para todas as dúvidas</small></div>
+    </a>
+    <a class="nml-fab-item" href="https://wa.me/554991032411?text=Olá!%20Preciso%20de%20ajuda%20com%20a%20Nemalá." target="_blank" rel="noopener noreferrer" data-track="Contact" data-track-canal="ajuda_wa">
+      <div class="nml-fab-ic" style="background:#E8F9F2;color:#0EA671"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg></div>
+      <div class="nml-fab-tx"><strong>Falar no WhatsApp</strong><small>Resposta em até 2h úteis</small></div>
+    </a>
+  </div>
+  <button id="nml-fab-btn" onclick="document.getElementById('nml-fab-menu').classList.toggle('open')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+    <span id="nml-fab-label">Ajuda</span>
+  </button>
+</div>
+
+<!-- COOKIE -->
+<div id="nml-cookie">
+  <div id="nml-cookie-in">
+    <div id="nml-cookie-txt">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" style="flex-shrink:0"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <span>Usamos cookies para melhorar sua experiência. Veja nossa <a href="privacidade">Política de Privacidade</a>.</span>
+    </div>
+    <div id="nml-cookie-acts">
+      <button id="nml-cookie-reject">Recusar</button>
+      <button id="nml-cookie-accept">Aceitar</button>
+    </div>
+  </div>
+</div>
+
+<script src="security.js"></script>
+<script>
+(function(){
+  // ── Hamburger ──────────────────────────────────────────────────────────────
+  var hamBtn = document.getElementById('ham-btn');
+  var mobNav = document.getElementById('mob-nav');
+  if(hamBtn && mobNav){
+    hamBtn.addEventListener('click', function(e){
+      e.stopPropagation();
+      var isOpen = hamBtn.classList.toggle('open');
+      mobNav.classList.toggle('open');
+      hamBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    document.addEventListener('click', function(e){
+      if(mobNav.classList.contains('open') && !hamBtn.contains(e.target) && !mobNav.contains(e.target)){
+        hamBtn.classList.remove('open');
+        mobNav.classList.remove('open');
+        hamBtn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  // ── Nav scroll shadow ──────────────────────────────────────────────────────
+  var nb = document.getElementById('nb');
+  if(nb){
+    window.addEventListener('scroll', function(){
+      nb.classList.toggle('sc', window.scrollY > 8);
+    }, {passive:true});
+  }
+
+  // ── FAQ accordion ──────────────────────────────────────────────────────────
+  document.querySelectorAll('.help-faq-q').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.closest('.help-faq-item');
+      var isOpen = item.classList.contains('open');
+      // Fechar todos
+      document.querySelectorAll('.help-faq-item.open').forEach(function(el){
+        el.classList.remove('open');
+      });
+      // Abrir clicado
+      if(!isOpen) item.classList.add('open');
+    });
+  });
+
+  // ── Categorias scroll ──────────────────────────────────────────────────────
+  document.querySelectorAll('.help-cat[data-target]').forEach(function(cat){
+    cat.addEventListener('click', function(e){
+      e.preventDefault();
+      // Highlight
+      document.querySelectorAll('.help-cat').forEach(function(c){ c.classList.remove('active'); });
+      cat.classList.add('active');
+      // Scroll
+      var target = document.getElementById(cat.getAttribute('data-target'));
+      if(target){
+        var top = target.getBoundingClientRect().top + window.scrollY - 90;
+        window.scrollTo({top: top, behavior: 'smooth'});
+      }
+    });
+  });
+
+  // ── Busca ──────────────────────────────────────────────────────────────────
+  var searchInput = document.getElementById('help-search');
+  var searchEmpty = document.getElementById('search-empty');
+  var searchResults = document.getElementById('search-results-bar');
+
+  if(searchInput){
+    searchInput.addEventListener('input', function(){
+      var q = this.value.trim().toLowerCase();
+      var count = 0;
+
+      document.querySelectorAll('.help-faq-item').forEach(function(item){
+        var text = item.textContent.toLowerCase();
+        var show = !q || text.indexOf(q) > -1;
+        item.style.display = show ? '' : 'none';
+        if(show && q) count++;
+      });
+
+      document.querySelectorAll('.help-section').forEach(function(sec){
+        var hasVisible = Array.from(sec.querySelectorAll('.help-faq-item')).some(function(i){
+          return i.style.display !== 'none';
+        });
+        sec.style.display = !q || hasVisible ? '' : 'none';
+      });
+
+      // Barra de resultados abaixo do campo de busca
+      if(searchResults){
+        if(q){
+          searchResults.textContent = count > 0 ? count + ' resultado' + (count !== 1 ? 's' : '') + ' para "' + q + '"' : '';
+          searchResults.style.display = 'block';
+        } else {
+          searchResults.style.display = 'none';
+        }
+      }
+
+      if(searchEmpty) searchEmpty.style.display = (q && count === 0) ? '' : 'none';
+
+      // Scroll suave para o primeiro resultado
+      if(q && count > 0){
+        var first = document.querySelector('.help-faq-item:not([style*="none"])');
+        if(first){
+          setTimeout(function(){
+            var top = first.getBoundingClientRect().top + window.scrollY - 140;
+            window.scrollTo({top: top, behavior: 'smooth'});
+          }, 100);
+        }
+      }
+    });
+  }
+
+  // ── FAB fechar ao clicar fora ──────────────────────────────────────────────
+  var fabMenu = document.getElementById('nml-fab-menu');
+  document.addEventListener('click', function(e){
+    if(fabMenu && !document.getElementById('nml-fab').contains(e.target)){
+      fabMenu.classList.remove('open');
+    }
+  });
+
+  // ── Cookie ─────────────────────────────────────────────────────────────────
+  var CONSENT_KEY = 'nml_cookie_consent';
+  var cookieBanner = document.getElementById('nml-cookie');
+  function getConsent(){ try{ return localStorage.getItem(CONSENT_KEY); }catch(e){ return null; } }
+  function setConsent(v){ try{ localStorage.setItem(CONSENT_KEY, v); }catch(e){} }
+  if(!getConsent()){
+    setTimeout(function(){ if(cookieBanner) cookieBanner.style.display = 'block'; }, 1500);
+  }
+  var acceptBtn = document.getElementById('nml-cookie-accept');
+  var rejectBtn = document.getElementById('nml-cookie-reject');
+  if(acceptBtn) acceptBtn.addEventListener('click', function(){
+    setConsent('accept');
+    if(cookieBanner) cookieBanner.style.display = 'none';
+  });
+  if(rejectBtn) rejectBtn.addEventListener('click', function(){
+    setConsent('reject');
+    if(cookieBanner) cookieBanner.style.display = 'none';
+  });
+
+})();
+</script>
+</body>
+</html>
