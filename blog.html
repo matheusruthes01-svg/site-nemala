@@ -2,255 +2,554 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<!-- Consent Mode — ANTES do GTM -->
-<script>
-window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('consent','default',{analytics_storage:'granted',ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',wait_for_update:500});
-try{if(localStorage.getItem('nml_cookie_consent')==='accept'){gtag('consent','update',{analytics_storage:'granted',ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted'});}}catch(e){}
-</script>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NSQ62LBV');</script>
-<!-- End Google Tag Manager -->
-<base href="/">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Blog — Gestão Financeira para Empresários — Nemalá Finanças</title>
-<meta name="description" content="Artigos sobre gestão financeira, fluxo de caixa, DRE, indicadores e inteligência artificial para pequenas e médias empresas.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://nemala.com.br/blog.html">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Blog Nemalá — Gestão Financeira para Empresários">
-<meta property="og:description" content="Artigos sobre gestão financeira, fluxo de caixa, DRE, indicadores e IA para PMEs.">
-<meta property="og:url" content="https://nemala.com.br/blog.html">
-<meta property="og:site_name" content="Nemalá Finanças">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blog Nemalá — Manual Financeiro para Empresários</title>
+<meta name="description" content="Guias práticos sobre fluxo de caixa, capital de giro, DRE e gestão financeira para PMEs brasileiras. Escritos para empresários, não para contadores.">
+<link rel="canonical" href="https://nemala.com.br/blog">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iQ2FtYWRhXzEiIGRhdGEtbmFtZT0iQ2FtYWRhIDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZpZXdCb3g9IjAgMCAyNS41MyAxNS41NCI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOnVybCgjR3JhZGllbnRlX3NlbV9ub21lXzEzKX0uY2xzLTJ7Y2xpcC1ydWxlOmV2ZW5vZGQ7ZmlsbDpub25lfS5jbHMtM3tjbGlwLXBhdGg6dXJsKCNjbGlwcGF0aCl9PC9zdHlsZT48Y2xpcFBhdGggaWQ9ImNsaXBwYXRoIj48cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Ik0yMC45LDYuNDRsLTEuMjYtMS4yNi0uNTUuNTUsMS44MS43MVpNMTAuNCw4LjYybC41Ny0uNTcuNTUuNTUtLjU3LjU3LS41NS0uNTVaTTEzLjI4LDUuNzVsMi44NywyLjg3LTIuODcsMi44Ny0xLjE4LTEuMTgsMS43MS0xLjcyLTEuNy0xLjcsMS4xNi0xLjE2Wk02LjkzLDkuOGwtMS43MiwxLjcyLTIuOTItMi45Mkw2LjkxLDMuOTlsMi45MiwyLjkyLTEuNzEsMS43MSwxLjcsMS43LS42LjYtMS43MS0xLjY5LS41Ny41N1pNNi4zNSwxMi42N2wxLjE1LTEuMTUuNTYuNTUtMS4xNiwxLjE2LS41Ni0uNTZaTTE5LjY0LDQuMDNsMi44NywyLjg3LTIuODcsMi44Ny0yLjg3LTIuODcsMi44Ny0yLjg3Wk0yMC43OCwyLjg3bC41OC0uNTgsMy4wMywzLjAzLDEuMTUtMS4xNUwyMS4zNiwwbC00Ljg4LDQuODgsMCwwcy0uODkuOS0uODkuOWwtMi4zMi0yLjMyLTIuMzEsMi4zMUw2LjkxLDEuNywwLDguNmw0LjA2LDQuMDYtMi44MywyLjgzaDIuMjhzMS43LTEuNjgsMS43LTEuNjhsMS43LDEuNywyLjMxLTIuMzEsMi4zMywyLjNoMi4zcy0zLjQ4LTMuNDQtMy40OC0zLjQ0bC42LS42LDIuMzIsMi4zMiwxLjE4LTEuMTgsMi4zMiwyLjMzLDEuMTEtMS4xNSwxLjgsMS43NmgyLjMxcy00LjE1LTQuMDUtNC4xNS00LjA1bC0xLjA5LDEuMTQtMS4xNi0xLjE2LDEuNzItMS43MiwyLjMyLDIuMzIsNS4xNy01LjE3LTQuMDMtNC4wM1oiLz48L2NsaXBQYXRoPjxsaW5lYXJHcmFkaWVudCBpZD0iR3JhZGllbnRlX3NlbV9ub21lXzEzIiBkYXRhLW5hbWU9IkdyYWRpZW50ZSBzZW0gbm9tZSAxMyIgeDE9IjEyLjQ3IiB5MT0iMCIgeDI9IjEzLjA2IiB5Mj0iMTUuNTUiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNlYmFmMzMiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNlNThlMjkiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48ZyBjbGFzcz0iY2xzLTMiPjxyZWN0IGNsYXNzPSJjbHMtMSIgd2lkdGg9IjI1LjUzIiBoZWlnaHQ9IjE1LjU0Ii8+PC9nPjwvc3ZnPg==">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="style.css">
 <style>
-.ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;border-radius:8px}
-.ham span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:all .25s}
-.ham.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.ham.open span:nth-child(2){opacity:0}
-.ham.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-.mob-nav{display:none;position:fixed;top:66px;left:0;right:0;background:#fff;border-bottom:1px solid var(--bd);box-shadow:0 8px 32px rgba(0,0,0,.1);z-index:199;padding:16px 20px 24px;flex-direction:column;gap:4px}
-.mob-nav.open{display:flex}
-.mob-nav a{font-size:15px;font-weight:600;color:var(--ink);text-decoration:none;padding:11px 14px;border-radius:10px;transition:background .15s}
-.mob-nav a:hover{background:var(--bg)}
-.mob-nav .mob-ctas{display:flex;gap:8px;margin-top:12px;padding-top:12px;border-top:1px solid var(--bd)}
-/* Blog Index */
-.blog-hero{padding:80px 0 64px;background:linear-gradient(160deg,#fff 55%,#FFF6E0 100%);border-bottom:1px solid var(--bd);text-align:center}
-.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:56px 0 80px}
-.blog-card{background:#fff;border:1px solid var(--bd);border-radius:16px;overflow:hidden;text-decoration:none;color:inherit;transition:border-color .18s,transform .18s;display:flex;flex-direction:column}
-.blog-card:hover{border-color:var(--or);transform:translateY(-3px);box-shadow:0 8px 32px rgba(0,0,0,.08)}
-.blog-card-body{padding:20px 20px 24px;flex:1;display:flex;flex-direction:column}
-.blog-card-cat{font-size:11px;font-weight:700;color:var(--or-dk);text-transform:uppercase;letter-spacing:.07em;margin-bottom:10px}
-.blog-card-title{font-size:17px;font-weight:800;font-family:var(--display);color:var(--ink);line-height:1.35;margin-bottom:10px;flex:1}
-.blog-card-excerpt{font-size:13px;color:var(--sub);line-height:1.6;margin-bottom:16px}
-.blog-card-meta{display:flex;align-items:center;justify-content:space-between;font-size:12px;color:var(--sub);padding-top:14px;border-top:1px solid var(--bg)}
-.blog-card-accent{height:4px;background:linear-gradient(90deg,#FBB11E,#F68F1F)}
-.blog-cats{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:28px}
-.blog-cat-btn{padding:7px 18px;border-radius:100px;border:1.5px solid var(--bd);font-size:13px;font-weight:600;color:var(--sub);background:#fff;cursor:pointer;font-family:var(--body);transition:all .15s}
-.blog-cat-btn:hover,.blog-cat-btn.on{border-color:var(--or);background:#FFF6E0;color:var(--or-dk)}
-.blog-cta{background:var(--ink);border-radius:20px;padding:48px 40px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;margin-bottom:80px}
-.blog-cta h3{font-size:clamp(20px,2.5vw,28px);font-weight:800;color:#fff;font-family:var(--display);margin-bottom:8px}
-.blog-cta p{font-size:15px;color:rgba(255,255,255,.6);margin:0;line-height:1.6}
-#nml-fab{position:fixed;bottom:24px;right:20px;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:8px}
-#nml-fab-btn{display:flex;align-items:center;gap:8px;background:#25D366;color:#fff;border:none;border-radius:100px;padding:10px 18px 10px 14px;font-size:14px;font-weight:700;font-family:var(--body);cursor:pointer;box-shadow:0 4px 18px rgba(37,211,102,.35);transition:transform .18s;line-height:1}
-#nml-fab-btn:hover{transform:translateY(-2px)}
-#nml-fab-menu{background:#fff;border:1px solid var(--bd);border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,.14);overflow:hidden;min-width:240px;opacity:0;transform:translateY(8px) scale(.97);pointer-events:none;transition:opacity .2s,transform .2s}
-#nml-fab-menu.open{opacity:1;transform:none;pointer-events:auto}
-.nml-fab-item{display:flex;align-items:center;gap:12px;padding:14px 16px;text-decoration:none;color:var(--ink);transition:background .15s;border-bottom:1px solid var(--bg)}
-.nml-fab-item:last-child{border-bottom:none}.nml-fab-item:hover{background:var(--bg)}
-.nml-fab-ic{width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.nml-fab-tx strong{display:block;font-size:13px;font-weight:700;color:var(--ink)}.nml-fab-tx small{display:block;font-size:11px;color:var(--sub);margin-top:1px}
-@media(max-width:900px){.ham{display:flex}.na{display:none}#nml-fab{bottom:20px;right:16px}#nml-fab-btn{border-radius:50%;padding:14px;width:52px;height:52px;justify-content:center}#nml-fab-label{display:none}}
-@media(max-width:860px){.blog-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:560px){.blog-grid{grid-template-columns:1fr}.blog-cta{flex-direction:column;text-align:center}}
+/* ═══ BLOG EDITORIAL LAYOUT ════════════════════════════════════════ */
+
+/* 1. HERO EDITORIAL ───────────────────────────────────────────── */
+.bl-hero{background:#fff;border-bottom:1px solid var(--bd)}
+.bl-hero-editorial{
+  display:grid;
+  grid-template-columns:1fr 320px;
+  grid-template-rows:480px;  /* FIXED HEIGHT — solves collapse */
+  border-bottom:1px solid var(--bd)
+}
+
+/* Main story — left panel */
+.bl-ed-main{
+  position:relative;
+  overflow:hidden;
+  background:#111;
+  text-decoration:none;
+  display:block
+}
+.bl-ed-main img{
+  position:absolute;inset:0;
+  width:100%;height:100%;
+  object-fit:cover;
+  opacity:.55;
+  transition:opacity .3s
+}
+.bl-ed-main:hover img{opacity:.65}
+.bl-ed-main-body{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:32px 28px 28px;
+  background:linear-gradient(0deg,rgba(0,0,0,.95) 50%,rgba(0,0,0,.4) 80%,transparent)
+}
+.bl-ed-eyebrow{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.bl-ed-cat-pill{
+  font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+  background:var(--or);color:var(--ink);padding:4px 12px;border-radius:100px
+}
+.bl-ed-badge{font-size:11px;font-weight:600;color:rgba(255,255,255,.55)}
+.bl-ed-main h2{
+  font-family:"Sora",sans-serif;
+  font-size:clamp(22px,2.8vw,34px);
+  font-weight:800;color:#fff;
+  line-height:1.2;letter-spacing:-.025em;
+  margin-bottom:12px
+}
+.bl-ed-main h2 a{color:inherit;text-decoration:none}
+.bl-ed-main h2 a:hover{color:var(--or)}
+.bl-ed-desc{
+  font-size:14px;color:rgba(255,255,255,.65);
+  line-height:1.65;margin-bottom:14px;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden
+}
+.bl-ed-meta{font-size:12px;color:rgba(255,255,255,.4);display:flex;gap:10px}
+
+/* Sidebar — right panel */
+.bl-ed-sidebar{
+  display:flex;flex-direction:column;
+  border-left:1px solid var(--bd);
+  overflow:hidden
+}
+.bl-ed-item{
+  flex:1;
+  display:flex;
+  border-bottom:1px solid var(--bd);
+  text-decoration:none;color:inherit;
+  overflow:hidden;
+  transition:background .15s;
+  min-height:0
+}
+.bl-ed-item:last-child{border-bottom:none}
+.bl-ed-item:hover{background:#FAFAFA}
+.bl-ed-item-img{
+  width:100px;flex-shrink:0;
+  object-fit:cover;display:block;
+  align-self:stretch
+}
+.bl-ed-item-body{
+  padding:12px 14px;
+  display:flex;flex-direction:column;
+  justify-content:center;
+  overflow:hidden
+}
+.bl-ed-item-cat{
+  font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--or-dk);margin-bottom:5px
+}
+.bl-ed-item-title{
+  font-family:"Sora",sans-serif;font-size:13px;font-weight:800;
+  color:var(--ink);line-height:1.35;
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden
+}
+.bl-ed-item-meta{font-size:10px;color:var(--sub);margin-top:6px}
+
+/* 2. CATEGORY BAR ──────────────────────────────────────────────── */
+.bl-cats{
+  background:#fff;border-bottom:2px solid var(--bd);
+  position:sticky;top:66px;z-index:80
+}
+.bl-cats-inner{display:flex;overflow-x:auto;scrollbar-width:none}
+.bl-cats-inner::-webkit-scrollbar{display:none}
+.bl-cat-btn{
+  display:flex;align-items:center;gap:6px;
+  padding:14px 18px;font-size:13px;font-weight:600;color:var(--sub);
+  border:none;background:none;cursor:pointer;white-space:nowrap;
+  border-bottom:3px solid transparent;margin-bottom:-2px;
+  transition:all .15s;font-family:"Plus Jakarta Sans",sans-serif
+}
+.bl-cat-btn:hover{color:var(--ink)}
+.bl-cat-btn.active{color:var(--or-dk);border-bottom-color:var(--or);font-weight:700}
+.bl-cat-count{
+  font-size:10px;font-weight:700;background:var(--bg);color:var(--sub);
+  border-radius:100px;padding:2px 6px
+}
+.bl-cat-btn.active .bl-cat-count{background:var(--or-lt);color:var(--or-dk)}
+
+/* 3. ARTICLES SECTION HEADER ───────────────────────────────────── */
+.bl-section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.bl-section-title{
+  font-family:"Sora",sans-serif;font-size:13px;font-weight:800;
+  color:var(--ink);display:flex;align-items:center;gap:10px;
+  letter-spacing:.05em;text-transform:uppercase
+}
+.bl-section-title::before{content:"";width:4px;height:16px;background:var(--or);border-radius:2px;flex-shrink:0}
+
+/* 4. ARTICLE GRID ──────────────────────────────────────────────── */
+.bl-grid-section{padding:40px 0 64px;background:#F7F6F3}
+.bl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.bl-card{
+  background:#fff;border:1px solid var(--bd);border-radius:16px;
+  overflow:hidden;text-decoration:none;color:inherit;
+  display:flex;flex-direction:column;
+  transition:border-color .18s,transform .18s,box-shadow .18s
+}
+.bl-card:hover{border-color:var(--or);transform:translateY(-3px);box-shadow:0 8px 32px rgba(0,0,0,.07)}
+.bl-card-img{height:160px;overflow:hidden;position:relative;background:var(--bg)}
+.bl-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.bl-card:hover .bl-card-img img{transform:scale(1.03)}
+.bl-card-accent{height:3px;background:linear-gradient(90deg,#FFAB1A,#F68F1F)}
+.bl-card-body{padding:18px;flex:1;display:flex;flex-direction:column}
+.bl-card-cat{font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--or-dk);margin-bottom:8px}
+.bl-card-title{
+  font-family:"Sora",sans-serif;font-size:15px;font-weight:800;
+  color:var(--ink);line-height:1.35;margin-bottom:8px;flex:1;letter-spacing:-.015em
+}
+.bl-card-excerpt{
+  font-size:12px;color:var(--sub);line-height:1.6;margin-bottom:14px;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden
+}
+.bl-card-footer{
+  display:flex;align-items:center;justify-content:space-between;
+  padding-top:12px;border-top:1px solid var(--bg);font-size:11px;color:var(--sub)
+}
+.bl-card-read{font-size:11px;font-weight:700;color:var(--or-dk)}
+.bl-new{
+  position:absolute;top:10px;left:10px;
+  background:#FFAB1A;color:#1A1A1A;
+  font-size:9px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+  padding:3px 8px;border-radius:100px
+}
+
+/* 5. NEWSLETTER ────────────────────────────────────────────────── */
+.bl-nl{background:#0F0F0F;padding:56px 0;position:relative;overflow:hidden}
+.bl-nl::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 45% 80% at 15% 50%,rgba(255,171,26,.09),transparent 60%)}
+.bl-nl-inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;position:relative}
+.bl-nl h2{font-family:"Sora",sans-serif;font-size:clamp(22px,2.8vw,34px);font-weight:800;color:#fff;line-height:1.15;letter-spacing:-.03em;margin-bottom:12px}
+.bl-nl h2 em{font-style:normal;color:#FFAB1A}
+.bl-nl p{font-size:14px;color:rgba(255,255,255,.45);line-height:1.7}
+.bl-nl-form{display:flex;flex-direction:column;gap:10px}
+.bl-nl-form input{background:rgba(255,255,255,.07);border:1.5px solid rgba(255,255,255,.1);border-radius:10px;padding:13px 16px;font-size:14px;color:#fff;font-family:"Plus Jakarta Sans",sans-serif;outline:none;transition:border-color .2s}
+.bl-nl-form input::placeholder{color:rgba(255,255,255,.25)}
+.bl-nl-form input:focus{border-color:#FFAB1A}
+.bl-nl-form button{background:#FFAB1A;color:#1A1A1A;font-family:"Plus Jakarta Sans",sans-serif;font-weight:800;font-size:14px;border:none;border-radius:10px;padding:13px 20px;cursor:pointer;transition:all .18s;display:flex;align-items:center;justify-content:center;gap:8px}
+.bl-nl-form button:hover{background:#e09800;transform:translateY(-1px)}
+.bl-nl-note{font-size:11px;color:rgba(255,255,255,.2);text-align:center;margin-top:4px}
+
+/* 6. BLOG FOOTER ───────────────────────────────────────────────── */
+.blog-footer{background:#0A0A0A;border-top:1px solid rgba(255,255,255,.05);padding:52px 0 28px}
+.bf-inner{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:40px}
+.bf-brand-desc{font-size:13px;color:rgba(255,255,255,.35);line-height:1.7;margin-top:12px;max-width:220px}
+.bf-col h5{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.2);margin-bottom:14px}
+.bf-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.bf-col ul a{font-size:13px;color:rgba(255,255,255,.45);text-decoration:none;transition:color .15s}
+.bf-col ul a:hover{color:#FFAB1A}
+.bf-bottom{border-top:1px solid rgba(255,255,255,.05);padding-top:22px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.bf-bottom p{font-size:12px;color:rgba(255,255,255,.15)}
+.bf-tags{display:flex;gap:6px;flex-wrap:wrap}
+.bf-tag{font-size:10px;color:rgba(255,255,255,.25);background:rgba(255,255,255,.04);padding:3px 9px;border-radius:100px;border:1px solid rgba(255,255,255,.05)}
+
+/* 7. RESPONSIVE ────────────────────────────────────────────────── */
+@media(max-width:900px){
+  .bl-hero-editorial{grid-template-columns:1fr;grid-template-rows:320px auto}
+  .bl-ed-sidebar{flex-direction:row;border-left:none;border-top:1px solid var(--bd);overflow-x:auto;grid-template-rows:unset}
+  .bl-ed-item{flex:0 0 50%;border-bottom:none;border-right:1px solid var(--bd);min-height:120px}
+  .bl-ed-item:last-child{border-right:none}
+  .bl-ed-item-img{width:90px}
+  .bl-grid{grid-template-columns:repeat(2,1fr)}
+  .bl-nl-inner{grid-template-columns:1fr}
+  .bf-inner{grid-template-columns:1fr 1fr}
+}
+@media(max-width:580px){
+  .bl-hero-editorial{grid-template-rows:260px auto}
+  .bl-ed-item{flex:0 0 75%}
+  .bl-ed-item-img{width:80px}
+  .bl-grid{grid-template-columns:1fr}
+  .bf-inner{grid-template-columns:1fr}
+  .bf-bottom{flex-direction:column;text-align:center}
+}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"Blog Nemalá Finanças","url":"https://nemala.com.br/blog.html","description":"Artigos sobre gestão financeira para pequenas e médias empresas","publisher":{"@type":"Organization","name":"Nemalá Finanças","url":"https://nemala.com.br"}}</script>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSQ62LBV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
 <nav id="nb"><div class="container"><div class="nw">
-  <a class="logo" href="/"><svg style="height:30px;width:auto" viewBox="0 0 950.72 203.86" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><clipPath id="lcp1_bl_ft"><path fill-rule="evenodd" clip-rule="evenodd" d="M257.63,79.45l-15.53-15.53-6.82,6.82,22.35,8.71ZM128.24,106.35l7.02-7.02,6.82,6.82-7.02,7.02-6.82-6.82ZM163.68,70.92l35.44,35.44-35.44,35.44-14.49-14.49,21.14-21.14-20.94-20.94,14.3-14.3ZM85.47,120.92l-21.25,21.21-35.97-35.97,56.92-56.91,35.97,35.97-21.14,21.14,20.94,20.94-7.44,7.44-21.04-20.79-6.99,6.97ZM78.3,156.21l14.22-14.2,6.89,6.8-14.25,14.25-6.86-6.86ZM242.1,49.71l35.44,35.44-35.44,35.44-35.44-35.44,35.44-35.44ZM256.14,35.51l7.16-7.17,37.32,37.32,14.12-14.12L263.3.1l-60.13,60.13.08.08-10.97,10.97-28.61-28.61-28.42,28.42-50.09-50.09L0,106.16l50.08,50.08-34.92,34.85,28.05.12,20.96-20.88,21,21,28.46-28.46,28.69,28.36,28.29-.05-42.9-42.4,7.36-7.36,28.62,28.62,14.54-14.54,28.6,28.73,13.63-14.21,22.2,21.67h28.52s-51.19-49.95-51.19-49.95l-13.42,13.99-14.26-14.33,21.19-21.19,28.61,28.61,63.68-63.68-49.64-49.64Z"/></clipPath><linearGradient id="lg1_bl_ft" x1="153.72" y1=".03" x2="161.02" y2="191.74" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fbb11e"/><stop offset="1" stop-color="#f68f1f"/></linearGradient><clipPath id="lcp2_bl_ft"><path fill-rule="evenodd" clip-rule="evenodd" d="M780.97,153.26c3.08-2.03,6.63-3.04,10.65-3.04,5.54,0,10.45,1.7,14.74,5.09v4.68c-4.45-3.9-9.36-5.85-14.74-5.85-2.89,0-5.46.65-7.72,1.96-2.26,1.31-3.39,3.13-3.39,5.47,0,.78.14,1.47.41,2.08.27.6.74,1.15,1.4,1.64.66.49,1.31.91,1.93,1.26.62.35,1.53.7,2.72,1.05,1.19.35,2.19.63,3.01.85.82.21,1.99.5,3.51.85,5.07,1.13,8.65,2.65,10.74,4.56,2.09,1.91,3.15,4.27,3.19,7.08,0,2.46-.73,4.56-2.19,6.32-1.46,1.76-3.28,3.01-5.44,3.77-2.16.76-4.49,1.14-6.99,1.14h-.35c-5.97-.04-11.29-2.22-15.97-6.55v-4.62c5.11,4.8,10.51,7.2,16.21,7.2,2.93,0,5.42-.61,7.49-1.84,2.07-1.23,3.1-2.99,3.1-5.29,0-2.03-.93-3.7-2.78-5-1.85-1.31-4.98-2.47-9.39-3.48-5.15-1.13-8.89-2.51-11.23-4.12-2.34-1.62-3.51-3.89-3.51-6.81,0-3.55,1.54-6.34,4.62-8.37M735.09,177.65l-9.48-25.45-9.59,25.45h19.07ZM721.93,150.74h7.37l15.44,40.95h-4.44l-3.86-10.18h-21.76l-4.04,10.18h-4.39l15.68-40.95ZM638.66,170.98c0-5.81,1.99-10.75,5.97-14.83,3.98-4.08,8.83-6.11,14.57-6.11,4.21,0,7.98,1.17,11.29,3.51,3.31,2.34,5.77,5.44,7.37,9.3l-4.1,1.17c-1.29-3-3.21-5.41-5.76-7.22-2.56-1.81-5.49-2.72-8.8-2.72h-.18c-4.56,0-8.39,1.63-11.5,4.88-3.1,3.26-4.65,7.26-4.65,12.02s1.55,8.66,4.65,11.93c3.1,3.28,6.99,4.91,11.67,4.91,3.35,0,6.31-.89,8.86-2.66,2.56-1.77,4.46-4.16,5.7-7.17l4.1,1.11c-1.52,3.78-3.92,6.84-7.2,9.18-3.28,2.34-7,3.53-11.17,3.57l-.82,1.99c1.68.31,3.2.95,4.56,1.9,1.36.96,2.05,2.14,2.05,3.54,0,1.13-.5,2.06-1.49,2.78-.99.72-2.17,1.18-3.51,1.38-1.35.2-2.43.31-3.25.35-.82.04-1.36.06-1.64.06-.9,0-1.62-.08-2.16-.23v-2.98c.86.19,1.75.29,2.69.29s2.17-.13,3.71-.38c1.54-.25,2.31-.87,2.31-1.84,0-.86-.71-1.58-2.13-2.17-1.42-.58-2.78-.92-4.07-.99l1.46-3.8c-5.3-.51-9.72-2.74-13.25-6.7-3.53-3.96-5.29-8.65-5.29-14.07ZM580.14,150.74l21.41,39.08v-39.08h4.15v40.95h-7.96l-21.59-39.43v39.43h-4.1v-40.95h8.07ZM530.46,177.65l-9.48-25.45-9.59,25.45h19.07ZM517.29,150.74h7.37l15.45,40.95h-4.45l-3.86-10.18h-21.76l-4.04,10.18h-4.39l15.68-40.95ZM443.8,150.74l21.41,39.08v-39.08h4.15v40.95h-7.96l-21.59-39.43v39.43h-4.09v-40.95h8.07ZM397.39,191.69v-40.95h4.21v40.95h-4.21ZM364.96,150.74v3.92h-24.28v14.63h21.94v3.86h-21.94v18.54h-4.21v-40.95h28.49Z"/></clipPath><linearGradient id="lg2_bl_ft" x1="572.13" y1="149.96" x2="571.76" y2="203.92" xlink:href="#lg1_bl_ft"/></defs><g clip-path="url(#lcp1_bl_ft)"><rect fill="url(#lg1_bl_ft)" y=".1" width="314.75" height="191.59"/></g><g clip-path="url(#lcp2_bl_ft)"><rect fill="url(#lg2_bl_ft)" x="336.47" y="150.04" width="470.94" height="53.82"/></g><path fill="#fff" fill-rule="evenodd" d="M546.67,24.06h23.9v12.45l23.88-12.48h3.8c12.39-.03,21.55,4.58,26.86,12.48l23.88-12.48h9.12c20.52-.02,32.19,12.63,32.2,31.97l.04,64.85h-23.95V56.1c0-3.95-3-8.36-8.3-8.3l-3.8.04c-12.39.02-22.98,6.03-23.85,21.69l.03,51.32h-23.95V56.1c0-3.95-3-8.36-8.3-8.3l-3.8.04c-12.95.02-23.92,6.58-23.91,23.86l.04,49.16h-23.9V24.06ZM950.72,24.02v96.83h-23.9v-56.98l-44.94,23.43c-1.56.82-2.73,2.44-2.73,4.69,0,2.77,2.37,5.01,5.15,5.01h30.49s0,23.86,0,23.86h-30.57c-15,0-29.06-12.4-29.05-28.81,0-11.2,5.84-21.1,15.57-26.2l45.59-23.87-20.82,5.83h-40.34v-23.79h95.56ZM845.11,121.01h-7.95c-20.52.02-32.19-12.62-32.2-31.97l-.04-88.94h23.95v97.14s16.25-.04,16.25-.04v23.81ZM473.8,96.94l51.3.02v23.81s-51.31-.06-51.31-.06c-20.52-.02-32.19-12.61-32.2-31.98V24.02h23.9v12.49l23.88-12.48h15.59c20.14-.02,31.75,12.15,32.2,30.9,0,.36,0,.72-.01,1.07-.44,18.75-12.05,30.91-32.19,30.91h-39.46s0,1.73,0,1.73c0,3.95,3,8.3,8.3,8.3ZM466.54,63.1h39.1c4.73,0,7.59-3.73,7.59-7.49,0-3.86-2.55-7.77-7.38-7.77h-16.49c-10.87,0-19.78,4.44-22.82,15.26ZM904.95.39l26.74-.39-18.63,17.83-19.19.13,11.08-17.57ZM795.42,24.02v96.83h-23.9v-56.98l-44.94,23.43c-1.56.82-2.73,2.44-2.73,4.69,0,2.77,2.37,5.01,5.15,5.01h30.49s0,23.86,0,23.86h-30.58c-15,0-29.06-12.4-29.05-28.81,0-11.2,5.84-21.1,15.57-26.2l45.59-23.87-20.82,5.83h-40.34v-23.79h95.56ZM336.47,21.75h23.9v14.76l23.88-12.48h15.58c20.52-.02,32.19,12.61,32.2,31.97l.04,64.85h-23.95V56.1c0-3.95-2.99-8.31-8.3-8.3l-15.58.04c-12.95.02-23.92,6.58-23.91,23.86l.04,49.16h-23.9V21.75Z"/></svg></a>
+  <a class="logo" href="index.html"><svg style="height:30px;width:auto" viewBox="0 0 950.72 203.86" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><clipPath id="cpLH"><path fill-rule="evenodd" clip-rule="evenodd" d="M257.63,79.45l-15.53-15.53-6.82,6.82,22.35,8.71ZM128.24,106.35l7.02-7.02,6.82,6.82-7.02,7.02-6.82-6.82ZM163.68,70.92l35.44,35.44-35.44,35.44-14.49-14.49,21.14-21.14-20.94-20.94,14.3-14.3ZM85.47,120.92l-21.25,21.21-35.97-35.97,56.92-56.91,35.97,35.97-21.14,21.14,20.94,20.94-7.44,7.44-21.04-20.79-6.99,6.97ZM78.3,156.21l14.22-14.2,6.89,6.8-14.25,14.25-6.86-6.86ZM242.1,49.71l35.44,35.44-35.44,35.44-35.44-35.44,35.44-35.44ZM256.14,35.51l7.16-7.17,37.32,37.32,14.12-14.12L263.3.1l-60.13,60.13.08.08-10.97,10.97-28.61-28.61-28.42,28.42-50.09-50.09L0,106.16l50.08,50.08-34.92,34.85,28.05.12,20.96-20.88,21,21,28.46-28.46,28.69,28.36,28.29-.05-42.9-42.4,7.36-7.36,28.62,28.62,14.54-14.54,28.6,28.73,13.63-14.21,22.2,21.67h28.52s-51.19-49.95-51.19-49.95l-13.42,13.99-14.26-14.33,21.19-21.19,28.61,28.61,63.68-63.68-49.64-49.64Z"/></clipPath><linearGradient id="lgLH" x1="153.72" y1=".03" x2="161.02" y2="191.74" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fbb11e"/><stop offset="1" stop-color="#f68f1f"/></linearGradient><clipPath id="cpLH2"><path fill-rule="evenodd" clip-rule="evenodd" d="M780.97,153.26c3.08-2.03,6.63-3.04,10.65-3.04,5.54,0,10.45,1.7,14.74,5.09v4.68c-4.45-3.9-9.36-5.85-14.74-5.85-2.89,0-5.46.65-7.72,1.96-2.26,1.31-3.39,3.13-3.39,5.47,0,.78.14,1.47.41,2.08.27.6.74,1.15,1.4,1.64.66.49,1.31.91,1.93,1.26.62.35,1.53.7,2.72,1.05,1.19.35,2.19.63,3.01.85.82.21,1.99.5,3.51.85,5.07,1.13,8.65,2.65,10.74,4.56,2.09,1.91,3.15,4.27,3.19,7.08,0,2.46-.73,4.56-2.19,6.32-1.46,1.76-3.28,3.01-5.44,3.77-2.16.76-4.49,1.14-6.99,1.14h-.35c-5.97-.04-11.29-2.22-15.97-6.55v-4.62c5.11,4.8,10.51,7.2,16.21,7.2,2.93,0,5.42-.61,7.49-1.84,2.07-1.23,3.1-2.99,3.1-5.29,0-2.03-.93-3.7-2.78-5-1.85-1.31-4.98-2.47-9.39-3.48-5.15-1.13-8.89-2.51-11.23-4.12-2.34-1.62-3.51-3.89-3.51-6.81,0-3.55,1.54-6.34,4.62-8.37M735.09,177.65l-9.48-25.45-9.59,25.45h19.07ZM721.93,150.74h7.37l15.44,40.95h-4.44l-3.86-10.18h-21.76l-4.04,10.18h-4.39l15.68-40.95ZM638.66,170.98c0-5.81,1.99-10.75,5.97-14.83,3.98-4.08,8.83-6.11,14.57-6.11,4.21,0,7.98,1.17,11.29,3.51,3.31,2.34,5.77,5.44,7.37,9.3l-4.1,1.17c-1.29-3-3.21-5.41-5.76-7.22-2.56-1.81-5.49-2.72-8.8-2.72h-.18c-4.56,0-8.39,1.63-11.5,4.88-3.1,3.26-4.65,7.26-4.65,12.02s1.55,8.66,4.65,11.93c3.1,3.28,6.99,4.91,11.67,4.91,3.35,0,6.31-.89,8.86-2.66,2.56-1.77,4.46-4.16,5.7-7.17l4.1,1.11c-1.52,3.78-3.92,6.84-7.2,9.18-3.28,2.34-7,3.53-11.17,3.57l-.82,1.99c1.68.31,3.2.95,4.56,1.9,1.36.96,2.05,2.14,2.05,3.54,0,1.13-.5,2.06-1.49,2.78-.99.72-2.17,1.18-3.51,1.38-1.35.2-2.43.31-3.25.35-.82.04-1.36.06-1.64.06-.9,0-1.62-.08-2.16-.23v-2.98c.86.19,1.75.29,2.69.29s2.17-.13,3.71-.38c1.54-.25,2.31-.87,2.31-1.84,0-.86-.71-1.58-2.13-2.17-1.42-.58-2.78-.92-4.07-.99l1.46-3.8c-5.3-.51-9.72-2.74-13.25-6.7-3.53-3.96-5.29-8.65-5.29-14.07ZM580.14,150.74l21.41,39.08v-39.08h4.15v40.95h-7.96l-21.59-39.43v39.43h-4.1v-40.95h8.07ZM530.46,177.65l-9.48-25.45-9.59,25.45h19.07ZM517.29,150.74h7.37l15.45,40.95h-4.45l-3.86-10.18h-21.76l-4.04,10.18h-4.39l15.68-40.95ZM443.8,150.74l21.41,39.08v-39.08h4.15v40.95h-7.96l-21.59-39.43v39.43h-4.09v-40.95h8.07ZM397.39,191.69v-40.95h4.21v40.95h-4.21ZM364.96,150.74v3.92h-24.28v14.63h21.94v3.86h-21.94v18.54h-4.21v-40.95h28.49Z"/></clipPath><linearGradient id="lgLH2" x1="572.13" y1="149.96" x2="571.76" y2="203.92" xlink:href="#lgLH"/></defs><g clip-path="url(#cpLH)"><rect fill="url(#lgLH)" y=".1" width="314.75" height="191.59"/></g><g clip-path="url(#cpLH2)"><rect fill="url(#lgLH2)" x="336.47" y="150.04" width="470.94" height="53.82"/></g><path fill="#1A1A1A" fill-rule="evenodd" d="M546.67,24.06h23.9v12.45l23.88-12.48h3.8c12.39-.03,21.55,4.58,26.86,12.48l23.88-12.48h9.12c20.52-.02,32.19,12.63,32.2,31.97l.04,64.85h-23.95V56.1c0-3.95-3-8.36-8.3-8.3l-3.8.04c-12.39.02-22.98,6.03-23.85,21.69l.03,51.32h-23.95V56.1c0-3.95-3-8.36-8.3-8.3l-3.8.04c-12.95.02-23.92,6.58-23.91,23.86l.04,49.16h-23.9V24.06ZM950.72,24.02v96.83h-23.9v-56.98l-44.94,23.43c-1.56.82-2.73,2.44-2.73,4.69,0,2.77,2.37,5.01,5.15,5.01h30.49s0,23.86,0,23.86h-30.57c-15,0-29.06-12.4-29.05-28.81,0-11.2,5.84-21.1,15.57-26.2l45.59-23.87-20.82,5.83h-40.34v-23.79h95.56ZM845.11,121.01h-7.95c-20.52.02-32.19-12.62-32.2-31.97l-.04-88.94h23.95v97.14s16.25-.04,16.25-.04v23.81ZM473.8,96.94l51.3.02v23.81s-51.31-.06-51.31-.06c-20.52-.02-32.19-12.61-32.2-31.98V24.02h23.9v12.49l23.88-12.48h15.59c20.14-.02,31.75,12.15,32.2,30.9,0,.36,0,.72-.01,1.07-.44,18.75-12.05,30.91-32.19,30.91h-39.46s0,1.73,0,1.73c0,3.95,3,8.3,8.3,8.3ZM466.54,63.1h39.1c4.73,0,7.59-3.73,7.59-7.49,0-3.86-2.55-7.77-7.38-7.77h-16.49c-10.87,0-19.78,4.44-22.82,15.26ZM904.95.39l26.74-.39-18.63,17.83-19.19.13,11.08-17.57ZM795.42,24.02v96.83h-23.9v-56.98l-44.94,23.43c-1.56.82-2.73,2.44-2.73,4.69,0,2.77,2.37,5.01,5.15,5.01h30.49s0,23.86,0,23.86h-30.58c-15,0-29.06-12.4-29.05-28.81,0-11.2,5.84-21.1,15.57-26.2l45.59-23.87-20.82,5.83h-40.34v-23.79h95.56ZM336.47,21.75h23.9v14.76l23.88-12.48h15.58c20.52-.02,32.19,12.61,32.2,31.97l.04,64.85h-23.95V56.1c0-3.95-2.99-8.31-8.3-8.3l-15.58.04c-12.95.02-23.92,6.58-23.91,23.86l.04,49.16h-23.9V21.75Z"/></svg></a>
   <ul class="nl">
-    <li><a href="funcionalidades.html">Funcionalidades</a></li>
-    <li><a href="planos.html">Planos</a></li>
-    <li><a href="sobre-mentoria.html">Mentoria</a></li>
-    <li><a href="parceiros-bpo.html">Parceiros</a></li>
-    <li><a href="sobre.html">Sobre</a></li>
-    <li><a href="contato.html">Contato</a></li>
-    <li><a href="ajuda.html">Ajuda</a></li>
-    <li><a href="blog.html" style="color:var(--or);font-weight:700">Blog</a></li>
+    <li class="nl-dd">
+      <button class="nl-dd-btn">Plataforma <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:10px;height:10px;flex-shrink:0"><polyline points="6 9 12 15 18 9"/></svg></button>
+      <div class="nl-dd-menu wide">
+        <a href="funcionalidades.html"><div class="nl-dd-txt"><strong>Funcionalidades</strong><span>Dashboard, relatórios e controles</span></div></a>
+        <a href="score-financeiro.html"><div class="nl-dd-txt"><strong>Score Financeiro</strong><span>Avalie a saúde da empresa</span></div></a>
+        <a href="planos.html"><div class="nl-dd-txt"><strong>Planos e Preços</strong><span>Encontre o plano ideal</span></div></a>
+        <a href="parceiros-bpo.html"><div class="nl-dd-txt"><strong>Parceiros BPO</strong><span>Para escritórios de contabilidade</span></div></a>
+      </div>
+    </li>
+    <li class="nl-dd">
+      <button class="nl-dd-btn">Aprenda <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:10px;height:10px;flex-shrink:0"><polyline points="6 9 12 15 18 9"/></svg></button>
+      <div class="nl-dd-menu">
+        <a href="blog.html" style="font-weight:700;color:var(--or-dk)"><div class="nl-dd-txt"><strong>Blog</strong><span>Guias de gestão financeira</span></div></a>
+        <a href="materiais.html"><div class="nl-dd-txt"><strong>Materiais Gratuitos</strong><span>Planilhas, calculadoras e modelos</span></div></a>
+        <div class="nl-dd-sep"></div>
+        <a href="sobre-mentoria.html"><div class="nl-dd-txt"><strong>Mentoria</strong><span>Acompanhamento personalizado</span></div></a>
+      </div>
+    </li>
+    <li><a href="sobre.html" class="nl-lnk">Sobre</a></li>
+    <li><a href="contato.html" class="nl-lnk">Contato</a></li>
   </ul>
   <div class="na">
-    <a href="https://app.nemala.com.br" target="_blank" rel="noopener noreferrer" class="btn btn-gh btn-sm">Entrar</a>
-    <a href="https://app.nemala.com.br/register" class="btn btn-or btn-sm" target="_blank" rel="noopener noreferrer" data-track="InitiateCheckout">Teste grátis</a>
+    <a href="https://app.nemala.com.br" target="_blank" rel="noopener" class="btn btn-gh btn-sm">Entrar</a>
+    <a href="https://app.nemala.com.br/register" class="btn btn-or btn-sm" target="_blank" rel="noopener">Teste grátis</a>
   </div>
   <button class="ham" id="ham-btn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </div></div></nav>
 <div class="mob-nav" id="mob-nav">
-  <a href="funcionalidades.html">Funcionalidades</a><a href="planos.html">Planos</a><a href="sobre-mentoria.html">Mentoria</a><a href="parceiros-bpo.html">Parceiros</a><a href="sobre.html">Sobre</a><a href="contato.html">Contato</a><a href="ajuda.html">Ajuda</a><a href="blog.html">Blog</a>
+  <a href="funcionalidades.html">Funcionalidades</a>
+  <a href="planos.html">Planos</a>
+  <a href="sobre-mentoria.html">Mentoria</a>
+  <a href="parceiros-bpo.html">Parceiros BPO</a>
+  <a href="blog.html">Blog</a>
+  <a href="materiais.html">Materiais</a>
+  <a href="sobre.html">Sobre</a>
+  <a href="contato.html">Contato</a>
   <div class="mob-ctas">
-    <a href="https://app.nemala.com.br" target="_blank" rel="noopener noreferrer" class="btn btn-gh" style="flex:1;justify-content:center">Entrar</a>
-    <a href="https://app.nemala.com.br/register" class="btn btn-or" style="flex:1;justify-content:center" target="_blank" rel="noopener noreferrer" data-track="InitiateCheckout">Teste grátis</a>
+    <a href="https://app.nemala.com.br" target="_blank" rel="noopener" class="btn btn-gh" style="flex:1;justify-content:center">Entrar</a>
+    <a href="https://app.nemala.com.br/register" class="btn btn-or" style="flex:1;justify-content:center" target="_blank" rel="noopener">Teste grátis</a>
   </div>
 </div>
 
-<div class="blog-hero">
+<!-- EDITORIAL HERO -->
+<section class="bl-hero">
+  <div class="bl-hero-editorial">
+    <!-- DESTAQUE PRINCIPAL -->
+    <a class="bl-ed-main" href="blog/capital-de-giro.html">
+      <img src="assets/img/capital-giro-coins.jpg" alt="Capital de Giro PME" loading="eager">
+      <div class="bl-ed-main-body">
+        <div class="bl-ed-eyebrow">
+          <span class="bl-ed-cat-pill">Gestão Financeira</span>
+          <span class="bl-ed-badge">Novo &middot; 12 min de leitura</span>
+        </div>
+        <h2>Capital de Giro: O Que É, Como Calcular e Por Que 9 em 10 Empresas Erram</h2>
+        <p class="bl-ed-desc">Entenda por que o capital de giro é o oxigênio da sua empresa, como calcular a NCG e as 4 estratégias para nunca ficar sem caixa.</p>
+        <div class="bl-ed-meta"><span>Nemalá Finanças</span><span>·</span><span>19 mai 2026</span></div>
+      </div>
+    </a>
+    <!-- SIDEBAR -->
+    <div class="bl-ed-sidebar">
+      <a class="bl-ed-item" href="blog/margem-de-contribuicao.html">
+        <img class="bl-ed-item-img" src="assets/img/margem-holografico.jpg" alt="Margem de Contribuição" loading="lazy">
+        <div class="bl-ed-item-body">
+          <div class="bl-ed-item-cat">Gestão Financeira</div>
+          <div class="bl-ed-item-title">Margem de Contribuição: A Métrica que Separa Produtos Lucrativos dos que Te Quebram</div>
+          <div class="bl-ed-item-meta">19 mai · 10 min</div>
+        </div>
+      </a>
+      <a class="bl-ed-item" href="blog/reforma-tributaria-pme.html">
+        <img class="bl-ed-item-img" src="assets/img/reforma-tributaria.jpg" alt="Reforma Tributária" loading="lazy">
+        <div class="bl-ed-item-body">
+          <div class="bl-ed-item-cat">Tributação</div>
+          <div class="bl-ed-item-title">Reforma Tributária 2026: O Que Muda para Sua PME na Prática</div>
+          <div class="bl-ed-item-meta">19 mai · 11 min</div>
+        </div>
+      </a>
+      <a class="bl-ed-item" href="blog/inadimplencia-como-reduzir.html">
+        <img class="bl-ed-item-img" src="assets/img/inadimplencia.jpg" alt="Inadimplência" loading="lazy">
+        <div class="bl-ed-item-body">
+          <div class="bl-ed-item-cat">Gestão Financeira</div>
+          <div class="bl-ed-item-title">Inadimplência: Como Cobrar, Reduzir e Não Perder o Cliente</div>
+          <div class="bl-ed-item-meta">19 mai · 9 min</div>
+        </div>
+      </a>
+      <a class="bl-ed-item" href="blog/planejamento-financeiro-anual.html">
+        <img class="bl-ed-item-img" src="assets/img/planejamento-bokeh.jpg" alt="Planejamento Financeiro" loading="lazy">
+        <div class="bl-ed-item-body">
+          <div class="bl-ed-item-cat">Planejamento</div>
+          <div class="bl-ed-item-title">Planejamento Financeiro Anual para PMEs: Guia Passo a Passo</div>
+          <div class="bl-ed-item-meta">19 mai · 11 min</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="bl-cats">
   <div class="container">
-    <div class="eyebrow"><span class="dot"></span>Blog</div>
-    <h1 style="font-size:clamp(28px,4vw,48px);font-weight:800;font-family:var(--display);margin:16px 0 12px;line-height:1.15">Gestão financeira que você<br>entende e aplica</h1>
-    <p style="font-size:17px;color:var(--sub);max-width:480px;margin:0 auto;line-height:1.65">Conteúdo prático sobre finanças, indicadores, IA e gestão — escrito para empresários, não para contadores.</p>
-    <div class="blog-cats" id="cats">
-      <button class="blog-cat-btn on" data-cat="todos">Todos</button>
-      <button class="blog-cat-btn" data-cat="Gestão Financeira">Gestão Financeira</button>
-      <button class="blog-cat-btn" data-cat="Contabilidade Gerencial">Contabilidade</button>
-      <button class="blog-cat-btn" data-cat="Análise e Indicadores">Indicadores</button>
-      <button class="blog-cat-btn" data-cat="Tecnologia e IA">Tecnologia e IA</button>
+    <div class="bl-cats-inner">
+      <button class="bl-cat-btn active" data-cat="todos">Todos <span class="bl-cat-count">13</span></button>
+      <button class="bl-cat-btn" data-cat="gestao">Gestão Financeira <span class="bl-cat-count">6</span></button>
+      <button class="bl-cat-btn" data-cat="contabilidade">Contabilidade <span class="bl-cat-count">2</span></button>
+      <button class="bl-cat-btn" data-cat="indicadores">Indicadores <span class="bl-cat-count">2</span></button>
+      <button class="bl-cat-btn" data-cat="planejamento">Planejamento <span class="bl-cat-count">2</span></button>
+      <button class="bl-cat-btn" data-cat="tecnologia">Tecnologia e IA <span class="bl-cat-count">1</span></button>
     </div>
   </div>
 </div>
 
-<div class="container">
-  <div class="blog-grid" id="blog-grid">
 
-    <a class="blog-card" href="blog/fluxo-de-caixa.html" data-cat="Gestão Financeira">
-      <div class="blog-card-accent"></div>
-      <div class="blog-card-body">
-        <div class="blog-card-cat">Gestão Financeira</div>
-        <div class="blog-card-title">Fluxo de Caixa: Guia Completo para Pequenas e Médias Empresas</div>
-        <div class="blog-card-excerpt">Entenda o que é fluxo de caixa, como montar do zero e por que ele é o termômetro mais importante da saúde financeira da sua empresa.</div>
-        <div class="blog-card-meta"><span>7 mai 2026</span><span>8 min de leitura</span></div>
-      </div>
-    </a>
 
-    <a class="blog-card" href="blog/o-que-e-dre-gerencial.html" data-cat="Contabilidade Gerencial">
-      <div class="blog-card-accent"></div>
-      <div class="blog-card-body">
-        <div class="blog-card-cat">Contabilidade Gerencial</div>
-        <div class="blog-card-title">DRE Gerencial: O que é, Como Fazer e Por que sua Empresa Precisa</div>
-        <div class="blog-card-excerpt">A DRE Gerencial mostra se sua empresa está realmente lucrando — não só no papel. Veja como montar, interpretar e usar na prática.</div>
-        <div class="blog-card-meta"><span>5 mai 2026</span><span>10 min de leitura</span></div>
-      </div>
-    </a>
-
-    <a class="blog-card" href="blog/como-precificar-produtos-e-servicos.html" data-cat="Gestão Financeira">
-      <div class="blog-card-accent"></div>
-      <div class="blog-card-body">
-        <div class="blog-card-cat">Gestão Financeira</div>
-        <div class="blog-card-title">Como Precificar Produtos e Serviços sem Perder Dinheiro</div>
-        <div class="blog-card-excerpt">Preço errado é a causa número 1 de prejuízo invisível. Aprenda a calcular o preço certo com markup, margem e ponto de equilíbrio.</div>
-        <div class="blog-card-meta"><span>2 mai 2026</span><span>9 min de leitura</span></div>
-      </div>
-    </a>
-
-    <a class="blog-card" href="blog/indicadores-financeiros-essenciais.html" data-cat="Análise e Indicadores">
-      <div class="blog-card-accent"></div>
-      <div class="blog-card-body">
-        <div class="blog-card-cat">Análise e Indicadores</div>
-        <div class="blog-card-title">10 Indicadores Financeiros que Todo Empresário Deve Monitorar</div>
-        <div class="blog-card-excerpt">Se você não monitora esses 10 indicadores, está gerindo sua empresa no escuro. Fórmulas, referências e como interpretar cada um.</div>
-        <div class="blog-card-meta"><span>28 abr 2026</span><span>12 min de leitura</span></div>
-      </div>
-    </a>
-
-    <a class="blog-card" href="blog/inteligencia-artificial-gestao-financeira.html" data-cat="Tecnologia e IA">
-      <div class="blog-card-accent"></div>
-      <div class="blog-card-body">
-        <div class="blog-card-cat">Tecnologia e IA</div>
-        <div class="blog-card-title">Inteligência Artificial na Gestão Financeira: O que Muda para Seu Negócio</div>
-        <div class="blog-card-excerpt">A IA deixou de ser assunto de grandes corporações. Veja o que ela já faz pela gestão financeira de PMEs e como aplicar agora.</div>
-        <div class="blog-card-meta"><span>22 abr 2026</span><span>9 min de leitura</span></div>
-      </div>
-    </a>
-
-    <a class="blog-card" href="blog/ponto-de-equilibrio.html" data-cat="Análise e Indicadores">
-      <div class="blog-card-accent"></div>
-      <div class="blog-card-body">
-        <div class="blog-card-cat">Análise e Indicadores</div>
-        <div class="blog-card-title">Ponto de Equilíbrio: Como Calcular, Interpretar e Usar na Gestão</div>
-        <div class="blog-card-excerpt">Saber seu ponto de equilíbrio é saber quanto precisa vender para não ter prejuízo. Veja como calcular os 3 tipos e o que fazer com esse número.</div>
-        <div class="blog-card-meta"><span>15 abr 2026</span><span>11 min de leitura</span></div>
-      </div>
-    </a>
-
-    <a class="blog-card" href="blog/gestao-de-estoque.html" data-cat="Gestão Operacional">
-      <div class="blog-card-accent"></div>
-      <div class="blog-card-body">
-        <div class="blog-card-cat">Gestão Operacional</div>
-        <div class="blog-card-title">Gestão de Estoque para PMEs: Como Calcular, Controlar e Evitar Perdas</div>
-        <div class="blog-card-excerpt">Estoque parado é dinheiro morto. Estoque insuficiente é venda perdida. Veja como calcular giro, estoque mínimo e ponto de pedido para nunca errar.</div>
-        <div class="blog-card-meta"><span>19 mai 2026</span><span>10 min de leitura</span></div>
-      </div>
-    </a>
-
-    <a class="blog-card" href="blog/planejamento-financeiro-anual.html" data-cat="Planejamento">
-      <div class="blog-card-accent"></div>
-      <div class="blog-card-body">
-        <div class="blog-card-cat">Planejamento</div>
-        <div class="blog-card-title">Planejamento Financeiro Anual para PMEs: Guia Passo a Passo</div>
-        <div class="blog-card-excerpt">Empresas que planejam crescem 2× mais rápido. Aprenda a montar seu orçamento anual, projetar cenários e revisar metas mensalmente.</div>
-        <div class="blog-card-meta"><span>19 mai 2026</span><span>11 min de leitura</span></div>
-      </div>
-    </a>
-
-  </div>
-
-  <div class="blog-cta">
-    <div>
-      <h3>Coloque a teoria em prática</h3>
-      <p>A Nemalá automatiza fluxo de caixa, DRE, indicadores e análise por IA — para você parar de ler sobre gestão financeira e começar a fazer.</p>
+<section class="bl-grid-section" id="artigos">
+  <div class="container">
+    <div class="bl-section-head"><div class="bl-section-title">Todos os artigos</div></div>
+    <div class="bl-grid" id="blog-grid">
+      <a class="bl-card" href="blog/capital-de-giro.html" data-cat="gestao"><div class="bl-card-img"><img src="assets/img/capital-giro-coins.jpg" alt="Capital de Giro" loading="lazy"><div class="bl-new">Novo</div></div><div class="bl-card-accent"></div><div class="bl-card-body"><div class="bl-card-cat">Gestão Financeira</div><div class="bl-card-title">Capital de Giro: O Que É, Como Calcular e Por Que 9 em 10 Empresas Erram</div><div class="bl-card-excerpt">Entenda por que o capital de giro é o oxigênio da sua empresa e como nunca ficar sem caixa.</div><div class="bl-card-footer"><span>19 mai 2026</span><span class="bl-card-read">12 min →</span></div></div></a>
+      <a class="bl-card" href="blog/margem-de-contribuicao.html" data-cat="gestao"><div class="bl-card-img"><img src="assets/img/margem-contribuicao.jpg" alt="Margem de contribuição" loading="lazy"><div class="bl-new">Novo</div></div><div class="bl-card-accent"></div><div class="bl-card-body"><div class="bl-card-cat">Gestão Financeira</div><div class="bl-card-title">Margem de Contribuição: A Métrica que Separa Produtos Lucrativos dos que Te Quebram</div><div class="bl-card-excerpt">A maioria olha só para o faturamento. A margem revela quais produtos realmente pagam as contas.</div><div class="bl-card-footer"><span>19 mai 2026</span><span class="bl-card-read">10 min →</span></div></div></a>
+      <a class="bl-card" href="blog/reforma-tributaria-pme.html" data-cat="planejamento"><div class="bl-card-img"><img src="assets/img/reforma-tributaria.jpg" alt="Reforma tributária" loading="lazy"><div class="bl-new">Novo</div></div><div class="bl-card-accent"></div><div class="bl-card-body"><div class="bl-card-cat">Tributação</div><div class="bl-card-title">Reforma Tributária 2026: O Que Muda para Sua PME na Prática</div><div class="bl-card-excerpt">CBS, IBS e Imposto Seletivo. Entenda o cronograma e o que sua empresa precisa fazer agora.</div><div class="bl-card-footer"><span>19 mai 2026</span><span class="bl-card-read">11 min →</span></div></div></a>
+      <a class="bl-card" href="blog/inadimplencia-como-reduzir.html" data-cat="gestao"><div class="bl-card-img"><img src="assets/img/inadimplencia.jpg" alt="Inadimplência" loading="lazy"><div class="bl-new">Novo</div></div><div class="bl-card-accent"></div><div class="bl-card-body"><div class="bl-card-cat">Gestão Financeira</div><div class="bl-card-title">Inadimplência: Como Cobrar, Reduzir e Não Perder o Cliente</div><div class="bl-card-excerpt">Com 8,9 milhões de empresas inadimplentes, uma régua de cobrança eficiente é sobrevivência.</div><div class="bl-card-footer"><span>19 mai 2026</span><span class="bl-card-read">9 min →</span></div></div></a>
+      <a class="bl-card" href="blog/gestao-de-estoque.html" data-cat="gestao"><div class="bl-card-img"><img src="assets/img/gestao-estoque.jpg" alt="Gestão de estoque" loading="lazy"></div><div class="bl-card-accent"></div><div class="bl-card-body"><div class="bl-card-cat">Gestão Operacional</div><div class="bl-card-title">Gestão de Estoque para PMEs: Como Calcular, Controlar e Evitar Perdas</div><div class="bl-card-excerpt">Estoque parado é dinheiro morto. Calcule giro, estoque mínimo e ponto de pedido.</div><div class="bl-card-footer"><span>19 mai 2026</span><span class="bl-card-read">10 min →</span></div></div></a>
+      <a class="bl-card" href="blog/planejamento-financeiro-anual.html" data-cat="planejamento"><div class="bl-card-img"><img src="assets/img/planejamento-financeiro.jpg" alt="Planejamento financeiro" loading="lazy"></div><div class="bl-card-accent"></div><div class="bl-card-body"><div class="bl-card-cat">Planejamento</div><div class="bl-card-title">Planejamento Financeiro Anual para PMEs: Guia Passo a Passo</div><div class="bl-card-excerpt">Empresas que planejam crescem 2× mais rápido. Monte seu orçamento e revise metas mensalmente.</div><div class="bl-card-footer"><span>19 mai 2026</span><span class="bl-card-read">11 min →</span></div></div></a>
+      <a class="bl-card" href="blog/fluxo-de-caixa.html" data-cat="gestao"><div class="bl-card-img"><img src="assets/img/capital-giro-coins.jpg" alt="Capital de Giro" loading="lazy"></div><div class="bl-card-accent"></div><div class="bl-card-body"><div class="bl-card-cat">Gestão Financeira</div><div class="bl-card-title">Fluxo de Caixa: Guia Completo para Pequenas e Médias Empresas</div><div class="bl-card-excerpt">O termômetro mais importante da saúde financeira da sua empresa — entenda e monte do zero.</div><div class="bl-card-footer"><span>7 mai 2026</span><span class="bl-card-read">8 min →</span></div></div></a>
+      <a class="bl-card" href="blog/o-que-e-dre-gerencial.html" data-cat="contabilidade"><div class="bl-card-img"><img src="assets/img/planejamento-financeiro.jpg" alt="Planejamento financeiro" loading="lazy"></div><div class="bl-card-accent"></div><div class="bl-card-body"><div class="bl-card-cat">Contabilidade</div><div class="bl-card-title">DRE Gerencial: O que é, Como Fazer e Por que sua Empresa Precisa</div><div class="bl-card-excerpt">Mostra se sua empresa está realmente lucrando — não só no papel.</div><div class="bl-card-footer"><span>5 mai 2026</span><span class="bl-card-read">10 min →</span></div></div></a>
+      <a class="bl-card" href="blog/como-precificar-produtos-e-servicos.html" data-cat="gestao"><div class="bl-card-img"><img src="assets/img/inadimplencia.jpg" alt="Inadimplência" loading="lazy"></div><div class="bl-card-accent"></div><div class="bl-card-body"><div class="bl-card-cat">Gestão Financeira</div><div class="bl-card-title">Como Precificar Produtos e Serviços sem Perder Dinheiro</div><div class="bl-card-excerpt">Preço errado é a causa nº 1 de prejuízo invisível. Calcule markup, margem e ponto de equilíbrio.</div><div class="bl-card-footer"><span>2 mai 2026</span><span class="bl-card-read">9 min →</span></div></div></a>
+      <a class="bl-card" href="blog/indicadores-financeiros-essenciais.html" data-cat="indicadores"><div class="bl-card-img"><img src="assets/img/indicadores-kpi.jpg" alt="Indicadores financeiros" loading="lazy"></div><div class="bl-card-accent"></div><div class="bl-card-body"><div class="bl-card-cat">Indicadores</div><div class="bl-card-title">10 Indicadores Financeiros que Todo Empresário Deve Monitorar</div><div class="bl-card-excerpt">Se você não monitora esses 10, está gerindo no escuro. Fórmulas e como interpretar cada um.</div><div class="bl-card-footer"><span>28 abr 2026</span><span class="bl-card-read">12 min →</span></div></div></a>
+      <a class="bl-card" href="blog/inteligencia-artificial-gestao-financeira.html" data-cat="tecnologia"><div class="bl-card-img"><img src="assets/img/ia-gestao.jpg" alt="IA gestão financeira" loading="lazy"></div><div class="bl-card-accent"></div><div class="bl-card-body"><div class="bl-card-cat">Tecnologia e IA</div><div class="bl-card-title">Inteligência Artificial na Gestão Financeira: O que Muda para Seu Negócio</div><div class="bl-card-excerpt">A IA deixou de ser assunto de grandes corporações. O que já faz para PMEs e como aplicar agora.</div><div class="bl-card-footer"><span>22 abr 2026</span><span class="bl-card-read">9 min →</span></div></div></a>
+      <a class="bl-card" href="blog/ponto-de-equilibrio.html" data-cat="indicadores"><div class="bl-card-img"><img src="assets/img/margem-contribuicao.jpg" alt="Margem de contribuição" loading="lazy"></div><div class="bl-card-accent"></div><div class="bl-card-body"><div class="bl-card-cat">Indicadores</div><div class="bl-card-title">Ponto de Equilíbrio: Como Calcular, Interpretar e Usar na Gestão</div><div class="bl-card-excerpt">Saber quanto precisa vender para não ter prejuízo. Calcule os 3 tipos e use na tomada de decisão.</div><div class="bl-card-footer"><span>15 abr 2026</span><span class="bl-card-read">11 min →</span></div></div></a>
+      <a class="bl-card" href="blog/o-que-e-dre-gerencial.html" data-cat="contabilidade"><div class="bl-card-img"><img src="assets/img/planejamento-financeiro.jpg" alt="Planejamento financeiro" loading="lazy"></div><div class="bl-card-accent"></div><div class="bl-card-body"><div class="bl-card-cat">Contabilidade</div><div class="bl-card-title">DRE vs Fluxo de Caixa: Qual a Diferença e Quando Usar Cada Um</div><div class="bl-card-excerpt">Confundir os dois custa caro. O que cada relatório revela sobre sua empresa.</div><div class="bl-card-footer"><span>10 abr 2026</span><span class="bl-card-read">8 min →</span></div></div></a>
     </div>
-    <a href="https://app.nemala.com.br/register" class="btn btn-or btn-lg" style="flex-shrink:0" target="_blank" rel="noopener noreferrer" data-track="InitiateCheckout">Testar grátis — 15 dias</a>
   </div>
-</div>
+</section>
 
-<footer><div class="container">
-  <div class="fg">
-    <div class="fb">
-      <a class="logo" href="index.html"><svg style="height:30px;width:auto;filter:brightness(0) invert(1)" viewBox="0 0 950.72 203.86" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" fill-rule="evenodd" d="M546.67,24.06h23.9v12.45l23.88-12.48h3.8c12.39-.03,21.55,4.58,26.86,12.48l23.88-12.48h9.12c20.52-.02,32.19,12.63,32.2,31.97l.04,64.85h-23.95V56.1c0-3.95-3-8.36-8.3-8.3l-3.8.04c-12.39.02-22.98,6.03-23.85,21.69l.03,51.32h-23.95V56.1c0-3.95-3-8.36-8.3-8.3l-3.8.04c-12.95.02-23.92,6.58-23.91,23.86l.04,49.16h-23.9V24.06ZM950.72,24.02v96.83h-23.9v-56.98l-44.94,23.43c-1.56.82-2.73,2.44-2.73,4.69,0,2.77,2.37,5.01,5.15,5.01h30.49v23.86h-30.57c-15,0-29.06-12.4-29.05-28.81,0-11.2,5.84-21.1,15.57-26.2l45.59-23.87-20.82,5.83h-40.34v-23.79h95.56ZM336.47,21.75h23.9v14.76l23.88-12.48h15.58c20.52-.02,32.19,12.61,32.2,31.97l.04,64.85h-23.95V56.1c0-3.95-2.99-8.31-8.3-8.3l-15.58.04c-12.95.02-23.92,6.58-23.91,23.86l.04,49.16h-23.9V21.75Z"/></svg></a>
-      <p class="fdesc">Gestão financeira com IA para empresários que querem clareza, controle e previsibilidade.</p>
+<section class="bl-nl">
+  <div class="container">
+    <div class="bl-nl-inner">
+      <div>
+        <h2>Gestão financeira na sua caixa de entrada, <em>toda semana</em></h2>
+        <p>Novos artigos e análises para empresários que querem crescer com controle.</p>
+      </div>
+      <div>
+        <div class="bl-nl-form" id="nl-form">
+          <input type="text" placeholder="Seu nome" id="nl-name">
+          <input type="email" placeholder="Seu melhor e-mail" id="nl-email">
+          <button type="button" onclick="handleNL()">Quero receber</button>
+        </div>
+        <p class="bl-nl-note">Sem spam. Cancele quando quiser.</p>
+      </div>
     </div>
-    <div class="fc"><h5>Produto</h5><ul><li><a href="funcionalidades.html">Funcionalidades</a></li><li><a href="planos.html">Planos e preços</a></li><li><a href="sobre-mentoria.html">Mentoria</a></li><li><a href="https://app.nemala.com.br/register" target="_blank" rel="noopener noreferrer" data-track="InitiateCheckout">Teste grátis</a></li></ul></div>
-    <div class="fc"><h5>Empresa</h5><ul><li><a href="sobre.html">Sobre a Nemalá</a></li><li><a href="parceiros-bpo.html">Parceiros BPO</a></li><li><a href="contato.html">Contato</a></li></ul></div>
-    <div class="fc"><h5>Conteúdo</h5><ul><li><a href="blog.html">Blog</a></li><li><a href="ajuda.html">Central de Ajuda</a></li><li><a href="termos.html">Termos de uso</a></li><li><a href="privacidade.html">Privacidade</a></li></ul></div>
   </div>
-  <div class="fb2"><div class="fc2">© 2026 Nemalá Finanças. Todos os direitos reservados.</div><div class="fl"><a href="termos.html">Termos</a><a href="privacidade.html">Privacidade</a></div></div>
-</div></footer>
+</section>
 
-<div id="nml-fab">
-  <div id="nml-fab-menu">
-    <a class="nml-fab-item" href="ajuda.html"><div class="nml-fab-ic" style="background:#FFF6E0;color:#E8950A"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div><div class="nml-fab-tx"><strong>Central de Ajuda</strong><small>Respostas para todas as dúvidas</small></div></a>
-    <a class="nml-fab-item" href="https://wa.me/554991032411?text=Olá!%20Preciso%20de%20ajuda%20com%20a%20Nemalá." target="_blank" rel="noopener noreferrer" data-track="Contact" data-track-canal="site_wa"><div class="nml-fab-ic" style="background:#E8F9F2;color:#0EA671"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg></div><div class="nml-fab-tx"><strong>Falar no WhatsApp</strong><small>Resposta em até 2h úteis</small></div></a>
+<footer class="blog-footer">
+  <div class="container">
+    <div class="bf-inner">
+      <div>
+        <svg style="height:30px;width:auto" viewBox="0 0 950.72 203.86" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs><clipPath id="cp1ft"><path fill-rule="evenodd" clip-rule="evenodd" d="M257.63,79.45l-15.53-15.53-6.82,6.82,22.35,8.71ZM128.24,106.35l7.02-7.02,6.82,6.82-7.02,7.02-6.82-6.82ZM163.68,70.92l35.44,35.44-35.44,35.44-14.49-14.49,21.14-21.14-20.94-20.94,14.3-14.3ZM85.47,120.92l-21.25,21.21-35.97-35.97,56.92-56.91,35.97,35.97-21.14,21.14,20.94,20.94-7.44,7.44-21.04-20.79-6.99,6.97ZM78.3,156.21l14.22-14.2,6.89,6.8-14.25,14.25-6.86-6.86ZM242.1,49.71l35.44,35.44-35.44,35.44-35.44-35.44,35.44-35.44ZM256.14,35.51l7.16-7.17,37.32,37.32,14.12-14.12L263.3.1l-60.13,60.13.08.08-10.97,10.97-28.61-28.61-28.42,28.42-50.09-50.09L0,106.16l50.08,50.08-34.92,34.85,28.05.12,20.96-20.88,21,21,28.46-28.46,28.69,28.36,28.29-.05-42.9-42.4,7.36-7.36,28.62,28.62,14.54-14.54,28.6,28.73,13.63-14.21,22.2,21.67h28.52s-51.19-49.95-51.19-49.95l-13.42,13.99-14.26-14.33,21.19-21.19,28.61,28.61,63.68-63.68-49.64-49.64Z"/></clipPath>
+<linearGradient id="lg1ft" x1="153.72" y1=".03" x2="161.02" y2="191.74" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fbb11e"/><stop offset="1" stop-color="#f68f1f"/></linearGradient>
+<clipPath id="cp2ft"><path fill-rule="evenodd" clip-rule="evenodd" d="M780.97,153.26c3.08-2.03,6.63-3.04,10.65-3.04,5.54,0,10.45,1.7,14.74,5.09v4.68c-4.45-3.9-9.36-5.85-14.74-5.85-2.89,0-5.46.65-7.72,1.96-2.26,1.31-3.39,3.13-3.39,5.47,0,.78.14,1.47.41,2.08.27.6.74,1.15,1.4,1.64.66.49,1.31.91,1.93,1.26.62.35,1.53.7,2.72,1.05,1.19.35,2.19.63,3.01.85.82.21,1.99.5,3.51.85,5.07,1.13,8.65,2.65,10.74,4.56,2.09,1.91,3.15,4.27,3.19,7.08,0,2.46-.73,4.56-2.19,6.32-1.46,1.76-3.28,3.01-5.44,3.77-2.16.76-4.49,1.14-6.99,1.14h-.35c-5.97-.04-11.29-2.22-15.97-6.55v-4.62c5.11,4.8,10.51,7.2,16.21,7.2,2.93,0,5.42-.61,7.49-1.84,2.07-1.23,3.1-2.99,3.1-5.29,0-2.03-.93-3.7-2.78-5-1.85-1.31-4.98-2.47-9.39-3.48-5.15-1.13-8.89-2.51-11.23-4.12-2.34-1.62-3.51-3.89-3.51-6.81,0-3.55,1.54-6.34,4.62-8.37M735.09,177.65l-9.48-25.45-9.59,25.45h19.07ZM721.93,150.74h7.37l15.44,40.95h-4.44l-3.86-10.18h-21.76l-4.04,10.18h-4.39l15.68-40.95ZM638.66,170.98c0-5.81,1.99-10.75,5.97-14.83,3.98-4.08,8.83-6.11,14.57-6.11,4.21,0,7.98,1.17,11.29,3.51,3.31,2.34,5.77,5.44,7.37,9.3l-4.1,1.17c-1.29-3-3.21-5.41-5.76-7.22-2.56-1.81-5.49-2.72-8.8-2.72h-.18c-4.56,0-8.39,1.63-11.5,4.88-3.1,3.26-4.65,7.26-4.65,12.02s1.55,8.66,4.65,11.93c3.1,3.28,6.99,4.91,11.67,4.91,3.35,0,6.31-.89,8.86-2.66,2.56-1.77,4.46-4.16,5.7-7.17l4.1,1.11c-1.52,3.78-3.92,6.84-7.2,9.18-3.28,2.34-7,3.53-11.17,3.57l-.82,1.99c1.68.31,3.2.95,4.56,1.9,1.36.96,2.05,2.14,2.05,3.54,0,1.13-.5,2.06-1.49,2.78-.99.72-2.17,1.18-3.51,1.38-1.35.2-2.43.31-3.25.35-.82.04-1.36.06-1.64.06-.9,0-1.62-.08-2.16-.23v-2.98c.86.19,1.75.29,2.69.29s2.17-.13,3.71-.38c1.54-.25,2.31-.87,2.31-1.84,0-.86-.71-1.58-2.13-2.17-1.42-.58-2.78-.92-4.07-.99l1.46-3.8c-5.3-.51-9.72-2.74-13.25-6.7-3.53-3.96-5.29-8.65-5.29-14.07ZM580.14,150.74l21.41,39.08v-39.08h4.15v40.95h-7.96l-21.59-39.43v39.43h-4.1v-40.95h8.07ZM530.46,177.65l-9.48-25.45-9.59,25.45h19.07ZM517.29,150.74h7.37l15.45,40.95h-4.45l-3.86-10.18h-21.76l-4.04,10.18h-4.39l15.68-40.95ZM443.8,150.74l21.41,39.08v-39.08h4.15v40.95h-7.96l-21.59-39.43v39.43h-4.09v-40.95h8.07ZM397.39,191.69v-40.95h4.21v40.95h-4.21ZM364.96,150.74v3.92h-24.28v14.63h21.94v3.86h-21.94v18.54h-4.21v-40.95h28.49Z"/></clipPath>
+<linearGradient id="lg2ft" x1="572.13" y1="149.96" x2="571.76" y2="203.92" xlink:href="#lg1ft"/></defs>
+<g clip-path="url(#cp1ft)"><rect fill="url(#lg1ft)" y=".1" width="314.75" height="191.59"/></g>
+<g clip-path="url(#cp2ft)"><rect fill="url(#lg2ft)" x="336.47" y="150.04" width="470.94" height="53.82"/></g>
+<path fill="#fff" fill-rule="evenodd" d="M546.67,24.06h23.9v12.45l23.88-12.48h3.8c12.39-.03,21.55,4.58,26.86,12.48l23.88-12.48h9.12c20.52-.02,32.19,12.63,32.2,31.97l.04,64.85h-23.95V56.1c0-3.95-3-8.36-8.3-8.3l-3.8.04c-12.39.02-22.98,6.03-23.85,21.69l.03,51.32h-23.95V56.1c0-3.95-3-8.36-8.3-8.3l-3.8.04c-12.95.02-23.92,6.58-23.91,23.86l.04,49.16h-23.9V24.06ZM950.72,24.02v96.83h-23.9v-56.98l-44.94,23.43c-1.56.82-2.73,2.44-2.73,4.69,0,2.77,2.37,5.01,5.15,5.01h30.49s0,23.86,0,23.86h-30.57c-15,0-29.06-12.4-29.05-28.81,0-11.2,5.84-21.1,15.57-26.2l45.59-23.87-20.82,5.83h-40.34v-23.79h95.56ZM845.11,121.01h-7.95c-20.52.02-32.19-12.62-32.2-31.97l-.04-88.94h23.95v97.14s16.25-.04,16.25-.04v23.81ZM473.8,96.94l51.3.02v23.81s-51.31-.06-51.31-.06c-20.52-.02-32.19-12.61-32.2-31.98V24.02h23.9v12.49l23.88-12.48h15.59c20.14-.02,31.75,12.15,32.2,30.9,0,.36,0,.72-.01,1.07-.44,18.75-12.05,30.91-32.19,30.91h-39.46s0,1.73,0,1.73c0,3.95,3,8.3,8.3,8.3ZM466.54,63.1h39.1c4.73,0,7.59-3.73,7.59-7.49,0-3.86-2.55-7.77-7.38-7.77h-16.49c-10.87,0-19.78,4.44-22.82,15.26ZM904.95.39l26.74-.39-18.63,17.83-19.19.13,11.08-17.57ZM795.42,24.02v96.83h-23.9v-56.98l-44.94,23.43c-1.56.82-2.73,2.44-2.73,4.69,0,2.77,2.37,5.01,5.15,5.01h30.49s0,23.86,0,23.86h-30.58c-15,0-29.06-12.4-29.05-28.81,0-11.2,5.84-21.1,15.57-26.2l45.59-23.87-20.82,5.83h-40.34v-23.79h95.56ZM336.47,21.75h23.9v14.76l23.88-12.48h15.58c20.52-.02,32.19,12.61,32.2,31.97l.04,64.85h-23.95V56.1c0-3.95-2.99-8.31-8.3-8.3l-15.58.04c-12.95.02-23.92,6.58-23.91,23.86l.04,49.16h-23.9V21.75Z"/>
+</svg>
+        <p class="bf-brand-desc">Manual financeiro para empresários que querem clareza, controle e crescimento sustentável.</p>
+      </div>
+      <div class="bf-col"><h5>Artigos</h5><ul>
+        <li><a href="blog/capital-de-giro.html">Capital de Giro</a></li>
+        <li><a href="blog/margem-de-contribuicao.html">Margem de Contribuição</a></li>
+        <li><a href="blog/fluxo-de-caixa.html">Fluxo de Caixa</a></li>
+        <li><a href="blog/o-que-e-dre-gerencial.html">DRE Gerencial</a></li>
+        <li><a href="blog.html">Ver todos →</a></li>
+      </ul></div>
+      <div class="bf-col"><h5>Materiais</h5><ul>
+        <li><a href="materiais/planilha-fluxo-de-caixa.html">Fluxo de Caixa</a></li>
+        <li><a href="materiais/calculadora-ponto-de-equilibrio.html">Ponto de Equilíbrio</a></li>
+        <li><a href="materiais/planilha-dre-gerencial.html">DRE Gerencial</a></li>
+        <li><a href="materiais/planilha-precificacao.html">Precificação</a></li>
+        <li><a href="materiais.html">Ver todos →</a></li>
+      </ul></div>
+      <div class="bf-col"><h5>Nemalá</h5><ul>
+        <li><a href="index.html">Site principal</a></li>
+        <li><a href="planos.html">Planos</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="https://app.nemala.com.br/register" target="_blank" rel="noopener">Testar grátis</a></li>
+      </ul></div>
+    </div>
+    <div class="bf-bottom">
+      <p>© 2026 Nemalá Finanças. Todos os direitos reservados.</p>
+      <div class="bf-tags">
+        <span class="bf-tag">Gestão Financeira PME</span>
+        <span class="bf-tag">Fluxo de Caixa</span>
+        <span class="bf-tag">Capital de Giro</span>
+        <span class="bf-tag">DRE Gerencial</span>
+      </div>
+    </div>
   </div>
-  <button id="nml-fab-btn" onclick="document.getElementById('nml-fab-menu').classList.toggle('open')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg><span id="nml-fab-label">Ajuda</span></button>
-</div>
-<div id="nml-cookie" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9998;background:#1A1A1A;padding:14px 20px"><div style="max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap"><span style="font-size:13px;color:rgba(255,255,255,.75)">Usamos cookies. <a href="privacidade.html" style="color:var(--or)">Política de Privacidade</a>.</span><div style="display:flex;gap:8px"><button id="nml-cr" style="background:transparent;border:1px solid rgba(255,255,255,.3);color:rgba(255,255,255,.7);font-size:13px;font-weight:600;padding:8px 16px;border-radius:8px;cursor:pointer;font-family:var(--body)">Recusar</button><button id="nml-ca" style="background:var(--or);border:none;color:var(--ink);font-size:13px;font-weight:700;padding:8px 18px;border-radius:8px;cursor:pointer;font-family:var(--body)">Aceitar</button></div></div></div>
+</footer>
 
 <script>
+document.querySelectorAll('.bl-cat-btn').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    document.querySelectorAll('.bl-cat-btn').forEach(function(b){b.classList.remove('active');});
+    this.classList.add('active');
+    var cat=this.dataset.cat;
+    document.querySelectorAll('#blog-grid .bl-card').forEach(function(card){
+      card.style.display=(cat==='todos'||card.dataset.cat===cat)?'flex':'none';
+    });
+  });
+});
+function handleNL(){
+  var name=document.getElementById('nl-name').value.trim();
+  var email=document.getElementById('nl-email').value.trim();
+  if(!email||!email.includes('@')){alert('Insira um e-mail válido.');return;}
+  document.getElementById('nl-form').innerHTML='<div style="text-align:center;padding:24px 0"><div style="font-size:36px;margin-bottom:12px">✅</div><strong style="color:#fff;font-size:16px">Perfeito'+(name?', '+name:'')+'!</strong><p style="color:rgba(255,255,255,.4);font-size:13px;margin-top:8px">Você receberá nossos conteúdos toda semana.</p></div>';
+}
+
+// ── NAV: dropdown click + ham ─────────────────────────────────
 (function(){
-  var hb=document.getElementById('ham-btn'),mn=document.getElementById('mob-nav');
-  if(hb&&mn){hb.addEventListener('click',function(){var o=hb.classList.toggle('open');mn.classList.toggle('open');hb.setAttribute('aria-expanded',o);});document.addEventListener('click',function(e){if(!hb.contains(e.target)&&!mn.contains(e.target)){hb.classList.remove('open');mn.classList.remove('open');}});}
-  var nb=document.getElementById('nb');
-  if(nb)window.addEventListener('scroll',function(){nb.classList.toggle('sc',window.scrollY>8);},{passive:true});
-  // Filtro de categorias
-  var btns=document.querySelectorAll('.blog-cat-btn');
-  var cards=document.querySelectorAll('.blog-card');
-  btns.forEach(function(btn){btn.addEventListener('click',function(){btns.forEach(function(b){b.classList.remove('on');});btn.classList.add('on');var cat=btn.getAttribute('data-cat');cards.forEach(function(c){c.style.display=(cat==='todos'||c.getAttribute('data-cat')===cat)?'':'none';});});});
-  // FAB
-  var fm=document.getElementById('nml-fab-menu');
-  document.addEventListener('click',function(e){if(fm&&!document.getElementById('nml-fab').contains(e.target))fm.classList.remove('open');});
-  // Cookie
-  var CK='nml_cookie_consent';function gc(){try{return localStorage.getItem(CK);}catch(e){return null;}}function sc(v){try{localStorage.setItem(CK,v);}catch(e){}}
-  var cb=document.getElementById('nml-cookie');if(!gc()&&cb)setTimeout(function(){cb.style.display='block';},1500);
-  var ca=document.getElementById('nml-ca'),cr=document.getElementById('nml-cr');
-  if(ca)ca.addEventListener('click',function(){sc('accept');if(cb)cb.style.display='none';window.dataLayer=window.dataLayer||[];if(typeof gtag==='function'){gtag('consent','update',{analytics_storage:'granted',ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted'});}window.dataLayer.push({event:'nml_consent_granted'});});
-  if(cr)cr.addEventListener('click',function(){sc('reject');if(cb)cb.style.display='none';});
+  // ── NAV: dropdown click + ham ─────────────────────────────────
+(function(){
+  var nb=document.getElementById("nb");
+  if(nb)window.addEventListener("scroll",function(){nb.classList.toggle("sc",window.scrollY>8);},{passive:true});
+
+  // Click-based dropdowns
+  var dds=document.querySelectorAll(".nl-dd");
+  dds.forEach(function(dd){
+    var btn=dd.querySelector(".nl-dd-btn");
+    if(!btn)return;
+    btn.addEventListener("click",function(e){
+      e.stopPropagation();
+      var isOpen=dd.classList.contains("open");
+      // close all
+      dds.forEach(function(d){d.classList.remove("open");});
+      if(!isOpen) dd.classList.add("open");
+    });
+  });
+  // Close on outside click
+  document.addEventListener("click",function(e){
+    if(!e.target.closest(".nl-dd")) dds.forEach(function(d){d.classList.remove("open");});
+  });
+
+  // Ham / mob-nav
+  var hb=document.getElementById("ham-btn"),mn=document.getElementById("mob-nav");
+  if(hb&&mn){
+    hb.addEventListener("click",function(e){
+      e.stopPropagation();
+      var o=hb.classList.toggle("open");
+      mn.classList.toggle("open",o);
+      hb.setAttribute("aria-expanded",o);
+    });
+    document.addEventListener("click",function(e){
+      if(!hb.contains(e.target)&&!mn.contains(e.target)){
+        hb.classList.remove("open");
+        mn.classList.remove("open");
+      }
+    });
+  }
+})();
+  // Click-based dropdowns
+  var dds=document.querySelectorAll(".nl-dd");
+  dds.forEach(function(dd){
+    var btn=dd.querySelector(".nl-dd-btn");
+    if(!btn)return;
+    btn.addEventListener("click",function(e){
+      e.stopPropagation();
+      var isOpen=dd.classList.contains("open");
+      // close all
+      dds.forEach(function(d){d.classList.remove("open");});
+      if(!isOpen) dd.classList.add("open");
+    });
+  });
+  // Close on outside click
+  document.addEventListener("click",function(e){
+    if(!e.target.closest(".nl-dd")) dds.forEach(function(d){d.classList.remove("open");});
+  });
+
+  // Ham / mob-nav
+  var hb=document.getElementById("ham-btn"),mn=document.getElementById("mob-nav");
+  if(hb&&mn){
+    hb.addEventListener("click",function(e){
+      e.stopPropagation();
+      var o=hb.classList.toggle("open");
+      mn.classList.toggle("open",o);
+      hb.setAttribute("aria-expanded",o);
+    });
+    document.addEventListener("click",function(e){
+      if(!hb.contains(e.target)&&!mn.contains(e.target)){
+        hb.classList.remove("open");
+        mn.classList.remove("open");
+      }
+    });
+  }
+})();
+
+// click-based dropdown
+(function(){
+  var nb=document.getElementById("nb");
+  if(nb)window.addEventListener("scroll",function(){nb.classList.toggle("sc",window.scrollY>8);},{passive:true});
+  var dds=document.querySelectorAll(".nl-dd");
+  dds.forEach(function(dd){
+    var btn=dd.querySelector(".nl-dd-btn");
+    if(!btn)return;
+    btn.addEventListener("click",function(e){
+      e.stopPropagation();
+      var isOpen=dd.classList.contains("open");
+      dds.forEach(function(d){d.classList.remove("open");});
+      if(!isOpen)dd.classList.add("open");
+    });
+  });
+  document.addEventListener("click",function(e){
+    if(!e.target.closest(".nl-dd"))dds.forEach(function(d){d.classList.remove("open");});
+  });
+  var hb=document.getElementById("ham-btn"),mn=document.getElementById("mob-nav");
+  if(hb&&mn){
+    hb.addEventListener("click",function(e){
+      e.stopPropagation();
+      var o=hb.classList.toggle("open");
+      mn.classList.toggle("open",o);
+      hb.setAttribute("aria-expanded",o);
+    });
+    document.addEventListener("click",function(e){
+      if(!hb.contains(e.target)&&!mn.contains(e.target)){hb.classList.remove("open");mn.classList.remove("open");}
+    });
+  }
 })();
 </script>
 </body>

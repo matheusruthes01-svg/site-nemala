@@ -643,3 +643,28 @@ footer .fb a:hover{color:#fff}
 /* Botões CTA soltos — garantir alinhamento */
 .section-cta{display:flex;justify-content:center;margin-top:24px}
 .section-cta-left{display:flex;justify-content:flex-start;margin-top:24px}
+
+
+
+/* ── DROPDOWN NAV ──────────────────────────────────────────────── */
+.nl-dd{position:relative;list-style:none}
+.nl-dd-btn{display:flex;align-items:center;gap:5px;font-size:14px;font-weight:500;color:var(--sub);background:none;border:none;cursor:pointer;padding:6px 13px;border-radius:8px;transition:color .15s,background .15s;font-family:var(--body);white-space:nowrap}
+.nl-dd-btn:hover,.nl-dd.open .nl-dd-btn{color:var(--ink);background:var(--bg)}
+.nl-dd-btn svg{transition:transform .2s}
+.nl-dd.open .nl-dd-btn svg{transform:rotate(180deg)}
+.nl-dd-menu{position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%) translateY(-4px);min-width:220px;background:#fff;border:1px solid var(--bd);border-radius:16px;box-shadow:0 16px 48px rgba(0,0,0,.12),0 2px 8px rgba(0,0,0,.06);padding:6px;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .18s,transform .18s;z-index:400}
+.nl-dd.open .nl-dd-menu{opacity:1;visibility:visible;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+.nl-dd-menu.wide{min-width:420px;display:grid;grid-template-columns:1fr 1fr}
+.nl-dd-menu a{display:flex;align-items:flex-start;padding:10px 12px;border-radius:10px;text-decoration:none;color:inherit;transition:background .15s}
+.nl-dd-menu a:hover{background:var(--bg)}
+.nl-dd-txt strong{display:block;font-size:13px;font-weight:700;color:var(--ink);line-height:1.2}
+.nl-dd-txt span{display:block;font-size:11px;color:var(--sub);margin-top:2px;line-height:1.35}
+.nl-dd-sep{height:1px;background:var(--bd);margin:4px 0;grid-column:1/-1}
+.nl-lnk{font-size:14px;font-weight:500;color:var(--sub);text-decoration:none;padding:6px 13px;border-radius:8px;transition:color .15s,background .15s}
+.nl-lnk:hover{color:var(--ink);background:var(--bg)}
+
+
+.mob-nav{display:none!important}
+.mob-nav.open{display:flex!important}
+
+.ar-hero{padding-top:66px}

@@ -281,6 +281,27 @@
     }, { passive: true });
   };
 
+  
+  NmlSec.initDropdowns = function () {
+    var dds = document.querySelectorAll('.nl-dd');
+    if (!dds.length) return;
+    dds.forEach(function (dd) {
+      var btn = dd.querySelector('.nl-dd-btn');
+      if (!btn) return;
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var isOpen = dd.classList.contains('open');
+        dds.forEach(function (d) { d.classList.remove('open'); });
+        if (!isOpen) dd.classList.add('open');
+      });
+    });
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.nl-dd')) {
+        dds.forEach(function (d) { d.classList.remove('open'); });
+      }
+    });
+  };
+
   NmlSec.initFAQ = function () {
     var buttons = document.querySelectorAll('.faq-q');
     buttons.forEach(function (btn) {
@@ -465,6 +486,7 @@
   NmlSec.init = function (options) {
     NmlSec.hardenExternalLinks();
     NmlSec.initHamburger();
+    NmlSec.initDropdowns();
     NmlSec.initFAQ();
     NmlSec.initNavScroll();
     NmlSec.initReveal();

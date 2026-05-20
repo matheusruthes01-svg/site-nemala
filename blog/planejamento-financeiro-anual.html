@@ -126,6 +126,35 @@ try{if(localStorage.getItem('nml_cookie_consent')==='accept'){gtag('consent','up
 .mob-nav .mob-ctas{display:flex;gap:8px;margin-top:12px;padding-top:12px;border-top:1px solid var(--bd)}
 @media(max-width:900px){.ham{display:flex}.na{display:none}#nml-fab{bottom:20px;right:16px}#nml-fab-btn{border-radius:50%;padding:14px;width:52px;height:52px;justify-content:center}#nml-fab-label{display:none}}
 @media(max-width:640px){.ba-related-grid{grid-template-columns:1fr}.ba-cta-inline{flex-direction:column}.ba-stat-grid{grid-template-columns:1fr 1fr}}
+
+/* Breadcrumb fix */
+.ar-breadcrumb{display:flex;align-items:center;gap:6px;font-size:12px;margin-bottom:20px}
+.ar-breadcrumb a{color:rgba(255,255,255,.55);text-decoration:none;transition:color .15s}
+.ar-breadcrumb a:hover{color:#FFAB1A}
+.ar-breadcrumb .ar-bc-sep{color:rgba(255,255,255,.2);font-size:10px}
+.ar-breadcrumb .ar-bc-cur{color:rgba(255,255,255,.4);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:200px}
+
+
+/* ── BLOG ARTICLE SUB-NAV ──────────────────────────────────── */
+.ar-subnav{background:#fff;border-bottom:1px solid var(--bd);position:sticky;top:66px;z-index:90;padding:0}
+.ar-subnav-inner{display:flex;align-items:center;gap:0;height:44px}
+.ar-subnav-back{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--sub);text-decoration:none;padding:0 16px 0 0;border-right:1px solid var(--bd);margin-right:16px;height:100%;white-space:nowrap;transition:color .15s;flex-shrink:0}
+.ar-subnav-back:hover{color:var(--or-dk)}
+.ar-subnav-back svg{flex-shrink:0}
+.ar-subnav-crumb{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--sub);overflow:hidden}
+.ar-subnav-crumb a{color:var(--sub);text-decoration:none;font-weight:500;white-space:nowrap;transition:color .15s}
+.ar-subnav-crumb a:hover{color:var(--or-dk)}
+.ar-subnav-crumb .sep{color:rgba(0,0,0,.2);font-size:11px}
+.ar-subnav-crumb .cur{color:var(--ink);font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:300px}
+.ar-subnav-mat{margin-left:auto;flex-shrink:0}
+.ar-subnav-mat a{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--or-dk);text-decoration:none;padding:7px 14px;border:1.5px solid var(--or);border-radius:100px;transition:all .15s;white-space:nowrap}
+.ar-subnav-mat a:hover{background:var(--or);color:var(--ink)}
+/* Remove old breadcrumb (now in subnav) */
+.ar-breadcrumb{display:none!important}
+/* Fix ar-hero padding — subnav takes 44px, nav takes 66px */
+.ar-hero{padding-top:0!important}
+@media(max-width:600px){.ar-subnav-mat{display:none}.ar-subnav-crumb .cur{max-width:160px}}
+
 </style>
 <script type="application/ld+json">{
   "@context":"https://schema.org",
@@ -139,28 +168,74 @@ try{if(localStorage.getItem('nml_cookie_consent')==='accept'){gtag('consent','up
   "mainEntityOfPage":{"@type":"WebPage","@id":"https://nemala.com.br/blog/planejamento-financeiro-anual.html"},
   "keywords":"planejamento financeiro anual, orçamento empresarial PME, budget empresarial"
 }</script>
+<style>
+.ar-toc{position:static!important;display:flex;flex-direction:column;gap:4px}
+.ar-toc a{font-size:12px;color:var(--sub);text-decoration:none;padding:6px 10px;border-radius:8px;transition:all .15s;border-left:2px solid transparent;display:block}
+.ar-toc a:hover,.ar-toc a.active{color:var(--or-dk);background:var(--or-lt);border-left-color:var(--or)}
+.nl-lnk{font-size:14px;font-weight:500;color:var(--sub);text-decoration:none;padding:6px 13px;border-radius:8px;transition:color .15s,background .15s}
+.nl-lnk:hover{color:var(--ink);background:var(--bg)}
+.blog-footer{background:#0A0A0A;border-top:1px solid rgba(255,255,255,.05);padding:52px 0 28px}
+.bf-inner{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:40px}
+.bf-brand-desc{font-size:13px;color:rgba(255,255,255,.35);line-height:1.7;margin-top:12px;max-width:220px}
+.bf-col h5{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.2);margin-bottom:14px}
+.bf-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.bf-col ul a{font-size:13px;color:rgba(255,255,255,.45);text-decoration:none;transition:color .15s}
+.bf-col ul a:hover{color:#FFAB1A}
+.bf-bottom{border-top:1px solid rgba(255,255,255,.05);padding-top:22px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.bf-bottom p{font-size:12px;color:rgba(255,255,255,.15)}
+.bf-tags{display:flex;gap:6px;flex-wrap:wrap}
+.bf-tag{font-size:10px;color:rgba(255,255,255,.25);background:rgba(255,255,255,.04);padding:3px 9px;border-radius:100px;border:1px solid rgba(255,255,255,.05)}
+@media(max-width:720px){.bf-inner{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.bf-inner{grid-template-columns:1fr}.bf-bottom{flex-direction:column;text-align:center}}
+</style>
 </head>
 <body>
 <div class="ba-progress-bar" id="ba-progress"></div>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSQ62LBV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav id="nb"><div class="container"><div class="nw">
-  <a class="logo" href="../index.html"><svg style="height:32px;width:auto" viewBox="0 0 950.72 203.86" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><clipPath id="BL1"><path fill-rule="evenodd" clip-rule="evenodd" d="M257.63,79.45l-15.53-15.53-6.82,6.82,22.35,8.71ZM128.24,106.35l7.02-7.02,6.82,6.82-7.02,7.02-6.82-6.82ZM163.68,70.92l35.44,35.44-35.44,35.44-14.49-14.49,21.14-21.14-20.94-20.94,14.3-14.3ZM85.47,120.92l-21.25,21.21-35.97-35.97,56.92-56.91,35.97,35.97-21.14,21.14,20.94,20.94-7.44,7.44-21.04-20.79-6.99,6.97ZM78.3,156.21l14.22-14.2,6.89,6.8-14.25,14.25-6.86-6.86ZM242.1,49.71l35.44,35.44-35.44,35.44-35.44-35.44,35.44-35.44ZM256.14,35.51l7.16-7.17,37.32,37.32,14.12-14.12L263.3.1l-60.13,60.13.08.08-10.97,10.97-28.61-28.61-28.42,28.42-50.09-50.09L0,106.16l50.08,50.08-34.92,34.85,28.05.12,20.96-20.88,21,21,28.46-28.46,28.69,28.36,28.29-.05-42.9-42.4,7.36-7.36,28.62,28.62,14.54-14.54,28.6,28.73,13.63-14.21,22.2,21.67h28.52s-51.19-49.95-51.19-49.95l-13.42,13.99-14.26-14.33,21.19-21.19,28.61,28.61,63.68-63.68-49.64-49.64Z"/></clipPath><linearGradient id="BL2" x1="153.72" y1=".03" x2="161.02" y2="191.74" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fbb11e"/><stop offset="1" stop-color="#f68f1f"/></linearGradient><clipPath id="BL3"><path fill-rule="evenodd" clip-rule="evenodd" d="M780.97,153.26c3.08-2.03,6.63-3.04,10.65-3.04,5.54,0,10.45,1.7,14.74,5.09v4.68c-4.45-3.9-9.36-5.85-14.74-5.85-2.89,0-5.46.65-7.72,1.96-2.26,1.31-3.39,3.13-3.39,5.47,0,.78.14,1.47.41,2.08.27.6.74,1.15,1.4,1.64.66.49,1.31.91,1.93,1.26.62.35,1.53.7,2.72,1.05,1.19.35,2.19.63,3.01.85.82.21,1.99.5,3.51.85,5.07,1.13,8.65,2.65,10.74,4.56,2.09,1.91,3.15,4.27,3.19,7.08,0,2.46-.73,4.56-2.19,6.32-1.46,1.76-3.28,3.01-5.44,3.77-2.16.76-4.49,1.14-6.99,1.14h-.35c-5.97-.04-11.29-2.22-15.97-6.55v-4.62c5.11,4.8,10.51,7.2,16.21,7.2,2.93,0,5.42-.61,7.49-1.84,2.07-1.23,3.1-2.99,3.1-5.29,0-2.03-.93-3.7-2.78-5-1.85-1.31-4.98-2.47-9.39-3.48-5.15-1.13-8.89-2.51-11.23-4.12-2.34-1.62-3.51-3.89-3.51-6.81,0-3.55,1.54-6.34,4.62-8.37M735.09,177.65l-9.48-25.45-9.59,25.45h19.07ZM721.93,150.74h7.37l15.44,40.95h-4.44l-3.86-10.18h-21.76l-4.04,10.18h-4.39l15.68-40.95ZM638.66,170.98c0-5.81,1.99-10.75,5.97-14.83,3.98-4.08,8.83-6.11,14.57-6.11,4.21,0,7.98,1.17,11.29,3.51,3.31,2.34,5.77,5.44,7.37,9.3l-4.1,1.17c-1.29-3-3.21-5.41-5.76-7.22-2.56-1.81-5.49-2.72-8.8-2.72h-.18c-4.56,0-8.39,1.63-11.5,4.88-3.1,3.26-4.65,7.26-4.65,12.02s1.55,8.66,4.65,11.93c3.1,3.28,6.99,4.91,11.67,4.91,3.35,0,6.31-.89,8.86-2.66,2.56-1.77,4.46-4.16,5.7-7.17l4.1,1.11c-1.52,3.78-3.92,6.84-7.2,9.18-3.28,2.34-7,3.53-11.17,3.57l-.82,1.99c1.68.31,3.2.95,4.56,1.9,1.36.96,2.05,2.14,2.05,3.54,0,1.13-.5,2.06-1.49,2.78-.99.72-2.17,1.18-3.51,1.38-1.35.2-2.43.31-3.25.35-.82.04-1.36.06-1.64.06-.9,0-1.62-.08-2.16-.23v-2.98c.86.19,1.75.29,2.69.29s2.17-.13,3.71-.38c1.54-.25,2.31-.87,2.31-1.84,0-.86-.71-1.58-2.13-2.17-1.42-.58-2.78-.92-4.07-.99l1.46-3.8c-5.3-.51-9.72-2.74-13.25-6.7-3.53-3.96-5.29-8.65-5.29-14.07ZM580.14,150.74l21.41,39.08v-39.08h4.15v40.95h-7.96l-21.59-39.43v39.43h-4.1v-40.95h8.07ZM530.46,177.65l-9.48-25.45-9.59,25.45h19.07ZM517.29,150.74h7.37l15.45,40.95h-4.45l-3.86-10.18h-21.76l-4.04,10.18h-4.39l15.68-40.95ZM443.8,150.74l21.41,39.08v-39.08h4.15v40.95h-7.96l-21.59-39.43v39.43h-4.09v-40.95h8.07ZM397.39,191.69v-40.95h4.21v40.95h-4.21ZM364.96,150.74v3.92h-24.28v14.63h21.94v3.86h-21.94v18.54h-4.21v-40.95h28.49Z"/></clipPath><linearGradient id="BL4" x1="572.13" y1="149.96" x2="571.76" y2="203.92" xlink:href="#BL2"/></defs><g clip-path="url(#BL1)"><rect fill="url(#BL2)" y=".1" width="314.75" height="191.59"/></g><g clip-path="url(#BL3)"><rect fill="url(#BL4)" x="336.47" y="150.04" width="470.94" height="53.82"/></g><path fill="#1A1A1A" fill-rule="evenodd" d="M546.67,24.06h23.9v12.45l23.88-12.48h3.8c12.39-.03,21.55,4.58,26.86,12.48l23.88-12.48h9.12c20.52-.02,32.19,12.63,32.2,31.97l.04,64.85h-23.95V56.1c0-3.95-3-8.36-8.3-8.3l-3.8.04c-12.39.02-22.98,6.03-23.85,21.69l.03,51.32h-23.95V56.1c0-3.95-3-8.36-8.3-8.3l-3.8.04c-12.95.02-23.92,6.58-23.91,23.86l.04,49.16h-23.9V24.06ZM950.72,24.02v96.83h-23.9v-56.98l-44.94,23.43c-1.56.82-2.73,2.44-2.73,4.69,0,2.77,2.37,5.01,5.15,5.01h30.49s0,23.86,0,23.86h-30.57c-15,0-29.06-12.4-29.05-28.81,0-11.2,5.84-21.1,15.57-26.2l45.59-23.87-20.82,5.83h-40.34v-23.79h95.56ZM845.11,121.01h-7.95c-20.52.02-32.19-12.62-32.2-31.97l-.04-88.94h23.95v97.14s16.25-.04,16.25-.04v23.81ZM473.8,96.94l51.3.02v23.81s-51.31-.06-51.31-.06c-20.52-.02-32.19-12.61-32.2-31.98V24.02h23.9v12.49l23.88-12.48h15.59c20.14-.02,31.75,12.15,32.2,30.9,0,.36,0,.72-.01,1.07-.44,18.75-12.05,30.91-32.19,30.91h-39.46s0,1.73,0,1.73c0,3.95,3,8.3,8.3,8.3ZM466.54,63.1h39.1c4.73,0,7.59-3.73,7.59-7.49,0-3.86-2.55-7.77-7.38-7.77h-16.49c-10.87,0-19.78,4.44-22.82,15.26ZM904.95.39l26.74-.39-18.63,17.83-19.19.13,11.08-17.57ZM795.42,24.02v96.83h-23.9v-56.98l-44.94,23.43c-1.56.82-2.73,2.44-2.73,4.69,0,2.77,2.37,5.01,5.15,5.01h30.49s0,23.86,0,23.86h-30.58c-15,0-29.06-12.4-29.05-28.81,0-11.2,5.84-21.1,15.57-26.2l45.59-23.87-20.82,5.83h-40.34v-23.79h95.56ZM336.47,21.75h23.9v14.76l23.88-12.48h15.58c20.52-.02,32.19,12.61,32.2,31.97l.04,64.85h-23.95V56.1c0-3.95-2.99-8.31-8.3-8.3l-15.58.04c-12.95.02-23.92,6.58-23.91,23.86l.04,49.16h-23.9V21.75Z"/></svg></a>
+  <a class="logo" href="../index.html"><svg style="height:30px;width:auto" viewBox="0 0 950.72 203.86" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><clipPath id="cpLH"><path fill-rule="evenodd" clip-rule="evenodd" d="M257.63,79.45l-15.53-15.53-6.82,6.82,22.35,8.71ZM128.24,106.35l7.02-7.02,6.82,6.82-7.02,7.02-6.82-6.82ZM163.68,70.92l35.44,35.44-35.44,35.44-14.49-14.49,21.14-21.14-20.94-20.94,14.3-14.3ZM85.47,120.92l-21.25,21.21-35.97-35.97,56.92-56.91,35.97,35.97-21.14,21.14,20.94,20.94-7.44,7.44-21.04-20.79-6.99,6.97ZM78.3,156.21l14.22-14.2,6.89,6.8-14.25,14.25-6.86-6.86ZM242.1,49.71l35.44,35.44-35.44,35.44-35.44-35.44,35.44-35.44ZM256.14,35.51l7.16-7.17,37.32,37.32,14.12-14.12L263.3.1l-60.13,60.13.08.08-10.97,10.97-28.61-28.61-28.42,28.42-50.09-50.09L0,106.16l50.08,50.08-34.92,34.85,28.05.12,20.96-20.88,21,21,28.46-28.46,28.69,28.36,28.29-.05-42.9-42.4,7.36-7.36,28.62,28.62,14.54-14.54,28.6,28.73,13.63-14.21,22.2,21.67h28.52s-51.19-49.95-51.19-49.95l-13.42,13.99-14.26-14.33,21.19-21.19,28.61,28.61,63.68-63.68-49.64-49.64Z"/></clipPath><linearGradient id="lgLH" x1="153.72" y1=".03" x2="161.02" y2="191.74" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fbb11e"/><stop offset="1" stop-color="#f68f1f"/></linearGradient><clipPath id="cpLH2"><path fill-rule="evenodd" clip-rule="evenodd" d="M780.97,153.26c3.08-2.03,6.63-3.04,10.65-3.04,5.54,0,10.45,1.7,14.74,5.09v4.68c-4.45-3.9-9.36-5.85-14.74-5.85-2.89,0-5.46.65-7.72,1.96-2.26,1.31-3.39,3.13-3.39,5.47,0,.78.14,1.47.41,2.08.27.6.74,1.15,1.4,1.64.66.49,1.31.91,1.93,1.26.62.35,1.53.7,2.72,1.05,1.19.35,2.19.63,3.01.85.82.21,1.99.5,3.51.85,5.07,1.13,8.65,2.65,10.74,4.56,2.09,1.91,3.15,4.27,3.19,7.08,0,2.46-.73,4.56-2.19,6.32-1.46,1.76-3.28,3.01-5.44,3.77-2.16.76-4.49,1.14-6.99,1.14h-.35c-5.97-.04-11.29-2.22-15.97-6.55v-4.62c5.11,4.8,10.51,7.2,16.21,7.2,2.93,0,5.42-.61,7.49-1.84,2.07-1.23,3.1-2.99,3.1-5.29,0-2.03-.93-3.7-2.78-5-1.85-1.31-4.98-2.47-9.39-3.48-5.15-1.13-8.89-2.51-11.23-4.12-2.34-1.62-3.51-3.89-3.51-6.81,0-3.55,1.54-6.34,4.62-8.37M735.09,177.65l-9.48-25.45-9.59,25.45h19.07ZM721.93,150.74h7.37l15.44,40.95h-4.44l-3.86-10.18h-21.76l-4.04,10.18h-4.39l15.68-40.95ZM638.66,170.98c0-5.81,1.99-10.75,5.97-14.83,3.98-4.08,8.83-6.11,14.57-6.11,4.21,0,7.98,1.17,11.29,3.51,3.31,2.34,5.77,5.44,7.37,9.3l-4.1,1.17c-1.29-3-3.21-5.41-5.76-7.22-2.56-1.81-5.49-2.72-8.8-2.72h-.18c-4.56,0-8.39,1.63-11.5,4.88-3.1,3.26-4.65,7.26-4.65,12.02s1.55,8.66,4.65,11.93c3.1,3.28,6.99,4.91,11.67,4.91,3.35,0,6.31-.89,8.86-2.66,2.56-1.77,4.46-4.16,5.7-7.17l4.1,1.11c-1.52,3.78-3.92,6.84-7.2,9.18-3.28,2.34-7,3.53-11.17,3.57l-.82,1.99c1.68.31,3.2.95,4.56,1.9,1.36.96,2.05,2.14,2.05,3.54,0,1.13-.5,2.06-1.49,2.78-.99.72-2.17,1.18-3.51,1.38-1.35.2-2.43.31-3.25.35-.82.04-1.36.06-1.64.06-.9,0-1.62-.08-2.16-.23v-2.98c.86.19,1.75.29,2.69.29s2.17-.13,3.71-.38c1.54-.25,2.31-.87,2.31-1.84,0-.86-.71-1.58-2.13-2.17-1.42-.58-2.78-.92-4.07-.99l1.46-3.8c-5.3-.51-9.72-2.74-13.25-6.7-3.53-3.96-5.29-8.65-5.29-14.07ZM580.14,150.74l21.41,39.08v-39.08h4.15v40.95h-7.96l-21.59-39.43v39.43h-4.1v-40.95h8.07ZM530.46,177.65l-9.48-25.45-9.59,25.45h19.07ZM517.29,150.74h7.37l15.45,40.95h-4.45l-3.86-10.18h-21.76l-4.04,10.18h-4.39l15.68-40.95ZM443.8,150.74l21.41,39.08v-39.08h4.15v40.95h-7.96l-21.59-39.43v39.43h-4.09v-40.95h8.07ZM397.39,191.69v-40.95h4.21v40.95h-4.21ZM364.96,150.74v3.92h-24.28v14.63h21.94v3.86h-21.94v18.54h-4.21v-40.95h28.49Z"/></clipPath><linearGradient id="lgLH2" x1="572.13" y1="149.96" x2="571.76" y2="203.92" xlink:href="#lgLH"/></defs><g clip-path="url(#cpLH)"><rect fill="url(#lgLH)" y=".1" width="314.75" height="191.59"/></g><g clip-path="url(#cpLH2)"><rect fill="url(#lgLH2)" x="336.47" y="150.04" width="470.94" height="53.82"/></g><path fill="#1A1A1A" fill-rule="evenodd" d="M546.67,24.06h23.9v12.45l23.88-12.48h3.8c12.39-.03,21.55,4.58,26.86,12.48l23.88-12.48h9.12c20.52-.02,32.19,12.63,32.2,31.97l.04,64.85h-23.95V56.1c0-3.95-3-8.36-8.3-8.3l-3.8.04c-12.39.02-22.98,6.03-23.85,21.69l.03,51.32h-23.95V56.1c0-3.95-3-8.36-8.3-8.3l-3.8.04c-12.95.02-23.92,6.58-23.91,23.86l.04,49.16h-23.9V24.06ZM950.72,24.02v96.83h-23.9v-56.98l-44.94,23.43c-1.56.82-2.73,2.44-2.73,4.69,0,2.77,2.37,5.01,5.15,5.01h30.49s0,23.86,0,23.86h-30.57c-15,0-29.06-12.4-29.05-28.81,0-11.2,5.84-21.1,15.57-26.2l45.59-23.87-20.82,5.83h-40.34v-23.79h95.56ZM845.11,121.01h-7.95c-20.52.02-32.19-12.62-32.2-31.97l-.04-88.94h23.95v97.14s16.25-.04,16.25-.04v23.81ZM473.8,96.94l51.3.02v23.81s-51.31-.06-51.31-.06c-20.52-.02-32.19-12.61-32.2-31.98V24.02h23.9v12.49l23.88-12.48h15.59c20.14-.02,31.75,12.15,32.2,30.9,0,.36,0,.72-.01,1.07-.44,18.75-12.05,30.91-32.19,30.91h-39.46s0,1.73,0,1.73c0,3.95,3,8.3,8.3,8.3ZM466.54,63.1h39.1c4.73,0,7.59-3.73,7.59-7.49,0-3.86-2.55-7.77-7.38-7.77h-16.49c-10.87,0-19.78,4.44-22.82,15.26ZM904.95.39l26.74-.39-18.63,17.83-19.19.13,11.08-17.57ZM795.42,24.02v96.83h-23.9v-56.98l-44.94,23.43c-1.56.82-2.73,2.44-2.73,4.69,0,2.77,2.37,5.01,5.15,5.01h30.49s0,23.86,0,23.86h-30.58c-15,0-29.06-12.4-29.05-28.81,0-11.2,5.84-21.1,15.57-26.2l45.59-23.87-20.82,5.83h-40.34v-23.79h95.56ZM336.47,21.75h23.9v14.76l23.88-12.48h15.58c20.52-.02,32.19,12.61,32.2,31.97l.04,64.85h-23.95V56.1c0-3.95-2.99-8.31-8.3-8.3l-15.58.04c-12.95.02-23.92,6.58-23.91,23.86l.04,49.16h-23.9V21.75Z"/></svg></a>
   <ul class="nl">
-    <li><a href="../funcionalidades.html">Funcionalidades</a></li>
-    <li><a href="../planos.html">Planos</a></li>
-    <li><a href="../sobre-mentoria.html">Mentoria</a></li>
-    <li><a href="../parceiros-bpo.html">Parceiros</a></li>
-    <li><a href="../sobre.html">Sobre</a></li>
-    <li><a href="../contato.html">Contato</a></li>
-    <li><a href="../ajuda.html">Ajuda</a></li>
-    <li><a href="../blog.html" class="active">Blog</a></li>
+    <li class="nl-dd">
+      <button class="nl-dd-btn">Plataforma <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:10px;height:10px;flex-shrink:0"><polyline points="6 9 12 15 18 9"/></svg></button>
+      <div class="nl-dd-menu wide">
+        <a href="../funcionalidades.html"><div class="nl-dd-txt"><strong>Funcionalidades</strong><span>Dashboard, relatórios e controles</span></div></a>
+        <a href="../score-financeiro.html"><div class="nl-dd-txt"><strong>Score Financeiro</strong><span>Avalie a saúde da empresa</span></div></a>
+        <a href="../planos.html"><div class="nl-dd-txt"><strong>Planos e Preços</strong><span>Encontre o plano ideal</span></div></a>
+        <a href="../parceiros-bpo.html"><div class="nl-dd-txt"><strong>Parceiros BPO</strong><span>Para escritórios de contabilidade</span></div></a>
+      </div>
+    </li>
+    <li class="nl-dd">
+      <button class="nl-dd-btn">Aprenda <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:10px;height:10px;flex-shrink:0"><polyline points="6 9 12 15 18 9"/></svg></button>
+      <div class="nl-dd-menu">
+        <a href="../blog.html" style="font-weight:700;color:var(--or-dk)"><div class="nl-dd-txt"><strong>Blog</strong><span>Guias de gestão financeira</span></div></a>
+        <a href="../materiais.html"><div class="nl-dd-txt"><strong>Materiais Gratuitos</strong><span>Planilhas, calculadoras e modelos</span></div></a>
+        <div class="nl-dd-sep"></div>
+        <a href="../sobre-mentoria.html"><div class="nl-dd-txt"><strong>Mentoria</strong><span>Acompanhamento personalizado</span></div></a>
+      </div>
+    </li>
+    <li><a href="../sobre.html" class="nl-lnk">Sobre</a></li>
+    <li><a href="../contato.html" class="nl-lnk">Contato</a></li>
   </ul>
   <div class="na">
-    <a href="https://app.nemala.com.br" target="_blank" rel="noopener noreferrer" class="btn btn-gh btn-sm">Entrar</a>
-    <a href="https://app.nemala.com.br/register" class="btn btn-or btn-sm">Teste grátis</a>
+    <a href="https://app.nemala.com.br" target="_blank" rel="noopener" class="btn btn-gh btn-sm">Entrar</a>
+    <a href="https://app.nemala.com.br/register" class="btn btn-or btn-sm" target="_blank" rel="noopener">Teste grátis</a>
   </div>
   <button class="ham" id="ham-btn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </div></div></nav>
+<div class="mob-nav" id="mob-nav">
+  <a href="../funcionalidades.html">Funcionalidades</a>
+  <a href="../planos.html">Planos</a>
+  <a href="../sobre-mentoria.html">Mentoria</a>
+  <a href="../parceiros-bpo.html">Parceiros BPO</a>
+  <a href="../blog.html">Blog</a>
+  <a href="../materiais.html">Materiais</a>
+  <a href="../sobre.html">Sobre</a>
+  <a href="../contato.html">Contato</a>
+  <div class="mob-ctas">
+    <a href="https://app.nemala.com.br" target="_blank" rel="noopener" class="btn btn-gh" style="flex:1;justify-content:center">Entrar</a>
+    <a href="https://app.nemala.com.br/register" class="btn btn-or" style="flex:1;justify-content:center" target="_blank" rel="noopener">Teste grátis</a>
+  </div>
+</div></nav>
 <div class="mob-nav" id="mob-nav">
   <a href="../funcionalidades.html">Funcionalidades</a>
   <a href="../planos.html">Planos</a>
@@ -199,7 +274,7 @@ try{if(localStorage.getItem('nml_cookie_consent')==='accept'){gtag('consent','up
   </header>
   <article class="ba-body">
     <div class="ba-hero-img">
-      <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=80" alt="Empresário planejando metas financeiras anuais" loading="eager" width="1200" height="525">
+      <img src="../assets/img/planejamento-bokeh.jpg" alt="Empresário planejando metas financeiras anuais" loading="eager" width="1200" height="525">
     </div>
     <p class="ba-img-caption">Planejamento financeiro anual: a diferença entre crescer com estratégia e crescer por acidente</p>
     <p class="ba-lead">A maioria das PMEs brasileiras não tem planejamento financeiro — e as que têm, criam uma planilha em janeiro que ninguém olha em fevereiro. Esse guia ensina como fazer diferente: um plano que serve de verdade, com processo de revisão mensal que mantém o negócio no trilho.</p>
@@ -243,7 +318,7 @@ try{if(localStorage.getItem('nml_cookie_consent')==='accept'){gtag('consent','up
       <li><strong>Janeiro:</strong> início da execução com revisão mensal configurada</li>
     </ul>
     <div class="ba-destaque">
-      <div class="ba-destaque-ic">📅</div>
+      <div class="ba-destaque-ic"></div>
       <div>Se você está lendo isso em março e ainda não fez o planejamento do ano: faça agora. Um plano de 9 meses é infinitamente melhor do que zero planejamento. O pior momento para começar era em dezembro. O segundo pior momento é nunca.</div>
     </div>
     <h2 id="passo-a-passo">O processo em 5 etapas</h2>
@@ -252,7 +327,7 @@ try{if(localStorage.getItem('nml_cookie_consent')==='accept'){gtag('consent','up
       <svg viewBox="0 0 660 120" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block">
         <!-- Step 1 -->
         <rect x="10" y="30" width="110" height="56" rx="10" fill="#FFF6E0" stroke="#FFD580" stroke-width="1.5"/>
-        <text x="65" y="52" text-anchor="middle" font-size="20" font-family="sans-serif">📊</text>
+        <text x="65" y="52" text-anchor="middle" font-size="20" font-family="sans-serif"></text>
         <text x="65" y="72" text-anchor="middle" font-size="11" font-weight="700" fill="#1A1A1A" font-family="sans-serif">Diagnóstico</text>
         <text x="65" y="84" text-anchor="middle" font-size="10" fill="#5C5C72" font-family="sans-serif">Onde estamos</text>
         <!-- Arrow -->
@@ -260,14 +335,14 @@ try{if(localStorage.getItem('nml_cookie_consent')==='accept'){gtag('consent','up
         <text x="128" y="55" text-anchor="middle" font-size="8" fill="#9494A8" font-family="sans-serif">→</text>
         <!-- Step 2 -->
         <rect x="138" y="30" width="110" height="56" rx="10" fill="#FFF6E0" stroke="#FFD580" stroke-width="1.5"/>
-        <text x="193" y="52" text-anchor="middle" font-size="20" font-family="sans-serif">🎯</text>
+        <text x="193" y="52" text-anchor="middle" font-size="20" font-family="sans-serif"></text>
         <text x="193" y="72" text-anchor="middle" font-size="11" font-weight="700" fill="#1A1A1A" font-family="sans-serif">Metas</text>
         <text x="193" y="84" text-anchor="middle" font-size="10" fill="#5C5C72" font-family="sans-serif">Aonde queremos ir</text>
         <!-- Arrow -->
         <text x="256" y="62" text-anchor="middle" font-size="14" fill="#9494A8" font-family="sans-serif">→</text>
         <!-- Step 3 -->
         <rect x="266" y="30" width="110" height="56" rx="10" fill="#FFF6E0" stroke="#FFD580" stroke-width="1.5"/>
-        <text x="321" y="52" text-anchor="middle" font-size="20" font-family="sans-serif">💰</text>
+        <text x="321" y="52" text-anchor="middle" font-size="20" font-family="sans-serif"></text>
         <text x="321" y="72" text-anchor="middle" font-size="11" font-weight="700" fill="#1A1A1A" font-family="sans-serif">Orçamento</text>
         <text x="321" y="84" text-anchor="middle" font-size="10" fill="#5C5C72" font-family="sans-serif">Como chegar lá</text>
         <!-- Arrow -->
@@ -281,7 +356,7 @@ try{if(localStorage.getItem('nml_cookie_consent')==='accept'){gtag('consent','up
         <text x="512" y="62" text-anchor="middle" font-size="14" fill="#9494A8" font-family="sans-serif">→</text>
         <!-- Step 5 -->
         <rect x="522" y="30" width="128" height="56" rx="10" fill="#F0F9F4" stroke="#C3E8D3" stroke-width="1.5"/>
-        <text x="586" y="52" text-anchor="middle" font-size="20" font-family="sans-serif">📅</text>
+        <text x="586" y="52" text-anchor="middle" font-size="20" font-family="sans-serif"></text>
         <text x="586" y="72" text-anchor="middle" font-size="11" font-weight="700" fill="#1A1A1A" font-family="sans-serif">Revisão mensal</text>
         <text x="586" y="84" text-anchor="middle" font-size="10" fill="#5C5C72" font-family="sans-serif">Manter no trilho</text>
       </svg>
@@ -441,8 +516,46 @@ try{if(localStorage.getItem('nml_cookie_consent')==='accept'){gtag('consent','up
 (function(){
   var hb=document.getElementById('ham-btn'),mn=document.getElementById('mob-nav');
   if(hb&&mn){hb.addEventListener('click',function(){var o=hb.classList.toggle('open');mn.classList.toggle('open');hb.setAttribute('aria-expanded',o);});document.addEventListener('click',function(e){if(!hb.contains(e.target)&&!mn.contains(e.target)){hb.classList.remove('open');mn.classList.remove('open');}});}
-  var nb=document.getElementById('nb');
-  if(nb)window.addEventListener('scroll',function(){nb.classList.toggle('sc',window.scrollY>8);},{passive:true});
+  // ── NAV: dropdown click + ham ─────────────────────────────────
+(function(){
+  var nb=document.getElementById("nb");
+  if(nb)window.addEventListener("scroll",function(){nb.classList.toggle("sc",window.scrollY>8);},{passive:true});
+
+  // Click-based dropdowns
+  var dds=document.querySelectorAll(".nl-dd");
+  dds.forEach(function(dd){
+    var btn=dd.querySelector(".nl-dd-btn");
+    if(!btn)return;
+    btn.addEventListener("click",function(e){
+      e.stopPropagation();
+      var isOpen=dd.classList.contains("open");
+      // close all
+      dds.forEach(function(d){d.classList.remove("open");});
+      if(!isOpen) dd.classList.add("open");
+    });
+  });
+  // Close on outside click
+  document.addEventListener("click",function(e){
+    if(!e.target.closest(".nl-dd")) dds.forEach(function(d){d.classList.remove("open");});
+  });
+
+  // Ham / mob-nav
+  var hb=document.getElementById("ham-btn"),mn=document.getElementById("mob-nav");
+  if(hb&&mn){
+    hb.addEventListener("click",function(e){
+      e.stopPropagation();
+      var o=hb.classList.toggle("open");
+      mn.classList.toggle("open",o);
+      hb.setAttribute("aria-expanded",o);
+    });
+    document.addEventListener("click",function(e){
+      if(!hb.contains(e.target)&&!mn.contains(e.target)){
+        hb.classList.remove("open");
+        mn.classList.remove("open");
+      }
+    });
+  }
+})();
   var fm=document.getElementById('nml-fab-menu');
   document.addEventListener('click',function(e){if(fm&&!document.getElementById('nml-fab').contains(e.target))fm.classList.remove('open');});
   var CK='nml_cookie_consent';
@@ -453,6 +566,74 @@ try{if(localStorage.getItem('nml_cookie_consent')==='accept'){gtag('consent','up
   var ca=document.getElementById('nml-ca'),cr=document.getElementById('nml-cr');
   if(ca)ca.addEventListener('click',function(){sc('accept');if(cb)cb.style.display='none';window.dataLayer=window.dataLayer||[];if(typeof gtag==='function'){gtag('consent','update',{analytics_storage:'granted',ad_storage:'granted'});}window.dataLayer.push({event:'nml_consent_granted'});});
   if(cr)cr.addEventListener('click',function(){sc('reject');if(cb)cb.style.display='none';});
+})();
+
+// click-based dropdown
+(function(){
+  var nb=document.getElementById("nb");
+  if(nb)window.addEventListener("scroll",function(){nb.classList.toggle("sc",window.scrollY>8);},{passive:true});
+  var dds=document.querySelectorAll(".nl-dd");
+  dds.forEach(function(dd){
+    var btn=dd.querySelector(".nl-dd-btn");
+    if(!btn)return;
+    btn.addEventListener("click",function(e){
+      e.stopPropagation();
+      var isOpen=dd.classList.contains("open");
+      dds.forEach(function(d){d.classList.remove("open");});
+      if(!isOpen)dd.classList.add("open");
+    });
+  });
+  document.addEventListener("click",function(e){
+    if(!e.target.closest(".nl-dd"))dds.forEach(function(d){d.classList.remove("open");});
+  });
+  var hb=document.getElementById("ham-btn"),mn=document.getElementById("mob-nav");
+  if(hb&&mn){
+    hb.addEventListener("click",function(e){
+      e.stopPropagation();
+      var o=hb.classList.toggle("open");
+      mn.classList.toggle("open",o);
+      hb.setAttribute("aria-expanded",o);
+    });
+    document.addEventListener("click",function(e){
+      if(!hb.contains(e.target)&&!mn.contains(e.target)){hb.classList.remove("open");mn.classList.remove("open");}
+    });
+  }
+})();
+</script>
+
+<script>
+// nav dropdown + ham
+(function(){
+  var nb=document.getElementById("nb");
+  if(nb)window.addEventListener("scroll",function(){nb.classList.toggle("sc",window.scrollY>8);},{passive:true});
+  var dds=document.querySelectorAll(".nl-dd");
+  dds.forEach(function(dd){
+    var btn=dd.querySelector(".nl-dd-btn");
+    if(!btn)return;
+    btn.addEventListener("click",function(e){
+      e.stopPropagation();
+      var isOpen=dd.classList.contains("open");
+      dds.forEach(function(d){d.classList.remove("open");});
+      if(!isOpen)dd.classList.add("open");
+    });
+  });
+  document.addEventListener("click",function(e){
+    if(!e.target.closest(".nl-dd"))dds.forEach(function(d){d.classList.remove("open");});
+  });
+  var hb=document.getElementById("ham-btn"),mn=document.getElementById("mob-nav");
+  if(hb&&mn){
+    hb.addEventListener("click",function(e){
+      e.stopPropagation();
+      var o=hb.classList.toggle("open");
+      mn.classList.toggle("open",o);
+      hb.setAttribute("aria-expanded",o);
+    });
+    document.addEventListener("click",function(e){
+      if(!hb.contains(e.target)&&!mn.contains(e.target)){
+        hb.classList.remove("open");mn.classList.remove("open");
+      }
+    });
+  }
 })();
 </script>
 </body>
