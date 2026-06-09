@@ -83,6 +83,11 @@
   .bf-inner{grid-template-columns:1fr 1fr}
 }
 @media(max-width:580px){.bf-inner{grid-template-columns:1fr}.bf-bottom{flex-direction:column;gap:14px;text-align:center}}
+.mp-hero-cta{display:inline-flex;align-items:center;gap:8px;background:#FFAB1A;color:#0F0F0F;font-weight:700;font-size:15px;padding:14px 28px;border-radius:12px;text-decoration:none;transition:transform .15s,box-shadow .15s;box-shadow:0 8px 24px rgba(255,171,26,.25)}
+.mp-hero-cta:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(255,171,26,.35)}
+.mp-hero-cta::before{content:"\2193";font-size:17px;font-weight:800;margin-right:2px}
+.nl-dd-ic{flex-shrink:0;width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;background:#FFF6E0;color:#E8950A;margin-right:11px;margin-top:1px}
+.nl-dd-menu a:hover .nl-dd-ic{background:#FBB11E;color:#fff}
 </style>
 <style>
 .nl-lnk{font-size:14px;font-weight:500;color:var(--sub);text-decoration:none;padding:6px 13px;border-radius:8px;transition:color .15s,background .15s}
@@ -124,19 +129,18 @@
     <li class="nl-dd">
       <button class="nl-dd-btn">Plataforma <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:10px;height:10px;flex-shrink:0"><polyline points="6 9 12 15 18 9"/></svg></button>
       <div class="nl-dd-menu wide">
-        <a href="../funcionalidades.html"><div class="nl-dd-txt"><strong>Funcionalidades</strong><span>Dashboard, relatórios e controles</span></div></a>
-        <a href="../score-financeiro.html"><div class="nl-dd-txt"><strong>Score Financeiro</strong><span>Avalie a saúde da empresa</span></div></a>
-        <a href="../planos.html"><div class="nl-dd-txt"><strong>Planos e Preços</strong><span>Encontre o plano ideal</span></div></a>
-        <a href="../parceiros-bpo.html"><div class="nl-dd-txt"><strong>Parceiros BPO</strong><span>Para escritórios de contabilidade</span></div></a>
+        <a href="../funcionalidades.html"><span class="nl-dd-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg></span><div class="nl-dd-txt"><strong>Funcionalidades</strong><span>Dashboard, relatórios e controles</span></div></a>
+        <a href="../planos.html"><span class="nl-dd-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></span><div class="nl-dd-txt"><strong>Planos e Preços</strong><span>Encontre o plano ideal</span></div></a>
+        <a href="../parceiros-bpo.html"><span class="nl-dd-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><div class="nl-dd-txt"><strong>Parceiros BPO</strong><span>Para escritórios de contabilidade</span></div></a>
       </div>
     </li>
     <li class="nl-dd">
       <button class="nl-dd-btn">Aprenda <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:10px;height:10px;flex-shrink:0"><polyline points="6 9 12 15 18 9"/></svg></button>
       <div class="nl-dd-menu">
-        <a href="../blog.html"><div class="nl-dd-txt"><strong>Blog</strong><span>Guias de gestão financeira</span></div></a>
-        <a href="../materiais.html" style="font-weight:700;color:var(--or-dk)"><div class="nl-dd-txt"><strong>Materiais Gratuitos</strong><span>Planilhas, calculadoras e modelos</span></div></a>
+        <a href="../blog.html"><span class="nl-dd-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span><div class="nl-dd-txt"><strong>Blog</strong><span>Guias de gestão financeira</span></div></a>
+        <a href="../materiais/" style="font-weight:700;color:var(--or-dk)"><div class="nl-dd-txt"><strong>Materiais Gratuitos</strong><span>Planilhas, calculadoras e modelos</span></div></a>
         <div class="nl-dd-sep"></div>
-        <a href="../sobre-mentoria.html"><div class="nl-dd-txt"><strong>Mentoria</strong><span>Acompanhamento personalizado</span></div></a>
+        <a href="../sobre-mentoria.html"><span class="nl-dd-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2.5 9 2.5 12 0v-5"/></svg></span><div class="nl-dd-txt"><strong>Mentoria</strong><span>Acompanhamento personalizado</span></div></a>
       </div>
     </li>
     <li><a href="../sobre.html" class="nl-lnk">Sobre</a></li>
@@ -154,7 +158,7 @@
   <a href="../sobre-mentoria.html">Mentoria</a>
   <a href="../parceiros-bpo.html">Parceiros BPO</a>
   <a href="../blog.html">Blog</a>
-  <a href="../materiais.html">Materiais</a>
+  <a href="../materiais/">Materiais</a>
   <a href="../sobre.html">Sobre</a>
   <a href="../contato.html">Contato</a>
   <div class="mob-ctas">
@@ -169,7 +173,7 @@
     <div class="mp-hero-inner">
       <div>
         <div class="mp-breadcrumb">
-          <a href="../materiais.html">Materiais</a>
+          <a href="../materiais/">Materiais</a>
           <span>/</span>
           <span>Gestão Operacional</span>
         </div>
@@ -181,7 +185,6 @@
           <span class="mp-badge">100% gratuito</span>
           <span class="mp-badge">Atualizado 2026</span>
         </div>
-        <a href="#" onclick="openDownload('planilha-gestao-estoque','file'); return false;">📥 Baixar grátis agora</a>
         
       </div>
       <div class="mp-card">
@@ -241,7 +244,7 @@
 
         <!-- FAQ -->
         <div style="margin-top:48px">
-          <h3 style="font-family:'Sora',sans-serif;font-size:20px;font-weight:800;color:var(--ink);margin-bottom:20px">Perguntas frequentes</h3>
+          <h3 style="font-family:'Sora',sans-serif;font-size:20px;font-weight:800;color:var(--ink);margin-bottom:20px;margin-top:48px;padding-top:48px;border-top:1px solid var(--bd)">Perguntas frequentes</h3>
           <div class="mp-faq">
             <div class="mp-faq-item"><button class="mp-faq-q">Como calcular o estoque mínimo? <span>+</span></button><div class="mp-faq-a">Estoque Mínimo = Demanda Diária Média × Prazo de Entrega do Fornecedor. Ex: vende 10 unidades/dia e o fornecedor entrega em 5 dias → estoque mínimo = 50 unidades. A planilha calcula automaticamente.</div></div>
     <div class="mp-faq-item"><button class="mp-faq-q">O que é custo médio ponderado? <span>+</span></button><div class="mp-faq-a">É a média ponderada dos custos de compra do produto. Quando você compra em momentos diferentes com preços diferentes, o CME calcula o custo unitário real do estoque atual. É o método mais utilizado no Brasil.</div></div>
@@ -276,7 +279,7 @@
               <div class="mp-related-emoji">✅</div>
               <div class="mp-related-title">Checklist de Saúde Financeira</div>
             </a>
-            <a class="mp-related-item" href="../materiais.html">
+            <a class="mp-related-item" href="../materiais/">
               <div class="mp-related-emoji">📂</div>
               <div class="mp-related-title">Ver todos os materiais grátis →</div>
             </a>
@@ -304,7 +307,7 @@
         <li><a href="../materiais/calculadora-ponto-de-equilibrio.html">Ponto de Equilíbrio</a></li>
         <li><a href="../materiais/planilha-dre-gerencial.html">DRE Gerencial</a></li>
         <li><a href="../materiais/planilha-precificacao.html">Precificação</a></li>
-        <li><a href="../materiais.html">Ver todos →</a></li>
+        <li><a href="../materiais/">Ver todos →</a></li>
       </ul></div>
       <div class="bf-col"><h5>Nemalá</h5><ul>
         <li><a href="../index.html">Site principal</a></li>
