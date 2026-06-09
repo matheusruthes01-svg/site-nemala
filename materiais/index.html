@@ -48,7 +48,7 @@
 .mat-card{background:#fff;border:1.5px solid var(--bd);border-radius:20px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:all .2s}
 .mat-card:hover{border-color:var(--or);transform:translateY(-4px);box-shadow:0 12px 48px rgba(0,0,0,.08)}
 .mat-card-top{height:140px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.mat-card-emoji{font-size:52px;position:relative;z-index:1}
+.mat-card-emoji{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:var(--or-bg,#FFF6E0);color:#E8950A;position:relative;z-index:1;flex-shrink:0}
 .mat-card-badge{position:absolute;top:12px;right:12px;font-size:9px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:4px 9px;border-radius:100px}
 .badge-planilha{background:#E3F5E1;color:#1B7A1B}
 .badge-calculadora{background:#E8F0FE;color:#1A56DB}
@@ -210,9 +210,9 @@
   <div class="container">
     <div class="mat-grid" id="mat-grid">
 
-      <a class="mat-card" href="materiais/planilha-fluxo-de-caixa.html" data-type="planilha" data-search="fluxo de caixa mensal planilha excel entradas saidas" onclick="openDownload('planilha-fluxo-de-caixa','file'); return false;">
+      <a class="mat-card" href="materiais/planilha-fluxo-de-caixa.html" data-type="planilha" data-search="fluxo de caixa mensal planilha excel entradas saidas">
         <div class="mat-card-top" style="background:linear-gradient(135deg,#E8F5E9,#C8E6C9)">
-          <div class="mat-card-emoji">📊</div>
+          <div class="mat-card-emoji"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
           <span class="mat-card-badge badge-planilha">Planilha</span>
         </div>
         <div class="mat-card-body">
@@ -229,9 +229,9 @@
         </div>
       </a>
 
-      <a class="mat-card" href="materiais/calculadora-ponto-de-equilibrio.html" data-type="calculadora" data-search="ponto de equilibrio calculo calculadora" onclick="openDownload('calculadora-ponto-de-equilibrio','file'); return false;">
+      <a class="mat-card" href="materiais/calculadora-ponto-de-equilibrio.html" data-type="calculadora" data-search="ponto de equilibrio calculo calculadora">
         <div class="mat-card-top" style="background:linear-gradient(135deg,#E3F2FD,#BBDEFB)">
-          <div class="mat-card-emoji">🧮</div>
+          <div class="mat-card-emoji"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><line x1="12" y1="2" x2="12" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
           <span class="mat-card-badge badge-calculadora">Calculadora</span>
         </div>
         <div class="mat-card-body">
@@ -245,9 +245,9 @@
         </div>
       </a>
 
-      <a class="mat-card" href="materiais/planilha-dre-gerencial.html" data-type="modelo" data-search="dre gerencial modelo demonstrativo resultado exercicio" onclick="openDownload('planilha-dre-gerencial','file'); return false;">
+      <a class="mat-card" href="materiais/planilha-dre-gerencial.html" data-type="modelo" data-search="dre gerencial modelo demonstrativo resultado exercicio">
         <div class="mat-card-top" style="background:linear-gradient(135deg,#FFF3E0,#FFE0B2)">
-          <div class="mat-card-emoji">📋</div>
+          <div class="mat-card-emoji"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="9" x2="15" y2="9"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg></div>
           <span class="mat-card-badge badge-modelo">Modelo</span>
         </div>
         <div class="mat-card-body">
@@ -261,9 +261,9 @@
         </div>
       </a>
 
-      <a class="mat-card" href="materiais/planilha-precificacao.html" data-type="planilha" data-search="precificacao markup margem preco produto servico" onclick="openDownload('planilha-precificacao','file'); return false;">
+      <a class="mat-card" href="materiais/planilha-precificacao.html" data-type="planilha" data-search="precificacao markup margem preco produto servico">
         <div class="mat-card-top" style="background:linear-gradient(135deg,#FCE4EC,#F8BBD0)">
-          <div class="mat-card-emoji">🏷️</div>
+          <div class="mat-card-emoji"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></div>
           <span class="mat-card-badge badge-planilha">Planilha</span>
         </div>
         <div class="mat-card-body">
@@ -277,9 +277,9 @@
         </div>
       </a>
 
-      <a class="mat-card" href="materiais/planilha-capital-de-giro.html" data-type="calculadora" data-search="capital de giro ncg necessidade calculo ciclo financeiro" onclick="openDownload('planilha-capital-de-giro','file'); return false;">
+      <a class="mat-card" href="materiais/planilha-capital-de-giro.html" data-type="calculadora" data-search="capital de giro ncg necessidade calculo ciclo financeiro">
         <div class="mat-card-top" style="background:linear-gradient(135deg,#E8EAF6,#C5CAE9)">
-          <div class="mat-card-emoji">💰</div>
+          <div class="mat-card-emoji"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
           <span class="mat-card-badge badge-calculadora">Calculadora</span>
         </div>
         <div class="mat-card-body">
@@ -293,9 +293,9 @@
         </div>
       </a>
 
-      <a class="mat-card" href="materiais/checklist-saude-financeira.html" data-type="checklist" data-search="checklist saude financeira diagnostico empresa" onclick="openDownload('checklist-saude-financeira','file'); return false;">
+      <a class="mat-card" href="materiais/checklist-saude-financeira.html" data-type="checklist" data-search="checklist saude financeira diagnostico empresa">
         <div class="mat-card-top" style="background:linear-gradient(135deg,#F3E5F5,#E1BEE7)">
-          <div class="mat-card-emoji">✅</div>
+          <div class="mat-card-emoji"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
           <span class="mat-card-badge badge-checklist">Checklist</span>
         </div>
         <div class="mat-card-body">
@@ -309,9 +309,9 @@
         </div>
       </a>
 
-      <a class="mat-card" href="materiais/planilha-gestao-estoque.html" data-type="planilha" data-search="controle estoque giro estoque minimo ponto pedido" onclick="openDownload('planilha-gestao-estoque','file'); return false;">
+      <a class="mat-card" href="materiais/planilha-gestao-estoque.html" data-type="planilha" data-search="controle estoque giro estoque minimo ponto pedido">
         <div class="mat-card-top" style="background:linear-gradient(135deg,#E0F7FA,#B2EBF2)">
-          <div class="mat-card-emoji">📦</div>
+          <div class="mat-card-emoji"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
           <span class="mat-card-badge badge-planilha">Planilha</span>
         </div>
         <div class="mat-card-body">
@@ -325,9 +325,9 @@
         </div>
       </a>
 
-      <a class="mat-card" href="materiais/modelo-orcamento-anual.html" data-type="modelo" data-search="orcamento anual budget planejamento receita despesa projecao" onclick="openDownload('modelo-orcamento-anual','file'); return false;">
+      <a class="mat-card" href="materiais/modelo-orcamento-anual.html" data-type="modelo" data-search="orcamento anual budget planejamento receita despesa projecao">
         <div class="mat-card-top" style="background:linear-gradient(135deg,#FFFDE7,#FFF9C4)">
-          <div class="mat-card-emoji">📅</div>
+          <div class="mat-card-emoji"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
           <span class="mat-card-badge badge-modelo">Modelo</span>
         </div>
         <div class="mat-card-body">
@@ -341,9 +341,9 @@
         </div>
       </a>
 
-      <a class="mat-card" href="materiais/planilha-margem-contribuicao.html" data-type="planilha" data-search="margem contribuicao produto mix produtos rentabilidade" onclick="openDownload('planilha-margem-contribuicao','file'); return false;">
+      <a class="mat-card" href="materiais/planilha-margem-contribuicao.html" data-type="planilha" data-search="margem contribuicao produto mix produtos rentabilidade">
         <div class="mat-card-top" style="background:linear-gradient(135deg,#E8F5E9,#A5D6A7)">
-          <div class="mat-card-emoji">📈</div>
+          <div class="mat-card-emoji"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
           <span class="mat-card-badge badge-planilha">Planilha</span>
         </div>
         <div class="mat-card-body">
@@ -357,9 +357,9 @@
         </div>
       </a>
 
-      <a class="mat-card" href="materiais/planilha-indicadores-financeiros.html" data-type="planilha" data-search="indicadores financeiros kpi dashboard empresa" onclick="openDownload('planilha-indicadores-financeiros','file'); return false;">
+      <a class="mat-card" href="materiais/planilha-indicadores-financeiros.html" data-type="planilha" data-search="indicadores financeiros kpi dashboard empresa">
         <div class="mat-card-top" style="background:linear-gradient(135deg,#FBE9E7,#FFCCBC)">
-          <div class="mat-card-emoji">🎯</div>
+          <div class="mat-card-emoji"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
           <span class="mat-card-badge badge-planilha">Planilha</span>
         </div>
         <div class="mat-card-body">
