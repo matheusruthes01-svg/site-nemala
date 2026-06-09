@@ -668,3 +668,7 @@ footer .fb a:hover{color:#fff}
 .mob-nav.open{display:flex!important}
 
 .ar-hero{padding-top:66px}
+
+/* Ícones do menu dropdown */
+.nl-dd-ic{flex-shrink:0;width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;background:#FFF6E0;color:#E8950A;margin-right:11px;margin-top:1px}
+.nl-dd-menu a:hover .nl-dd-ic{background:#FBB11E;color:#fff}

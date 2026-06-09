@@ -25,6 +25,7 @@ try{if(localStorage.getItem('nml_cookie_consent')==='accept'){gtag('consent','up
 <style>
 /* ─── LP Hero ─────────────────────────────────── */
 .lp-hero{padding:72px 0 60px;background:#fff;text-align:center;border-bottom:1px solid var(--bd)}
+@media(max-width:640px){.lp-hero{padding:32px 0 28px}.lp-stats{display:none}.lp-proof{margin-top:14px}.lp-sub{margin-bottom:22px;font-size:14px}.lp-h1{margin-bottom:12px}}
 .lp-eyebrow{display:inline-flex;align-items:center;gap:7px;background:#FFF6E0;border:1px solid #FFD97D;border-radius:100px;padding:5px 14px;font-size:12px;font-weight:700;color:#A05A00;margin-bottom:20px}
 .lp-eyebrow span{width:6px;height:6px;border-radius:50%;background:var(--or);display:inline-block}
 .lp-h1{font-size:clamp(30px,5vw,54px);font-weight:800;font-family:var(--display);line-height:1.12;margin-bottom:18px;color:var(--ink)}
@@ -78,7 +79,7 @@ try{if(localStorage.getItem('nml_cookie_consent')==='accept'){gtag('consent','up
 .lp-sticky{display:none;position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--bd);padding:12px 20px;z-index:90;box-shadow:0 -4px 20px rgba(0,0,0,.08)}
 .lp-sticky-in{max-width:480px;margin:0 auto;display:flex;gap:10px;align-items:center}
 .lp-sticky p{font-size:13px;font-weight:700;color:var(--ink);flex:1;line-height:1.3}
-@media(max-width:640px){.lp-sticky{display:block}#nml-chat-btn,#nml-chat-win{bottom:80px}#wa-fab{bottom:84px}.lp-form-row{grid-template-columns:1fr}}
+@media(max-width:640px){.lp-sticky{display:block}#nml-chat-btn,#nml-chat-win,#wa-fab{display:none!important}.lp-form-row{grid-template-columns:1fr}}
 /* ─── Stats ──────────────────────────────────────*/
 .lp-stats{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin-top:40px}
 .lp-stat{text-align:center}
@@ -166,13 +167,15 @@ try{if(localStorage.getItem('nml_cookie_consent')==='accept'){gtag('consent','up
   <div class="container">
     <div class="lp-eyebrow"><span></span>Gestão financeira com IA · Sem planilha</div>
     <h1 class="lp-h1">Você sabe quanto <em>de lucro real</em><br>sua empresa teve esse mês?</h1>
+    <h1 class="lp-h1-mob" style="display:none;font-size:28px;font-weight:800;font-family:var(--display);line-height:1.15;margin-bottom:12px;color:var(--ink)">Sua empresa fatura bem.<br><em style="font-style:normal;color:var(--or)">Mas sabe o lucro real?</em></h1>
+    <style>@media(max-width:640px){.lp-h1{display:none}.lp-h1-mob{display:block!important}}</style>
     <p class="lp-sub">A Nemalá lê seus extratos, classifica tudo com IA e te entrega DRE, fluxo de caixa e indicadores em menos de 10 minutos. Sem contador, sem planilha.</p>
 
     <div class="lp-cta-group">
-      <a href="https://app.nemala.com.br/register" data-track="InitiateCheckout" data-track-canal="lp_trafego_pago" class="btn btn-or btn-lg" data-cta="hero" style="font-size:16px;padding:16px 36px" target="_blank" rel="noopener noreferrer">
+      <button onclick="openLeadForm('hero')" data-track="InitiateCheckout" data-track-canal="lp_trafego_pago" class="btn btn-or btn-lg" data-cta="hero" style="font-size:16px;padding:16px 36px;border:none;cursor:pointer">
         Começar agora — 15 dias grátis
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </a>
+      </button>
       <span style="font-size:13px;color:var(--sub)">Sem cartão de crédito · Cancele quando quiser</span>
     </div>
 
@@ -248,7 +251,7 @@ try{if(localStorage.getItem('nml_cookie_consent')==='accept'){gtag('consent','up
       </div>
     </div>
     <div style="text-align:center;margin-top:36px">
-      <a href="https://app.nemala.com.br/register" data-track="InitiateCheckout" data-track-canal="lp_trafego_pago" class="btn btn-or btn-lg" data-cta="solucao" style="font-size:15px" target="_blank" rel="noopener noreferrer">Começar agora — é grátis</a>
+      <button onclick="openLeadForm('solucao')" data-track="InitiateCheckout" data-track-canal="lp_trafego_pago" class="btn btn-or btn-lg" data-cta="solucao" style="font-size:15px;border:none;cursor:pointer">Começar agora — é grátis</button>
     </div>
   </div>
 </section>
@@ -286,14 +289,43 @@ try{if(localStorage.getItem('nml_cookie_consent')==='accept'){gtag('consent','up
     <h2>Comece agora. É grátis por 15 dias.</h2>
     <p>Sem cartão de crédito. Acesso imediato. Cancele quando quiser.</p>
 
-    <div class="lp-form-wrap" style="text-align:center">
-      <div class="lp-form-title">Criar conta grátis</div>
-      <div class="lp-form-sub">Cadastro leva menos de 2 minutos. Sem cartão de crédito.</div>
-      <a href="https://app.nemala.com.br/register" data-track="InitiateCheckout" data-track-canal="lp_trafego_pago" class="btn btn-or btn-lg" style="width:100%;justify-content:center;margin-top:4px;font-size:15px;font-family:var(--body)" target="_blank" rel="noopener noreferrer">
-        Criar conta grátis — começar agora
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </a>
-      <div class="lp-terms">Ao criar sua conta você concorda com os <a href="termos" target="_blank" rel="noopener noreferrer">Termos de Uso</a> e a <a href="privacidade" target="_blank" rel="noopener noreferrer">Política de Privacidade</a>.</div>
+    <div class="lp-form-wrap" style="text-align:left">
+      <div class="lp-form-title" style="text-align:center">Criar conta grátis</div>
+      <div class="lp-form-sub" style="text-align:center">Cadastro leva menos de 2 minutos. Sem cartão de crédito.</div>
+      <div id="lp-inline-form">
+        <div class="lp-form-field">
+          <label for="if-empresa">Nome da empresa</label>
+          <input id="if-empresa" type="text" placeholder="Ex: Distribuidora Silva Ltda." autocomplete="organization">
+        </div>
+        <div class="lp-form-field">
+          <label for="if-nome">Seu nome</label>
+          <input id="if-nome" type="text" placeholder="Nome completo" autocomplete="name">
+        </div>
+        <div class="lp-form-field">
+          <label for="if-tel">Telefone (WhatsApp)</label>
+          <input id="if-tel" type="tel" placeholder="(11) 99999-9999" autocomplete="tel" maxlength="15">
+          <div id="if-tel-err" style="display:none;color:#E53E3E;font-size:11px;margin-top:4px">Digite um telefone válido com DDD (ex: 11 99999-9999)</div>
+        </div>
+        <div class="lp-form-field">
+          <label for="if-email">E-mail</label>
+          <input id="if-email" type="email" placeholder="voce@empresa.com.br" autocomplete="email">
+        </div>
+<div class="lp-form-field">
+          <label class="lp-form-label">Faturamento mensal <span style="color:#E53E3E">*</span></label>
+          <select id="if-fat" required>
+            <option value="" disabled selected>Selecione o faturamento</option>
+            <option value="ate-50k">Até R$ 50 mil</option>
+            <option value="50k-150k">R$ 50 mil – R$ 150 mil</option>
+            <option value="150k-500k">R$ 150 mil – R$ 500 mil</option>
+            <option value="acima-500k">Acima de R$ 500 mil</option>
+          </select>
+        </div>
+        <button id="if-btn" onclick="submitInlineForm()" class="btn btn-or btn-lg" style="width:100%;justify-content:center;font-size:15px;font-family:var(--body);border:none;cursor:pointer;margin-top:4px">
+          Criar conta grátis — começar agora
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+        <div class="lp-terms" style="margin-top:10px">Ao criar sua conta você concorda com os <a href="termos" target="_blank" rel="noopener noreferrer">Termos de Uso</a> e a <a href="privacidade" target="_blank" rel="noopener noreferrer">Política de Privacidade</a>.</div>
+      </div>
     </div>
   </div>
 </section>
@@ -301,8 +333,8 @@ try{if(localStorage.getItem('nml_cookie_consent')==='accept'){gtag('consent','up
 <!-- Sticky bar mobile -->
 <div class="lp-sticky" id="lp-sticky-bar">
   <div class="lp-sticky-in">
-    <p>15 dias grátis. Sem cartão.</p>
-    <a href="https://app.nemala.com.br/register" data-track="InitiateCheckout" data-track-canal="lp_trafego_pago" class="btn btn-or btn-sm" data-cta="sticky" target="_blank" rel="noopener noreferrer">Começar grátis</a>
+    <p>Veja seu lucro real em 10 min. Grátis.</p>
+    <button onclick="openLeadForm('sticky')" data-track="InitiateCheckout" data-track-canal="lp_trafego_pago" class="btn btn-or btn-sm" data-cta="sticky" style="border:none;cursor:pointer;white-space:nowrap">Começar grátis</button>
   </div>
 </div>
 
@@ -349,12 +381,278 @@ try{if(localStorage.getItem('nml_cookie_consent')==='accept'){gtag('consent','up
       <div class="wa-menu-tx"><strong>Falar no WhatsApp</strong><small>Resposta em até 2h úteis</small></div>
     </a>
   </div>
-  <button id="wa-fab-btn" aria-label="Ajuda">
+  <button id="wa-fab-btn" aria-label="Ajuda" onclick="toggleWaMenu()">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
     <span id="wa-fab-label">Ajuda</span>
   </button>
 </div>
-<script src="security.js"></script>
+<!-- ── MODAL DE CADASTRO ─────────────────────────── -->
+<style>
+#nml-modal-bg{position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.55);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;padding:16px;opacity:0;pointer-events:none;transition:opacity .25s}
+#nml-modal-bg.open{opacity:1;pointer-events:auto}
+#nml-modal{background:#fff;border-radius:22px;padding:36px 32px 28px;width:100%;max-width:460px;position:relative;transform:translateY(20px) scale(.97);transition:transform .28s;box-shadow:0 24px 80px rgba(0,0,0,.22)}
+#nml-modal-bg.open #nml-modal{transform:none}
+#nml-modal-close{position:absolute;top:14px;right:14px;background:var(--bg);border:none;border-radius:50%;width:32px;height:32px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--sub);transition:background .15s}
+#nml-modal-close:hover{background:var(--bd)}
+.nml-mf-field{margin-bottom:14px}
+.nml-mf-field label{display:block;font-size:12px;font-weight:700;color:var(--ink);margin-bottom:5px;letter-spacing:.02em}
+.nml-mf-field input{width:100%;border:1.5px solid var(--bd);border-radius:10px;padding:12px 14px;font-size:14px;font-family:var(--body);color:var(--ink);background:#fff;outline:none;transition:border-color .15s;box-sizing:border-box}
+.nml-mf-field input:focus{border-color:var(--or)}
+.nml-mf-field input.err{border-color:#E53E3E}
+.nml-mf-err{display:none;color:#E53E3E;font-size:11px;margin-top:4px}
+.nml-mf-err.show{display:block}
+#nml-modal-success{display:none;text-align:center;padding:12px 0}
+#nml-modal-success .s-ico{font-size:48px;margin-bottom:12px}
+#nml-modal-success h3{font-size:20px;font-weight:800;font-family:var(--display);color:var(--ink);margin-bottom:8px}
+#nml-modal-success p{font-size:14px;color:var(--sub);line-height:1.6}
+</style>
+
+<div id="nml-modal-bg" role="dialog" aria-modal="true" aria-label="Criar conta grátis" onclick="handleModalBgClick(event)">
+  <div id="nml-modal">
+    <button id="nml-modal-close" onclick="closeLeadForm()" aria-label="Fechar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+
+    <div id="nml-modal-form-wrap">
+      <div style="text-align:center;margin-bottom:22px">
+        <div class="lp-eyebrow" style="display:inline-flex;margin-bottom:10px"><span></span>15 dias grátis · Sem cartão</div>
+        <div style="font-size:20px;font-weight:800;font-family:var(--display);color:var(--ink);line-height:1.2">Crie sua conta grátis<br>e veja seu lucro real</div>
+      </div>
+
+      <div class="nml-mf-field">
+        <label for="mf-empresa">Nome da empresa</label>
+        <input id="mf-empresa" type="text" placeholder="Ex: Distribuidora Silva Ltda." autocomplete="organization">
+        <div class="nml-mf-err" id="err-empresa">Informe o nome da empresa</div>
+      </div>
+      <div class="nml-mf-field">
+        <label for="mf-nome">Seu nome</label>
+        <input id="mf-nome" type="text" placeholder="Nome completo" autocomplete="name">
+        <div class="nml-mf-err" id="err-nome">Informe seu nome</div>
+      </div>
+      <div class="nml-mf-field">
+        <label for="mf-tel">Telefone (WhatsApp)</label>
+        <input id="mf-tel" type="tel" placeholder="(11) 99999-9999" autocomplete="tel" maxlength="15" inputmode="numeric">
+        <div class="nml-mf-err" id="err-tel">Digite um telefone válido com DDD (ex: 11 99999-9999)</div>
+      </div>
+      <div class="nml-mf-field">
+        <label for="mf-email">E-mail</label>
+        <input id="mf-email" type="email" placeholder="voce@empresa.com.br" autocomplete="email">
+        <div class="nml-mf-err" id="err-email">Informe um e-mail válido</div>
+      </div>
+
+      <div class="nml-mf-field">
+        <label for="mf-fat">Faturamento mensal <span style="color:#E53E3E">*</span></label>
+        <select id="mf-fat" required style="width:100%;border:1.5px solid var(--bd);border-radius:10px;padding:11px 14px;font-size:14px;font-family:var(--body);color:var(--ink);background:#fff;outline:none;appearance:auto">
+          <option value="" disabled selected>Selecione o faturamento</option>
+          <option value="ate-50k">Até R$ 50 mil</option>
+          <option value="50k-150k">R$ 50 mil – R$ 150 mil</option>
+          <option value="150k-500k">R$ 150 mil – R$ 500 mil</option>
+          <option value="acima-500k">Acima de R$ 500 mil</option>
+        </select>
+      </div>
+
+      <button id="mf-submit-btn" onclick="submitModalForm()" class="btn btn-or btn-lg" style="width:100%;justify-content:center;font-size:15px;font-family:var(--body);border:none;cursor:pointer;margin-top:6px">
+        Criar conta grátis
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </button>
+      <p style="font-size:11px;color:var(--sub);text-align:center;margin-top:10px;line-height:1.5">Ao continuar você concorda com os <a href="termos" style="color:var(--or-dk);text-decoration:none" target="_blank">Termos de Uso</a> e <a href="privacidade" style="color:var(--or-dk);text-decoration:none" target="_blank">Privacidade</a>.</p>
+    </div>
+
+    <div id="nml-modal-success">
+      <div class="s-ico">✅</div>
+      <h3>Quase lá!</h3>
+      <p>Estamos te levando para criar sua senha.<br>Redirecionando em <span id="redir-count">3</span>s…</p>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+
+  /* ── Phone mask ── */
+  function maskPhone(input){
+    input.addEventListener('input', function(){
+      var v = this.value.replace(/\D/g,'');
+      if(v.length > 11) v = v.slice(0,11);
+      if(v.length > 6)      v = '(' + v.slice(0,2) + ') ' + v.slice(2,7) + '-' + v.slice(7);
+      else if(v.length > 2) v = '(' + v.slice(0,2) + ') ' + v.slice(2);
+      else if(v.length > 0) v = '(' + v;
+      this.value = v;
+    });
+  }
+  maskPhone(document.getElementById('mf-tel'));
+  maskPhone(document.getElementById('if-tel'));
+
+  /* ── Validation helpers ── */
+  function isPhoneValid(val){
+    var d = val.replace(/\D/g,'');
+    return d.length === 10 || d.length === 11;
+  }
+  function isEmailValid(val){
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val.trim());
+  }
+
+  function setFieldErr(inputId, errId, show){
+    var inp = document.getElementById(inputId);
+    var err = document.getElementById(errId);
+    if(!inp || !err) return;
+    if(show){ inp.classList.add('err'); err.classList.add('show'); }
+    else     { inp.classList.remove('err'); err.classList.remove('show'); }
+  }
+
+  /* ── Validate modal form ── */
+  function validateModal(){
+    var empresa = document.getElementById('mf-empresa').value.trim();
+    var nome    = document.getElementById('mf-nome').value.trim();
+    var tel     = document.getElementById('mf-tel').value.trim();
+    var email   = document.getElementById('mf-email').value.trim();
+    var fat     = (document.getElementById('mf-fat')||{}).value || '';
+    var ok = true;
+    setFieldErr('mf-empresa','err-empresa', !empresa);    if(!empresa) ok=false;
+    setFieldErr('mf-nome','err-nome', !nome);              if(!nome) ok=false;
+    setFieldErr('mf-tel','err-tel', !isPhoneValid(tel));  if(!isPhoneValid(tel)) ok=false;
+    setFieldErr('mf-email','err-email', !isEmailValid(email)); if(!isEmailValid(email)) ok=false;
+    return ok ? {empresa,nome,tel,email,fat} : null;
+  }
+
+  /* ── Validate inline form ── */
+  function validateInline(){
+    var empresa = document.getElementById('if-empresa').value.trim();
+    var nome    = document.getElementById('if-nome').value.trim();
+    var tel     = document.getElementById('if-tel').value.trim();
+    var email   = document.getElementById('if-email').value.trim();
+    var ok = true;
+    var telErr = document.getElementById('if-tel-err');
+
+    ['if-empresa','if-nome','if-email'].forEach(function(id){
+      var el = document.getElementById(id);
+      if(el) el.classList.remove('err');
+    });
+    if(telErr) telErr.style.display = 'none';
+
+    if(!empresa){ document.getElementById('if-empresa').classList.add('err'); ok=false; }
+    if(!nome)   { document.getElementById('if-nome').classList.add('err'); ok=false; }
+    if(!isPhoneValid(tel)){ document.getElementById('if-tel').classList.add('err'); if(telErr) telErr.style.display='block'; ok=false; }
+    if(!isEmailValid(email)){ document.getElementById('if-email').classList.add('err'); ok=false; }
+    var fat = (document.getElementById('if-fat')||{}).value || '';
+    return ok ? {empresa,nome,tel,email,fat} : null;
+  }
+
+  /* ── Cole aqui a URL do Apps Script após implantar ── */
+  var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwcE1A05ph_95XASbk8L4dvK-ory3xddzcpgGdpu7ND-ykYlaadSrSSs-0ZDiBW3zLjsQ/exec';
+
+  /* ── Pega UTMs da sessão ── */
+  function getUtms(){
+    try{ return JSON.parse(sessionStorage.getItem('nml_utms') || '{}'); }
+    catch(e){ return {}; }
+  }
+
+  /* ── Envia lead pro Sheets + pixel + redirect ── */
+  function sendLead(data, canal, onDone){
+    // 1. Pixel Meta
+    if(typeof fbq !== 'undefined'){
+      fbq('track','Lead',{content_name:'lp_trafego_lead', canal: canal});
+    }
+    // 2. GTM dataLayer
+    if(window.dataLayer){
+      window.dataLayer.push({event:'nml_lead', canal: canal, email: data.email});
+    }
+
+    var utms = getUtms();
+    var payload = {
+      empresa:      data.empresa,
+      nome:         data.nome,
+      telefone:     data.tel,
+      email:        data.email,
+      faturamento:  data.fat || '',
+      origem:       canal,
+      utm_source:   utms.utm_source   || '',
+      utm_medium:   utms.utm_medium   || '',
+      utm_campaign: utms.utm_campaign || '',
+      utm_content:  utms.utm_content  || ''
+    };
+
+    // 3. Envia pro Apps Script e só chama onDone quando confirmar
+    if(SCRIPT_URL){
+      var qs = new URLSearchParams(payload).toString();
+      var img = new Image();
+      img.onload = img.onerror = function(){ onDone(); };
+      img.src = SCRIPT_URL + '?' + qs;
+      // Fallback: se demorar mais de 3s, libera mesmo assim
+      setTimeout(function(){ onDone(); }, 3000);
+    } else {
+      onDone();
+    }
+  }
+
+  /* ── Modal submit ── */
+  window.submitModalForm = function(){
+    var data = validateModal();
+    if(!data) return;
+    var btn = document.getElementById('mf-submit-btn');
+    btn.disabled = true;
+    btn.textContent = 'Enviando…';
+
+    sendLead(data, 'modal_lp', function(){
+      document.getElementById('nml-modal-form-wrap').style.display = 'none';
+      var suc = document.getElementById('nml-modal-success');
+      suc.style.display = 'block';
+      suc.innerHTML = '<div class="s-ico">✅</div><h3>Recebemos seu contato!</h3><p>Nossa equipe vai entrar em contato em breve pelo WhatsApp.<br><strong>' + data.tel + '</strong></p>';
+    });
+  };
+
+  /* ── Inline form submit ── */
+  window.submitInlineForm = function(){
+    var data = validateInline();
+    if(!data) return;
+    var btn = document.getElementById('if-btn');
+    btn.disabled = true;
+    btn.textContent = 'Enviando…';
+
+    sendLead(data, 'inline_form_lp', function(){
+      var wrap = document.getElementById('lp-inline-form');
+      wrap.innerHTML = '<div style="text-align:center;padding:16px 0"><div style="font-size:40px;margin-bottom:10px">✅</div><div style="font-size:18px;font-weight:800;font-family:var(--display);color:var(--ink);margin-bottom:8px">Recebemos seu contato!</div><p style="font-size:14px;color:var(--sub);line-height:1.6">Nossa equipe vai entrar em contato em breve pelo WhatsApp.<br><strong>' + data.tel + '</strong></p></div>';
+    });
+  };
+
+  /* ── Open/Close modal ── */
+  window.openLeadForm = function(canal){
+    document.getElementById('nml-modal-bg').classList.add('open');
+    document.body.style.overflow = 'hidden';
+    setTimeout(function(){ document.getElementById('mf-empresa').focus(); }, 300);
+  };
+
+  window.closeLeadForm = function(){
+    document.getElementById('nml-modal-bg').classList.remove('open');
+    document.body.style.overflow = '';
+  };
+
+  window.handleModalBgClick = function(e){
+    if(e.target === document.getElementById('nml-modal-bg')) closeLeadForm();
+  };
+
+  /* ── ESC to close ── */
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeLeadForm();
+  });
+
+  /* ── Real-time clear errors on input ── */
+  ['mf-empresa','mf-nome','mf-tel','mf-email'].forEach(function(id){
+    var el = document.getElementById(id);
+    if(el) el.addEventListener('input', function(){
+      this.classList.remove('err');
+      var errEl = document.getElementById('err-' + id.replace('mf-',''));
+      if(errEl) errEl.classList.remove('show');
+    });
+  });
+
+  /* ── Inline: add err class style ── */
+  var style = document.createElement('style');
+  style.textContent = '#if-empresa.err,#if-nome.err,#if-tel.err,#if-email.err{border-color:#E53E3E!important}';
+  document.head.appendChild(style);
+
+})();
+</script>
 <script>
 (function(){
   function fireView(){
@@ -392,7 +690,7 @@ try{if(localStorage.getItem('nml_cookie_consent')==='accept'){gtag('consent','up
   window.addEventListener('scroll',function(){
     var bar=document.getElementById('lp-sticky-bar');
     if(!bar)return;
-    bar.style.display=window.scrollY>400?'block':'none';
+    bar.style.display=window.scrollY>100?'block':'none';
   },{passive:true});
 })();
 </script>
@@ -650,6 +948,22 @@ setTimeout(function(){
 }, 25000);
 
 })();
+</script>
+<script>
+// WA FAB toggle
+window.toggleWaMenu = function(){
+  var menu = document.getElementById('wa-menu');
+  if(!menu) return;
+  menu.classList.toggle('open');
+};
+// Close wa menu when clicking outside
+document.addEventListener('click', function(e){
+  var fab = document.getElementById('wa-fab');
+  var menu = document.getElementById('wa-menu');
+  if(fab && menu && !fab.contains(e.target)){
+    menu.classList.remove('open');
+  }
+});
 </script>
 </body>
 </html>
