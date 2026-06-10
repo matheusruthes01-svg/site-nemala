@@ -349,91 +349,36 @@
 var lcMat='',lcFile='';
 function openDownload(mat,file){lcMat=mat;lcFile=file;document.getElementById('lc-overlay').classList.add('open');}
 function closeLead(){document.getElementById('lc-overlay').classList.remove('open');}
+
+// ── Captura de leads (Google Apps Script) ──
+var LEADS_ENDPOINT='https://script.google.com/macros/s/AKfycbzriu8zQznjKaOaF9UWqeP6dNGUmIz3uENOO4QD3aNCKf2l0HRi_dYhnx7pzysLC-NGBg/exec'; // ← trocar pela URL do deployment (ver instrucoes-leads.md)
+function sendLead(params){
+  try{
+    if(LEADS_ENDPOINT.indexOf('http')!==0){console.warn('[Nemalá] LEADS_ENDPOINT não configurado — lead não salvo');return;}
+    var q=Object.keys(params).map(function(k){return encodeURIComponent(k)+'='+encodeURIComponent(params[k]||'')}).join('&');
+    new Image().src=LEADS_ENDPOINT+'?'+q+'&_t='+Date.now();
+  }catch(e){}
+}
 function submitLead(){
   var name=document.getElementById('lc-name').value.trim();
   var email=document.getElementById('lc-email').value.trim();
   if(!email||!email.includes('@')){alert('Insira um e-mail válido.');return;}
+  var fat=document.getElementById('lc-fat')?document.getElementById('lc-fat').value:'';
+  var emp=document.getElementById('lc-empresa')?document.getElementById('lc-empresa').value.trim():'';
+  sendLead({tipo:'material',material:lcMat,nome:name,email:email,empresa:emp,faturamento:fat,pagina:location.pathname});
   document.getElementById('lc-form-inner').innerHTML='<div class="lc-success"><div style="font-size:48px;margin-bottom:16px">✅</div><strong style="font-size:18px;color:var(--ink)">Material liberado!</strong><p style="font-size:14px;color:var(--sub);margin-top:8px">Iniciando download em instantes...</p></div>';
   setTimeout(function(){var a=document.createElement('a');a.href='files/modelo-orcamento-anual.xlsx';a.download='modelo-orcamento-anual.xlsx';document.body.appendChild(a);a.click();document.body.removeChild(a);setTimeout(function(){document.getElementById('lc-overlay').classList.remove('open');},1500);},800);
 }
 document.getElementById('lc-overlay').addEventListener('click',function(e){if(e.target===this)closeLead();});
-// ── NAV: dropdown click + ham ─────────────────────────────────
-(function(){
-  var nb=document.getElementById("nb");
-  if(nb)window.addEventListener("scroll",function(){nb.classList.toggle("sc",window.scrollY>8);},{passive:true});
 
-  // Click-based dropdowns
-  var dds=document.querySelectorAll(".nl-dd");
-  dds.forEach(function(dd){
-    var btn=dd.querySelector(".nl-dd-btn");
-    if(!btn)return;
-    btn.addEventListener("click",function(e){
-      e.stopPropagation();
-      var isOpen=dd.classList.contains("open");
-      // close all
-      dds.forEach(function(d){d.classList.remove("open");});
-      if(!isOpen) dd.classList.add("open");
-    });
-  });
-  // Close on outside click
-  document.addEventListener("click",function(e){
-    if(!e.target.closest(".nl-dd")) dds.forEach(function(d){d.classList.remove("open");});
-  });
-
-  // Ham / mob-nav
-  var hb=document.getElementById("ham-btn"),mn=document.getElementById("mob-nav");
-  if(hb&&mn){
-    hb.addEventListener("click",function(e){
-      e.stopPropagation();
-      var o=hb.classList.toggle("open");
-      mn.classList.toggle("open",o);
-      hb.setAttribute("aria-expanded",o);
-    });
-    document.addEventListener("click",function(e){
-      if(!hb.contains(e.target)&&!mn.contains(e.target)){
-        hb.classList.remove("open");
-        mn.classList.remove("open");
-      }
-    });
-  }
-})();
 // FAQ
 document.querySelectorAll(".mp-faq-q").forEach(function(q){q.addEventListener("click",function(){this.parentElement.classList.toggle("open");});});
 // Tabs
 document.querySelectorAll(".mp-tab").forEach(function(t){t.addEventListener("click",function(){document.querySelectorAll(".mp-tab").forEach(function(x){x.classList.remove("active");});document.querySelectorAll(".mp-tab-content").forEach(function(x){x.classList.remove("active");});this.classList.add("active");document.getElementById(this.dataset.tab).classList.add("active");});});
 
-// click-based dropdown
-(function(){
-  var nb=document.getElementById("nb");
-  if(nb)window.addEventListener("scroll",function(){nb.classList.toggle("sc",window.scrollY>8);},{passive:true});
-  var dds=document.querySelectorAll(".nl-dd");
-  dds.forEach(function(dd){
-    var btn=dd.querySelector(".nl-dd-btn");
-    if(!btn)return;
-    btn.addEventListener("click",function(e){
-      e.stopPropagation();
-      var isOpen=dd.classList.contains("open");
-      dds.forEach(function(d){d.classList.remove("open");});
-      if(!isOpen)dd.classList.add("open");
-    });
-  });
-  document.addEventListener("click",function(e){
-    if(!e.target.closest(".nl-dd"))dds.forEach(function(d){d.classList.remove("open");});
-  });
-  var hb=document.getElementById("ham-btn"),mn=document.getElementById("mob-nav");
-  if(hb&&mn){
-    hb.addEventListener("click",function(e){
-      e.stopPropagation();
-      var o=hb.classList.toggle("open");
-      mn.classList.toggle("open",o);
-      hb.setAttribute("aria-expanded",o);
-    });
-    document.addEventListener("click",function(e){
-      if(!hb.contains(e.target)&&!mn.contains(e.target)){hb.classList.remove("open");mn.classList.remove("open");}
-    });
-  }
-})();
+
 </script>
 
+<script src="../security.js"></script>
 </body>
 </html>

@@ -439,7 +439,7 @@ document.querySelectorAll('.bl-cat-btn').forEach(function(btn){
 });
 
 // ── Captura de leads (Google Apps Script) ──
-var LEADS_ENDPOINT='COLE_AQUI_URL_DO_APPS_SCRIPT'; // ← trocar pela URL do deployment (ver instrucoes-leads.md)
+var LEADS_ENDPOINT='https://script.google.com/macros/s/AKfycbzriu8zQznjKaOaF9UWqeP6dNGUmIz3uENOO4QD3aNCKf2l0HRi_dYhnx7pzysLC-NGBg/exec'; // ← trocar pela URL do deployment (ver instrucoes-leads.md)
 function sendLead(params){
   try{
     if(LEADS_ENDPOINT.indexOf('http')!==0){console.warn('[Nemalá] LEADS_ENDPOINT não configurado — lead não salvo');return;}
@@ -455,115 +455,10 @@ function handleNL(){
   document.getElementById('nl-form').innerHTML='<div style="text-align:center;padding:24px 0"><div style="font-size:36px;margin-bottom:12px">✅</div><strong style="color:#fff;font-size:16px">Perfeito'+(name?', '+name:'')+'!</strong><p style="color:rgba(255,255,255,.4);font-size:13px;margin-top:8px">Você receberá nossos conteúdos toda semana.</p></div>';
 }
 
-// ── NAV: dropdown click + ham ─────────────────────────────────
-(function(){
-  // ── NAV: dropdown click + ham ─────────────────────────────────
-(function(){
-  var nb=document.getElementById("nb");
-  if(nb)window.addEventListener("scroll",function(){nb.classList.toggle("sc",window.scrollY>8);},{passive:true});
 
-  // Click-based dropdowns
-  var dds=document.querySelectorAll(".nl-dd");
-  dds.forEach(function(dd){
-    var btn=dd.querySelector(".nl-dd-btn");
-    if(!btn)return;
-    btn.addEventListener("click",function(e){
-      e.stopPropagation();
-      var isOpen=dd.classList.contains("open");
-      // close all
-      dds.forEach(function(d){d.classList.remove("open");});
-      if(!isOpen) dd.classList.add("open");
-    });
-  });
-  // Close on outside click
-  document.addEventListener("click",function(e){
-    if(!e.target.closest(".nl-dd")) dds.forEach(function(d){d.classList.remove("open");});
-  });
 
-  // Ham / mob-nav
-  var hb=document.getElementById("ham-btn"),mn=document.getElementById("mob-nav");
-  if(hb&&mn){
-    hb.addEventListener("click",function(e){
-      e.stopPropagation();
-      var o=hb.classList.toggle("open");
-      mn.classList.toggle("open",o);
-      hb.setAttribute("aria-expanded",o);
-    });
-    document.addEventListener("click",function(e){
-      if(!hb.contains(e.target)&&!mn.contains(e.target)){
-        hb.classList.remove("open");
-        mn.classList.remove("open");
-      }
-    });
-  }
-})();
-  // Click-based dropdowns
-  var dds=document.querySelectorAll(".nl-dd");
-  dds.forEach(function(dd){
-    var btn=dd.querySelector(".nl-dd-btn");
-    if(!btn)return;
-    btn.addEventListener("click",function(e){
-      e.stopPropagation();
-      var isOpen=dd.classList.contains("open");
-      // close all
-      dds.forEach(function(d){d.classList.remove("open");});
-      if(!isOpen) dd.classList.add("open");
-    });
-  });
-  // Close on outside click
-  document.addEventListener("click",function(e){
-    if(!e.target.closest(".nl-dd")) dds.forEach(function(d){d.classList.remove("open");});
-  });
 
-  // Ham / mob-nav
-  var hb=document.getElementById("ham-btn"),mn=document.getElementById("mob-nav");
-  if(hb&&mn){
-    hb.addEventListener("click",function(e){
-      e.stopPropagation();
-      var o=hb.classList.toggle("open");
-      mn.classList.toggle("open",o);
-      hb.setAttribute("aria-expanded",o);
-    });
-    document.addEventListener("click",function(e){
-      if(!hb.contains(e.target)&&!mn.contains(e.target)){
-        hb.classList.remove("open");
-        mn.classList.remove("open");
-      }
-    });
-  }
-})();
-
-// click-based dropdown
-(function(){
-  var nb=document.getElementById("nb");
-  if(nb)window.addEventListener("scroll",function(){nb.classList.toggle("sc",window.scrollY>8);},{passive:true});
-  var dds=document.querySelectorAll(".nl-dd");
-  dds.forEach(function(dd){
-    var btn=dd.querySelector(".nl-dd-btn");
-    if(!btn)return;
-    btn.addEventListener("click",function(e){
-      e.stopPropagation();
-      var isOpen=dd.classList.contains("open");
-      dds.forEach(function(d){d.classList.remove("open");});
-      if(!isOpen)dd.classList.add("open");
-    });
-  });
-  document.addEventListener("click",function(e){
-    if(!e.target.closest(".nl-dd"))dds.forEach(function(d){d.classList.remove("open");});
-  });
-  var hb=document.getElementById("ham-btn"),mn=document.getElementById("mob-nav");
-  if(hb&&mn){
-    hb.addEventListener("click",function(e){
-      e.stopPropagation();
-      var o=hb.classList.toggle("open");
-      mn.classList.toggle("open",o);
-      hb.setAttribute("aria-expanded",o);
-    });
-    document.addEventListener("click",function(e){
-      if(!hb.contains(e.target)&&!mn.contains(e.target)){hb.classList.remove("open");mn.classList.remove("open");}
-    });
-  }
-})();
 </script>
+<script src="security.js"></script>
 </body>
 </html>
