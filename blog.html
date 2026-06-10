@@ -437,10 +437,21 @@ document.querySelectorAll('.bl-cat-btn').forEach(function(btn){
     });
   });
 });
+
+// ── Captura de leads (Google Apps Script) ──
+var LEADS_ENDPOINT='COLE_AQUI_URL_DO_APPS_SCRIPT'; // ← trocar pela URL do deployment (ver instrucoes-leads.md)
+function sendLead(params){
+  try{
+    if(LEADS_ENDPOINT.indexOf('http')!==0){console.warn('[Nemalá] LEADS_ENDPOINT não configurado — lead não salvo');return;}
+    var q=Object.keys(params).map(function(k){return encodeURIComponent(k)+'='+encodeURIComponent(params[k]||'')}).join('&');
+    new Image().src=LEADS_ENDPOINT+'?'+q+'&_t='+Date.now();
+  }catch(e){}
+}
 function handleNL(){
   var name=document.getElementById('nl-name').value.trim();
   var email=document.getElementById('nl-email').value.trim();
   if(!email||!email.includes('@')){alert('Insira um e-mail válido.');return;}
+  sendLead({tipo:'newsletter',nome:name,email:email,pagina:location.pathname});
   document.getElementById('nl-form').innerHTML='<div style="text-align:center;padding:24px 0"><div style="font-size:36px;margin-bottom:12px">✅</div><strong style="color:#fff;font-size:16px">Perfeito'+(name?', '+name:'')+'!</strong><p style="color:rgba(255,255,255,.4);font-size:13px;margin-top:8px">Você receberá nossos conteúdos toda semana.</p></div>';
 }
 
